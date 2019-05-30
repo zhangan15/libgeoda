@@ -63,7 +63,7 @@ set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/lib/libgdal.a)
 #
 ###########################################################
 if (APPLE)
-    set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /usr/local/Cellar/geos/3.7.2/lib/libgeos.a /usr/local/Cellar/geos/3.7.2/lib/libgeos_c.a")
+    set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${CMAKE_SOURCE_DIR}/deps/geos/3.7.2/lib/libgeos.a ${CMAKE_SOURCE_DIR}/deps/geos/3.7.2/lib/libgeos_c.a")
 endif()
 
 add_library(geoda SHARED src/library.cpp )
