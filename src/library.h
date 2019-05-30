@@ -3,6 +3,7 @@
 
 #include <vector>
 
+int Factorial(int n);
 
 void hello();
 

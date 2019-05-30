@@ -12,7 +12,7 @@ project(geoda)
 message(STATUS "Binary dir: ${CMAKE_BINARY_DIR}")
 
 set(CMAKE_MACOSX_RPATH 1)
-# set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 
 set(DEP_LIBRARY_PATH)
 if ( APPLE )
@@ -115,12 +115,25 @@ endif()
 #
 ###########################################################
 # Add swig subdirectory
-add_subdirectory(swig)
+#add_subdirectory(swig)
 
 
 ################################
 # GTest
 ################################
-ADD_SUBDIRECTORY (gtest-1.6.0)
+ADD_SUBDIRECTORY (googletest)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+
+################################
+# Unit Tests
+################################
+# Add test cpp file
+add_executable( runUnitTests test/testgtest.cpp)
+
+target_include_directories(runUnitTests PUBLIC ${geoda_SOURCE_DIR}/src)
+
+# Link test executable against gtest & gtest_main
+target_link_libraries(runUnitTests gtest gtest_main geoda)
+add_test( runUnitTests runUnitTests )
