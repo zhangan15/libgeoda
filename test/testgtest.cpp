@@ -11,3 +11,4 @@ namespace {
         EXPECT_EQ(1, Factorial(0));
     }
 }
+

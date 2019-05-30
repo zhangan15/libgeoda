@@ -12,6 +12,7 @@ GeoDaProxy::GeoDaProxy()
 GeoDaProxy::GeoDaProxy(const char* ds_path)
 {
     this->layer_names = GetLayerNames(ds_path);
+    this->num_obs = CountFeatures(ds_path);
 }
 
 GeoDaProxy::~GeoDaProxy() {

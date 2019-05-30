@@ -17,6 +17,8 @@ protected:
 
 public:
     const std::vector<const char *> &getLayer_names() const;
+
+    int num_obs;
 };
 
 #endif

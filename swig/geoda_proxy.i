@@ -33,4 +33,5 @@ protected:
     std::vector<const char*> layer_names;
 public:
     const std::vector<const char *> &getLayer_names() const;
+    int num_obs;
 };

@@ -6,6 +6,25 @@
 #include <ANN/ANN.h>
 #include <ogrsf_frmts.h>
 
+int CountFeatures(const char *ds_path)
+{
+    GDALAllRegister();
+    GDALDataset *poDS;
+    poDS = (GDALDataset*) GDALOpenEx(ds_path, GDAL_OF_VECTOR, NULL, NULL, NULL);
+
+    if( poDS == NULL ) {
+        return 0;
+    }
+    OGRLayer *poLayer = NULL;
+    int n_layers = poDS->GetLayerCount();
+    if (n_layers > 0) {
+        poLayer = poDS->GetLayer(0);
+        return  poLayer->GetFeatureCount(true);
+    }
+    GDALClose(poDS);
+    return 0;
+}
+
 std::vector<const char*> GetLayerNames(const char *ds_path)
 {
     std::vector<const char*> results;
