@@ -1,0 +1,12 @@
+build/
+cmake-build-debug/
+swig/python/build/
+.idea/
+
+*.swp
+*.so
+*.pyc
+*.o
+
+geoda_proxy_wrap.cxx
+libgeoda.dylib
