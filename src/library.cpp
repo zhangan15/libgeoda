@@ -13,13 +13,16 @@ int CountFeatures(const char *ds_path)
     poDS = (GDALDataset*) GDALOpenEx(ds_path, GDAL_OF_VECTOR, NULL, NULL, NULL);
 
     if( poDS == NULL ) {
+        std::cout << "posDS is NULL" << std::endl;
         return 0;
     }
     OGRLayer *poLayer = NULL;
     int n_layers = poDS->GetLayerCount();
     if (n_layers > 0) {
         poLayer = poDS->GetLayer(0);
-        return  poLayer->GetFeatureCount(true);
+        int n = poLayer->GetFeatureCount(true);
+        std::cout << "count:" << n << std::endl;
+        return n;
     }
     GDALClose(poDS);
     return 0;

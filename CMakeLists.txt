@@ -12,7 +12,6 @@ project(geoda)
 message(STATUS "Binary dir: ${CMAKE_BINARY_DIR}")
 
 set(CMAKE_MACOSX_RPATH 1)
-set(CMAKE_CXX_STANDARD 11)
 
 set(DEP_LIBRARY_PATH)
 if ( APPLE )
@@ -57,15 +56,14 @@ endif()
 set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/include)
 set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/lib/libgdal.a)
 
+## geos library 
+set (GEOS_LIBRARIES ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/libgeos.a ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/libgeos_c.a)
+
 ###########################################################
 #
 # output files and flags
 #
 ###########################################################
-if (APPLE)
-    set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${CMAKE_SOURCE_DIR}/deps/geos/3.7.2/lib/libgeos.a ${CMAKE_SOURCE_DIR}/deps/geos/3.7.2/lib/libgeos_c.a")
-endif()
-
 add_library(geoda SHARED src/library.cpp )
 
 
@@ -97,6 +95,8 @@ target_link_libraries(geoda ${CURL_LIBRARIES})
 target_include_directories(geoda PUBLIC ${GDAL_INCLUDE_DIR} )
 target_link_libraries(geoda ${GDAL_LIBRARIES})
 
+target_link_libraries(geoda ${GEOS_LIBRARIES})
+
 target_include_directories(geoda PUBLIC ${ANN_INCLUDE_DIR} )
 target_link_libraries(geoda ${ANN_LIBRARIES} )
 
@@ -123,6 +123,8 @@ endif()
 ################################
 ADD_SUBDIRECTORY (googletest)
 enable_testing()
+
+
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
@@ -131,6 +133,12 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 ################################
 # Add test cpp file
 add_executable( runUnitTests test/testgtest.cpp)
+
+set_target_properties(runUnitTests PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED YES
+    CXX_EXTENSIONS NO
+)
 
 target_include_directories(runUnitTests PUBLIC ${geoda_SOURCE_DIR}/src)
 
