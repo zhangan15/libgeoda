@@ -2,24 +2,61 @@
 
 from distutils.core import setup, Extension
 
+DEP_DIR = '../../deps/osx/'
+SRC_DIR = '../../src/'
 #PYTHON_HEADER = '-I/usr/include/python2.7'
 
-INCLUDE_DIRS = ['../../src/', '../']
+INCLUDE_DIRS = [
+       '../../src', 
+       DEP_DIR + 'ann/include',
+       DEP_DIR + 'gdal/include',
+       DEP_DIR + 'geos/3.7.2/include',
+       DEP_DIR + 'wx/include/wx-3.0',
+       DEP_DIR + 'wx/lib/wx/include/base-unicode-static-3.0',
+       '/usr/local/include'
+]
 
-LIBRARY_DIRS = ['../']
+LIBRARY_DIRS = ['/usr/lib']
 
-LIBRARIES = ['geoda']
+LIBRARIES = [
+       'curl',
+       'iconv',
+]
 
 SWIG_OPTS = ['-c++']
 
-EXTRA_COMPILE_ARGS = []
+EXTRA_COMPILE_ARGS = [
+       '-D_FILE_OFFSET_BITS=64',
+]
 
-EXTRA_LINK_ARGS = []
+EXTRA_LINK_ARGS = [
+       '-framework',
+       'IOKit', 
+       '-framework',
+       'CoreServices',
+       '-framework',
+       'System',
+       '-framework',
+       'ApplicationServices'
+]
 
-EXTRA_OBJECTS = []
+EXTRA_OBJECTS = [
+       DEP_DIR + 'ann/lib/libANN.a',
+       DEP_DIR + 'gdal/lib/libgdal.a',
+       DEP_DIR + 'geos/3.7.2/lib/libgeos.a',
+       DEP_DIR + 'geos/3.7.2/lib/libgeos_c.a',
+       DEP_DIR + 'wx/lib/libwx_baseu-3.0.a',
+       DEP_DIR + 'wx/lib/libwxregexu-3.0.a',
+       '/usr/local/lib/libboost_thread-mt.a',
+       '/usr/local/lib/libboost_system-mt.a',
+       '/usr/local/lib/libboost_chrono-mt.a',
+       '/usr/local/lib/libboost_date_time-mt.a',
+       '/usr/local/lib/libboost_atomic-mt.a',
+       ]
 
 SOURCE_FILES  = ['geoda_proxy_wrap.cxx',
-                 '../geoda_proxy.cpp']
+                 SRC_DIR + 'library.cpp'
+]
  
 extensions = [Extension('_geoda',
                         sources=SOURCE_FILES,

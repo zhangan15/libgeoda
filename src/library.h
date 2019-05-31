@@ -2,13 +2,27 @@
 #define LIBGEODA_LIBRARY_H
 
 #include <vector>
+#include <ogrsf_frmts.h>
 
-int Factorial(int n);
 
-void hello();
+class GeoDaProxy {
+public:
+    GeoDaProxy();
 
-std::vector<const char*> GetLayerNames(const char *ds_path);
+    GeoDaProxy(const char* pDsPath);
 
-int  CountFeatures(const char *ds_path);
+    virtual ~GeoDaProxy();
+
+    std::vector<double> GetValues();
+
+    std::string GetName();
+
+protected:
+    GDALDataset *poDS;
+    OGRLayer *poLayer;
+
+    int numLayers;
+    int numObs;
+};
 
 #endif

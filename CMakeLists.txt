@@ -102,6 +102,8 @@ target_link_libraries(geoda ${ANN_LIBRARIES} )
 
 target_include_directories(geoda PUBLIC ${Boost_INCLUDE_DIR} )
 target_link_libraries(geoda ${Boost_LIBRARIES})
+message(STATUS "boost header dir: ${Boost_INCLUDE_DIR}")
+message(STATUS "boost lib dir: ${Boost_LIBRARIES}")
 
 target_include_directories(geoda PUBLIC ${WX_INCLUDE_DIR} )
 target_link_libraries(geoda ${WX_LIBRARIES})

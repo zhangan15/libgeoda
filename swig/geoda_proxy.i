@@ -16,9 +16,9 @@ namespace std {
 }
 
 %{
-    #include "geoda_proxy.h"
+    #include "../src/library.h"
 %}
 
 #include <vector>
 
-%include "geoda_proxy.h"
+%include <../src/library.h>

@@ -1,4 +1,4 @@
 from geoda import GeoDaProxy
 
-gda = GeoDaProxy("/Users/xun/Github/libgeoda/data/natregimes.shp")
-print gda.num_obs
+gda = GeoDaProxy("/Users/xun/Box/test_data/natregimes/natregimes.shp")
+print(gda.num_obs)

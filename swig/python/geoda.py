@@ -1007,9 +1007,11 @@ class GeoDaProxy(object):
         _geoda.GeoDaProxy_swiginit(self, _geoda.new_GeoDaProxy(*args))
     __swig_destroy__ = _geoda.delete_GeoDaProxy
 
-    def getLayer_names(self):
-        return _geoda.GeoDaProxy_getLayer_names(self)
-    num_obs = property(_geoda.GeoDaProxy_num_obs_get, _geoda.GeoDaProxy_num_obs_set)
+    def GetValues(self):
+        return _geoda.GeoDaProxy_GetValues(self)
+
+    def GetName(self):
+        return _geoda.GeoDaProxy_GetName(self)
 
 # Register GeoDaProxy in _geoda:
 _geoda.GeoDaProxy_swigregister(GeoDaProxy)
