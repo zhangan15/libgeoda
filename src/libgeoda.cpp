@@ -1,4 +1,4 @@
-#include "library.h"
+#include "libgeoda.h"
 
 #include <iostream>
 
