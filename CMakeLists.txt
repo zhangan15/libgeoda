@@ -64,19 +64,25 @@ set (GEOS_LIBRARIES ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/libgeos.a ${DEP_LIBRARY_P
 # output files and flags
 #
 ###########################################################
-add_library(geoda SHARED src/library.cpp )
+set (GEODA_INCLUDE_FILES
+        src/libgeoda.h
+        src/geoda/ShapeOperations/GalWeight.h
+        src/geoda/ShapeOperations/GeodaWeight.h
+)
 
+set (GEODA_SOURCE_FILES
+        src/libgeoda.cpp
+        src/geoda/GenUtils.cpp
+        src/geoda/ShapeOperations/GeoDaWeight.cpp
+        src/geoda/ShapeOperations/GwtWeight.cpp
+        src/geoda/ShapeOperations/GalWeight.cpp
+        src/geoda/ShapeOperations/PolysToContigWeights.cpp
+)
 
-# Setup output for testing swig
-set_target_properties( geoda
-        PROPERTIES
-        ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/swig"
-        LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/swig"
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/swig"
-        )
+add_library(geoda STATIC ${GEODA_SOURCE_FILES})
 
 # Setup public headers for libgeoda
-set_target_properties(geoda PROPERTIES PUBLIC_HEADER "src/library.h")
+set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})
 
 # Add install target for libgeoda
 install(TARGETS ${PROJECT_NAME}
@@ -111,21 +117,29 @@ if (UNIX)
     target_link_libraries(geoda iconv)
 endif()
 
+
+#  For SWIG and testing only, copy files
+foreach(hfile ${GEODA_INCLUDE_FILES})
+    get_filename_component(barename ${hfile} NAME)
+    add_custom_command(
+            TARGET geoda POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy
+            ${CMAKE_SOURCE_DIR}/${hfile}
+            ${CMAKE_SOURCE_DIR}/deps/osx/libgeoda/include/${barename})
+endforeach()
+add_custom_command(
+    TARGET geoda POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+    ${CMAKE_CURRENT_BINARY_DIR}/libgeoda.a
+    ${CMAKE_SOURCE_DIR}/deps/osx/libgeoda/lib/libgeoda.a)
+
 ###########################################################
 #
-#  testing
+#  googletest testing framework
 #
 ###########################################################
-# Add swig subdirectory
-#add_subdirectory(swig)
-
-
-################################
-# GTest
-################################
 ADD_SUBDIRECTORY (googletest)
 enable_testing()
-
 
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
@@ -134,7 +148,11 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 # Unit Tests
 ################################
 # Add test cpp file
-add_executable( runUnitTests test/testgtest.cpp)
+set (TEST_SOURCE_FILES
+        test/testgtest.cpp
+        test/test_weights.cpp
+)
+add_executable( runUnitTests ${TEST_SOURCE_FILES})
 
 set_target_properties(runUnitTests PROPERTIES
     CXX_STANDARD 11
@@ -142,7 +160,7 @@ set_target_properties(runUnitTests PROPERTIES
     CXX_EXTENSIONS NO
 )
 
-target_include_directories(runUnitTests PUBLIC ${geoda_SOURCE_DIR}/src)
+target_include_directories(runUnitTests PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
 
 # Link test executable against gtest & gtest_main
 target_link_libraries(runUnitTests gtest gtest_main geoda)

@@ -1,4 +1,7 @@
-from geoda import GeoDaProxy
+from libgeoda import GeoDa
 
-gda = GeoDaProxy("/Users/xun/Box/test_data/natregimes/natregimes.shp")
-print(gda.num_obs)
+gda = GeoDa("/Users/xun/Box/test_data/natregimes/natregimes.shp")
+
+print(gda.GetName())
+
+print(gda.GetValues())

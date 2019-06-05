@@ -2,18 +2,24 @@
 
 #include <iostream>
 
-#include <wx/wx.h>
 #include <ANN/ANN.h>
+#include <wx/wx.h>
+#include <wx/filename.h>
 
-GeoDaProxy::GeoDaProxy()
+#include "./geoda/ShapeOperations/PolysToContigWeights.h"
+#include "./geoda/ShapeOperations/GalWeight.h"
+#include "./geoda/ShapeOperations/GeodaWeight.h"
+
+GeoDa::GeoDa()
 : poDS(NULL), poLayer(NULL)
 {
 
 }
 
-GeoDaProxy::GeoDaProxy(const char* poDsPath)
+GeoDa::GeoDa(const char* poDsPath)
 : poDS(NULL), poLayer(NULL), numLayers(0), numObs(0)
 {
+    wxFileName wx_fn(poDsPath);
     GDALAllRegister();
     poDS = (GDALDataset*) GDALOpenEx(poDsPath, GDAL_OF_VECTOR, NULL, NULL, NULL);
 
@@ -27,16 +33,16 @@ GeoDaProxy::GeoDaProxy(const char* poDsPath)
     } else {
         std::cout << "posDS is NULL" << std::endl;
     }
-    GDALClose(poDS);
+    //GDALClose(poDS);
 }
 
-GeoDaProxy::~GeoDaProxy() {
-    //if (poDS) {
-    //    GDALClose(poDS);
-    //}
+GeoDa::~GeoDa() {
+    if (poDS) {
+        GDALClose(poDS);
+    }
 }
 
-std::vector<double> GeoDaProxy::GetValues()
+std::vector<double> GeoDa::GetValues()
 {
     std::vector<double> rst;
     rst.push_back(0);
@@ -46,7 +52,24 @@ std::vector<double> GeoDaProxy::GetValues()
     return rst;
 }
 
-std::string GeoDaProxy::GetName() {
+std::string GeoDa::GetName() {
     return "Name";
 }
 
+GeoDaWeight* GeoDa::CreateQueenWeights(std::string polyid)
+{
+    double precision_threshold = 0.0;
+    bool is_rook = false;
+
+    GalWeight* poW = new GalWeight;
+    poW->num_obs = numObs;
+    poW->is_symmetric = true;
+    poW->symmetry_checked = true;
+
+    poW->gal = PolysToContigWeights(poLayer, !is_rook, precision_threshold);
+
+    poW->GetNbrStats();
+    return (GeoDaWeight*)poW;
+}
+
+int test() { return 100;}

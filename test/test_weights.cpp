@@ -2,3 +2,20 @@
 // Created by Xun Li on 2019-06-04.
 //
 
+#include <limits.h>
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
+
+#include <libgeoda.h>
+#include <GeodaWeight.h>
+
+using namespace testing;
+
+namespace {
+
+    TEST(WEIGHTS_TEST, GAL_CREATE) {
+        GeoDa gda("../data/natregimes.shp");
+        GeoDaWeight* w = gda.CreateQueenWeights();
+        EXPECT_THAT(gda.GetValues(), ElementsAre(0.0, 1.0, 2.0));
+    }
+}

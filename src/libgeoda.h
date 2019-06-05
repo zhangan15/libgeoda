@@ -4,18 +4,21 @@
 #include <vector>
 #include <ogrsf_frmts.h>
 
+class GeoDaWeight;
 
-class GeoDaProxy {
+class GeoDa {
 public:
-    GeoDaProxy();
+    GeoDa();
 
-    GeoDaProxy(const char* pDsPath);
+    GeoDa(const char* pDsPath);
 
-    virtual ~GeoDaProxy();
+    virtual ~GeoDa();
 
     std::vector<double> GetValues();
 
     std::string GetName();
+
+    GeoDaWeight* CreateQueenWeights(std::string polyid="");
 
 protected:
     GDALDataset *poDS;
@@ -24,5 +27,7 @@ protected:
     int numLayers;
     int numObs;
 };
+
+int test();
 
 #endif

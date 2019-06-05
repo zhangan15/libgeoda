@@ -7,7 +7,7 @@ SRC_DIR = '../../src/'
 #PYTHON_HEADER = '-I/usr/include/python2.7'
 
 INCLUDE_DIRS = [
-       '../../src', 
+       SRC_DIR, 
        DEP_DIR + 'ann/include',
        DEP_DIR + 'gdal/include',
        DEP_DIR + 'geos/3.7.2/include',
@@ -54,11 +54,12 @@ EXTRA_OBJECTS = [
        '/usr/local/lib/libboost_atomic-mt.a',
        ]
 
-SOURCE_FILES  = ['geoda_proxy_wrap.cxx',
-                 SRC_DIR + 'library.cpp'
+SOURCE_FILES  = [
+       'geoda_proxy_wrap.cxx',
+       SRC_DIR + 'libgeoda.cpp'
 ]
  
-extensions = [Extension('_geoda',
+extensions = [Extension('_libgeoda',
                         sources=SOURCE_FILES,
                         include_dirs=INCLUDE_DIRS,
                         swig_opts=SWIG_OPTS,
