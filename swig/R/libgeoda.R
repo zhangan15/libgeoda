@@ -5,7 +5,7 @@
 # the SWIG interface file instead.
 
 ##   Generated via the command line invocation:
-##	 swig -c++ -r -I../../deps/osx/libgeoda/include -o libgeoda.cpp ../libgeoda.i
+##	 swig -c++ -r -I../../deps/libgeoda/include -o libgeoda.cpp ../libgeoda.i
 
 
 #                         srun.swg                            #

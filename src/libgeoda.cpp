@@ -52,7 +52,7 @@ GeoDa::GeoDa(const char* poDsPath)
             } else {
                 fieldTypes.push_back(DT_STRING);
             }
-            std::cout << "field name: " << fieldName << " field type: " << fieldType << std::endl;
+            //std::cout << "field name: " << fieldName << " field type: " << fieldType << std::endl;
         }
 
     } else {

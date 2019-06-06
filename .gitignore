@@ -15,3 +15,4 @@ libgeoda.dylib
 swig/python/libgeoda.py
 swig/R/geoda_proxy_wrap.cpp
 swig/R/geoda_proxy_wrap.cpp
+swig/R/.RData
