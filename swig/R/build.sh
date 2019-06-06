@@ -9,11 +9,14 @@ mkdir build
 cp -rf pkg-template build/libgeoda
 cp libgeoda.R build/libgeoda/R/
 cp libgeoda.cpp build/libgeoda/src
-cp -rf ../../deps build/libgeoda/src/
+mkdir build/libgeoda/src/deps
+mkdir build/libgeoda/src/deps/osx
+mkdir build/libgeoda/src/deps/osx/libgeoda
+cp -rf ../../deps/osx/libgeoda/ build/libgeoda/src/deps/osx/libgeoda/
 cd build
 
 R CMD BUILD libgeoda
 R CMD REMOVE libgeoda
-R CMD INSTALL libgeoda_0.0-0.tar.gz
+R CMD INSTALL libgeoda_0.1.0.tar.gz
 
 cd ..

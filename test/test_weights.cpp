@@ -16,6 +16,7 @@ namespace {
     TEST(WEIGHTS_TEST, GAL_CREATE) {
         GeoDa gda("../data/natregimes.shp");
         GeoDaWeight* w = gda.CreateQueenWeights();
-        EXPECT_THAT(gda.GetValues(), ElementsAre(0.0, 1.0, 2.0));
+        //EXPECT_THAT(gda.by_col<int>(""), ElementsAre(0.0, 1.0, 2.0));
+        EXPECT_THAT(w->num_obs, 3085);
     }
 }

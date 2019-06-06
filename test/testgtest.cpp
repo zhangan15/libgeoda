@@ -11,9 +11,14 @@ using namespace testing;
 
 namespace {
 
-    TEST(IOTEST, NAT_FEAT_COUNT) {
+    TEST(LayerFunctions, getNumObs) {
         GeoDa gda("../data/natregimes.shp");
-        EXPECT_THAT(gda.GetValues(), ElementsAre(0.0, 1.0, 2.0));
+        EXPECT_THAT(gda.getNumObs(), 3085);
+    }
+
+    TEST(LayerFunctions, getNumCols) {
+        GeoDa gda("../data/natregimes.shp");
+        EXPECT_THAT(gda.getNumCols(), 12);
     }
 }
 

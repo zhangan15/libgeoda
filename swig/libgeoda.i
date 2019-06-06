@@ -1,7 +1,7 @@
 %module libgeoda
 
+%include "stl.i"
 %include "std_string.i"
-
 %include "std_vector.i"
 
 namespace std {
@@ -22,5 +22,10 @@ namespace std {
 
 #include <vector>
 
-%include <libgeoda.h>
+using namespace std;
+
 %include <GeodaWeight.h>
+%include <libgeoda.h>
+
+//%template(GeoDaInt) GeoDa<int>;
+//%template(GeoDaString) GeoDa<std::string>;

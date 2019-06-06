@@ -3,6 +3,7 @@ cmake-build-debug/
 swig/python/build/
 .idea/
 .vscode/
+deps/
 
 *.swp
 *.so

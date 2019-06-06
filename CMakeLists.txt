@@ -13,14 +13,13 @@ message(STATUS "Binary dir: ${CMAKE_BINARY_DIR}")
 
 set(CMAKE_MACOSX_RPATH 1)
 
-set(DEP_LIBRARY_PATH)
+set(DEP_LIBRARY_PATH "")
+set (DEP_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/deps/osx)
 if ( APPLE )
-    set (DEP_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/deps/osx)
+    set (CMAKE_OSX_ARCHITECTURES "x86_64")
+    set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -arch x86_64")
 endif()
 
-#set (CMAKE_IGNORE_PATH "/usr/local/include")
-set (CMAKE_OSX_ARCHITECTURES "x86_64")
-set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -arch x86_64")
 
 # gtest
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
@@ -38,25 +37,28 @@ set (ANN_INCLUDE_DIR ${DEP_LIBRARY_PATH}/ann/include)
 set (ANN_LIBRARIES ${DEP_LIBRARY_PATH}/ann/lib/libANN.a)
 
 ## Boost: static link
-set (Boost_USE_STATIC_LIBS ON)
-find_package(Boost COMPONENTS thread system REQUIRED)
+set (Boost_INCLUDE_DIR ${DEP_LIBRARY_PATH}/boost/include)
+set (Boost_LIBRARIES
+    ${DEP_LIBRARY_PATH}/boost/lib/libboost_thread-mt.a
+    ${DEP_LIBRARY_PATH}/boost/lib/libboost_system-mt.a
+    ${DEP_LIBRARY_PATH}/boost/lib/libboost_chrono-mt.a
+    ${DEP_LIBRARY_PATH}/boost/lib/libboost_date_time-mt.a
+    ${DEP_LIBRARY_PATH}/boost/lib/libboost_atomic-mt.a
+)
 
 ## wxWidgets library (non-ui)
 set (WX_INCLUDE_DIR ${DEP_LIBRARY_PATH}/wx/include/wx-3.0 ${DEP_LIBRARY_PATH}/wx/lib/wx/include/base-unicode-static-3.0)
 #set (CMAKE_CXX_FLAGS  ${CMAKE_CXX_FLAGS} "-D_FILE_OFFSET_BITS=64")
-# CMAKE_MODULE_LINKER_FLAGS
-# CMAKE_SHARED_LINKER_FLAGS
-# CMAKE_STATIC_LINKER_FLAGS
-if ( APPLE )
-    set (WX_LIBRARIES ${DEP_LIBRARY_PATH}/wx/lib/libwx_baseu-3.0.a ${DEP_LIBRARY_PATH}/wx/lib/libwxregexu-3.0.a)
-    set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -framework IOKit -framework CoreServices -framework System -framework ApplicationServices")
+set (WX_LIBRARIES ${DEP_LIBRARY_PATH}/wx/lib/libwx_baseu-3.0.a ${DEP_LIBRARY_PATH}/wx/lib/libwxregexu-3.0.a)
+if (APPLE)
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -framework IOKit -framework CoreServices -framework System -framework ApplicationServices")
 endif()
 
 ## gdal library (minimal)
 set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/include)
 set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/lib/libgdal.a)
 
-## geos library 
+## geos library
 set (GEOS_LIBRARIES ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/libgeos.a ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/libgeos_c.a)
 
 ###########################################################
@@ -68,21 +70,24 @@ set (GEODA_INCLUDE_FILES
         src/libgeoda.h
         src/geoda/ShapeOperations/GalWeight.h
         src/geoda/ShapeOperations/GeodaWeight.h
+        src/geoda/ShapeOperations/WeightsManState.h
 )
 
 set (GEODA_SOURCE_FILES
         src/libgeoda.cpp
         src/geoda/GenUtils.cpp
-        src/geoda/ShapeOperations/GeoDaWeight.cpp
+        src/geoda/ShapeOperations/GeodaWeight.cpp
         src/geoda/ShapeOperations/GwtWeight.cpp
         src/geoda/ShapeOperations/GalWeight.cpp
         src/geoda/ShapeOperations/PolysToContigWeights.cpp
+        src/geoda/ShapeOperations/WeightsManState.cpp
 )
 
 add_library(geoda STATIC ${GEODA_SOURCE_FILES})
 
 # Setup public headers for libgeoda
-set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})
+#set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})
+
 
 # Add install target for libgeoda
 install(TARGETS ${PROJECT_NAME}
@@ -108,8 +113,6 @@ target_link_libraries(geoda ${ANN_LIBRARIES} )
 
 target_include_directories(geoda PUBLIC ${Boost_INCLUDE_DIR} )
 target_link_libraries(geoda ${Boost_LIBRARIES})
-message(STATUS "boost header dir: ${Boost_INCLUDE_DIR}")
-message(STATUS "boost lib dir: ${Boost_LIBRARIES}")
 
 target_include_directories(geoda PUBLIC ${WX_INCLUDE_DIR} )
 target_link_libraries(geoda ${WX_LIBRARIES})
@@ -160,8 +163,25 @@ set_target_properties(runUnitTests PROPERTIES
     CXX_EXTENSIONS NO
 )
 
-target_include_directories(runUnitTests PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/include)
+target_include_directories(runUnitTests PUBLIC
+        ${gtest_SOURCE_DIR}/include
+        ${gmock_SOURCE_DIR}/include
+        ${geoda_SOURCE_DIR}/src
+        ${geoda_SOURCE_DIR}/src/geoda/ShapeOperations
+)
 
 # Link test executable against gtest & gtest_main
 target_link_libraries(runUnitTests gtest gtest_main geoda)
+if (APPLE)
+    find_library(CoreServices CoreServices)
+    find_library(IOKit IOKit)
+    find_library(System System)
+    find_library(ApplicationServices ApplicationServices)
+    target_link_libraries(runUnitTests
+            ${IOKit}
+            ${CoreServices}
+            ${System}
+            ${ApplicationServices}
+    )
+endif()
 add_test( runUnitTests runUnitTests )
