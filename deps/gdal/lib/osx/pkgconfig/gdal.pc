@@ -1,0 +1,16 @@
+CONFIG_VERSION=2.2.4
+CONFIG_INST_PREFIX=/Users/xunli/Downloads/test/gdal
+CONFIG_INST_LIBS=/Users/xunli/Downloads/test/gdal/lib/libgdal.a   /usr/local/opt/sqlite3/lib/libsqlite3.a /usr/local/opt/proj/lib/libproj.a /usr/local/Cellar/geos/3.7.2/lib/libgeos.a /usr/local/Cellar/geos/3.7.2/lib/libgeos_c.a -L/usr/lib -liconv -lpthread -ldl   -lcurl           -liconv     
+CONFIG_INST_CFLAGS=-I/Users/xunli/Downloads/test/gdal/include
+CONFIG_INST_DATA=/Users/xunli/Downloads/test/gdal/share/gdal/data
+prefix=${CONFIG_INST_PREFIX}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+datadir=${CONFIG_INST_DATA}
+
+Name: libgdal
+Description: Geospatial Data Abstraction Library
+Version: ${CONFIG_VERSION}
+Libs: ${CONFIG_INST_LIBS}
+Cflags: ${CONFIG_INST_CFLAGS}
