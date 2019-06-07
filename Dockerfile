@@ -20,8 +20,11 @@ RUN \
     cd geoda && \
     git checkout libgeoda && \
     cd .. && \
-    cd ..
+    cd .. && \
+    mkdir /usr/src/libgeoda/ubuntu/bionic/wx
 
+RUN \
+    mkdir /usr/src/libgeoda/ubuntu/bionic/wx
 RUN \
     rm -rf build && \
     mkdir build && \

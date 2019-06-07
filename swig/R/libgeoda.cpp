@@ -1146,36 +1146,38 @@ SWIG_R_ConvertPacked(SEXP obj, void *ptr, size_t sz, swig_type_info *ty) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_GeoDa swig_types[0]
-#define SWIGTYPE_p_GeoDaWeight swig_types[1]
-#define SWIGTYPE_p_allocator_type swig_types[2]
-#define SWIGTYPE_p_char swig_types[3]
-#define SWIGTYPE_p_difference_type swig_types[4]
-#define SWIGTYPE_p_size_type swig_types[5]
-#define SWIGTYPE_p_std__allocatorT_double_t swig_types[6]
-#define SWIGTYPE_p_std__allocatorT_float_t swig_types[7]
-#define SWIGTYPE_p_std__allocatorT_int_t swig_types[8]
-#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[9]
-#define SWIGTYPE_p_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t swig_types[10]
-#define SWIGTYPE_p_std__allocatorT_std__vectorT_int_std__allocatorT_int_t_t_t swig_types[11]
-#define SWIGTYPE_p_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t swig_types[12]
-#define SWIGTYPE_p_std__allocatorT_unsigned_char_t swig_types[13]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[14]
-#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[15]
-#define SWIGTYPE_p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t swig_types[16]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[17]
-#define SWIGTYPE_p_std__vectorT_long_std__allocatorT_long_t_t swig_types[18]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[19]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t swig_types[20]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_int_std__allocatorT_int_t_t_std__allocatorT_std__vectorT_int_std__allocatorT_int_t_t_t_t swig_types[21]
-#define SWIGTYPE_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[22]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[23]
-#define SWIGTYPE_p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t swig_types[24]
-#define SWIGTYPE_p_std__vectorT_wxString_std__allocatorT_wxString_t_t swig_types[25]
-#define SWIGTYPE_p_value_type swig_types[26]
-#define SWIGTYPE_p_wxString swig_types[27]
-static swig_type_info *swig_types[29];
-static swig_module_info swig_module = {swig_types, 28, 0, 0, 0, 0};
+#define SWIGTYPE_p_AbstractLocalSA swig_types[0]
+#define SWIGTYPE_p_GeoDa swig_types[1]
+#define SWIGTYPE_p_GeoDaWeight swig_types[2]
+#define SWIGTYPE_p_UniLisa swig_types[3]
+#define SWIGTYPE_p_allocator_type swig_types[4]
+#define SWIGTYPE_p_char swig_types[5]
+#define SWIGTYPE_p_difference_type swig_types[6]
+#define SWIGTYPE_p_size_type swig_types[7]
+#define SWIGTYPE_p_std__allocatorT_double_t swig_types[8]
+#define SWIGTYPE_p_std__allocatorT_float_t swig_types[9]
+#define SWIGTYPE_p_std__allocatorT_int_t swig_types[10]
+#define SWIGTYPE_p_std__allocatorT_std__string_t swig_types[11]
+#define SWIGTYPE_p_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t swig_types[12]
+#define SWIGTYPE_p_std__allocatorT_std__vectorT_int_std__allocatorT_int_t_t_t swig_types[13]
+#define SWIGTYPE_p_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t swig_types[14]
+#define SWIGTYPE_p_std__allocatorT_unsigned_char_t swig_types[15]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[16]
+#define SWIGTYPE_p_std__vectorT_float_std__allocatorT_float_t_t swig_types[17]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[18]
+#define SWIGTYPE_p_std__vectorT_long_std__allocatorT_long_t_t swig_types[19]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[20]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t swig_types[21]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_int_std__allocatorT_int_t_t_std__allocatorT_std__vectorT_int_std__allocatorT_int_t_t_t_t swig_types[22]
+#define SWIGTYPE_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t swig_types[23]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t swig_types[24]
+#define SWIGTYPE_p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t swig_types[25]
+#define SWIGTYPE_p_std__vectorT_wxString_std__allocatorT_wxString_t_t swig_types[26]
+#define SWIGTYPE_p_uint64_t swig_types[27]
+#define SWIGTYPE_p_value_type swig_types[28]
+#define SWIGTYPE_p_wxString swig_types[29]
+static swig_type_info *swig_types[31];
+static swig_module_info swig_module = {swig_types, 30, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3167,8 +3169,10 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__append(std:
       self->push_back(x);
     }
 
-    #include <libgeoda.h>
     #include <GeodaWeight.h>
+    #include <AbstractLocalSA.h>
+    #include <UniLisa.h>
+    #include <libgeoda.h>
 
 
   namespace swig {
@@ -3183,6 +3187,16 @@ SWIGINTERN void std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__append(std:
 
 
 
+
+  namespace swig {
+    template <>  struct traits< std::vector<long long int> > {
+      typedef pointer_category category;
+      static const char* type_name() {
+        return"std::vector<long long int>";
+      }
+    };
+  }
+ 
 
 #ifdef __cplusplus
 extern "C" {
@@ -11501,6 +11515,226 @@ R_swig_GeoDaWeight_GetNbrStats ( SEXP self)
 
 
 SWIGEXPORT SEXP
+R_swig_GeoDaWeight_GetNbrSize ( SEXP self, SEXP obs_idx, SEXP s_swig_copy)
+{
+  int result;
+  GeoDaWeight *arg1 = (GeoDaWeight *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDaWeight_GetNbrSize" "', argument " "1"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDaWeight * >(argp1);
+  arg2 = static_cast< int >(INTEGER(obs_idx)[0]);
+  result = (int)(arg1)->GetNbrSize(arg2);
+  r_ans = Rf_ScalarInteger(result);
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDaWeight_SpatialLag ( SEXP self, SEXP obs_idx, SEXP data, SEXP s_swig_copy)
+{
+  double result;
+  GeoDaWeight *arg1 = (GeoDaWeight *) 0 ;
+  int arg2 ;
+  std::vector< double,std::allocator< double > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDaWeight_SpatialLag" "', argument " "1"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDaWeight * >(argp1);
+  arg2 = static_cast< int >(INTEGER(obs_idx)[0]);
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res3 = swig::asptr(data, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDaWeight_SpatialLag" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SpatialLag" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  result = (double)(arg1)->SpatialLag(arg2,(std::vector< double,std::allocator< double > > const &)*arg3);
+  r_ans = SWIG_From_double(static_cast< double >(result));
+  
+  
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDaWeight_SaveToFile__SWIG_0 ( SEXP self, SEXP ofname, SEXP layer_name, SEXP id_var_name, SEXP id_vec, SEXP s_swig_copy)
+{
+  bool result;
+  GeoDaWeight *arg1 = (GeoDaWeight *) 0 ;
+  wxString *arg2 = 0 ;
+  wxString *arg3 = 0 ;
+  wxString *arg4 = 0 ;
+  std::vector< wxInt64,std::allocator< wxInt64 > > *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDaWeight_SaveToFile" "', argument " "1"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDaWeight * >(argp1);
+  res2 = SWIG_R_ConvertPtr(ofname, &argp2, SWIGTYPE_p_wxString,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GeoDaWeight_SaveToFile" "', argument " "2"" of type '" "wxString const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "2"" of type '" "wxString const &""'"); 
+  }
+  arg2 = reinterpret_cast< wxString * >(argp2);
+  res3 = SWIG_R_ConvertPtr(layer_name, &argp3, SWIGTYPE_p_wxString,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDaWeight_SaveToFile" "', argument " "3"" of type '" "wxString const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "3"" of type '" "wxString const &""'"); 
+  }
+  arg3 = reinterpret_cast< wxString * >(argp3);
+  res4 = SWIG_R_ConvertPtr(id_var_name, &argp4, SWIGTYPE_p_wxString,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDaWeight_SaveToFile" "', argument " "4"" of type '" "wxString const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "4"" of type '" "wxString const &""'"); 
+  }
+  arg4 = reinterpret_cast< wxString * >(argp4);
+  res5 = SWIG_R_ConvertPtr(id_vec, &argp5, SWIGTYPE_p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDaWeight_SaveToFile" "', argument " "5"" of type '" "std::vector< wxInt64,std::allocator< wxInt64 > > const &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "5"" of type '" "std::vector< wxInt64,std::allocator< wxInt64 > > const &""'"); 
+  }
+  arg5 = reinterpret_cast< std::vector< wxInt64,std::allocator< wxInt64 > > * >(argp5);
+  result = (bool)(arg1)->SaveToFile((wxString const &)*arg2,(wxString const &)*arg3,(wxString const &)*arg4,(std::vector< wxInt64,std::allocator< wxInt64 > > const &)*arg5);
+  r_ans = Rf_ScalarLogical(result);
+  
+  
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDaWeight_SaveToFile__SWIG_1 ( SEXP self, SEXP ofname, SEXP layer_name, SEXP id_var_name, SEXP id_vec, SEXP s_swig_copy)
+{
+  bool result;
+  GeoDaWeight *arg1 = (GeoDaWeight *) 0 ;
+  wxString *arg2 = 0 ;
+  wxString *arg3 = 0 ;
+  wxString *arg4 = 0 ;
+  std::vector< wxString,std::allocator< wxString > > *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDaWeight_SaveToFile" "', argument " "1"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDaWeight * >(argp1);
+  res2 = SWIG_R_ConvertPtr(ofname, &argp2, SWIGTYPE_p_wxString,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GeoDaWeight_SaveToFile" "', argument " "2"" of type '" "wxString const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "2"" of type '" "wxString const &""'"); 
+  }
+  arg2 = reinterpret_cast< wxString * >(argp2);
+  res3 = SWIG_R_ConvertPtr(layer_name, &argp3, SWIGTYPE_p_wxString,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDaWeight_SaveToFile" "', argument " "3"" of type '" "wxString const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "3"" of type '" "wxString const &""'"); 
+  }
+  arg3 = reinterpret_cast< wxString * >(argp3);
+  res4 = SWIG_R_ConvertPtr(id_var_name, &argp4, SWIGTYPE_p_wxString,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDaWeight_SaveToFile" "', argument " "4"" of type '" "wxString const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "4"" of type '" "wxString const &""'"); 
+  }
+  arg4 = reinterpret_cast< wxString * >(argp4);
+  res5 = SWIG_R_ConvertPtr(id_vec, &argp5, SWIGTYPE_p_std__vectorT_wxString_std__allocatorT_wxString_t_t,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDaWeight_SaveToFile" "', argument " "5"" of type '" "std::vector< wxString,std::allocator< wxString > > const &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaWeight_SaveToFile" "', argument " "5"" of type '" "std::vector< wxString,std::allocator< wxString > > const &""'"); 
+  }
+  arg5 = reinterpret_cast< std::vector< wxString,std::allocator< wxString > > * >(argp5);
+  result = (bool)(arg1)->SaveToFile((wxString const &)*arg2,(wxString const &)*arg3,(wxString const &)*arg4,(std::vector< wxString,std::allocator< wxString > > const &)*arg5);
+  r_ans = Rf_ScalarLogical(result);
+  
+  
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
 R_swig_GeoDaWeight_GetSparsity ( SEXP self, SEXP s_swig_copy)
 {
   double result;
@@ -12628,6 +12862,1178 @@ R_swig_GeoDaWeight_is_internal_use_get ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
+R_swig_delete_AbstractLocalSA ( SEXP self)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_AbstractLocalSA" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  delete arg1;
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  R_ClearExternalPtr(self);
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_ComputeLoalSA ( SEXP self)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_ComputeLoalSA" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  (arg1)->ComputeLoalSA();
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_CalcPseudoP ( SEXP self)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_CalcPseudoP" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  (arg1)->CalcPseudoP();
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_CalcPseudoP_threaded ( SEXP self)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_CalcPseudoP_threaded" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  (arg1)->CalcPseudoP_threaded();
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_CalcPseudoP_range ( SEXP self, SEXP obs_start, SEXP obs_end, SEXP seed_start)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  uint64_t arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp4 ;
+  int res4 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_CalcPseudoP_range" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< int >(INTEGER(obs_start)[0]);
+  arg3 = static_cast< int >(INTEGER(obs_end)[0]);
+  {
+    res4 = SWIG_R_ConvertPtr(seed_start, &argp4, SWIGTYPE_p_uint64_t,  0 );
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "AbstractLocalSA_CalcPseudoP_range" "', argument " "4"" of type '" "uint64_t""'"); 
+    }  
+    if (!argp4) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "AbstractLocalSA_CalcPseudoP_range" "', argument " "4"" of type '" "uint64_t""'");
+    } else {
+      arg4 = *(reinterpret_cast< uint64_t * >(argp4));
+    }
+  }
+  (arg1)->CalcPseudoP_range(arg2,arg3,arg4);
+  r_ans = R_NilValue;
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_LargerPermLocalSA ( SEXP self, SEXP cnt, SEXP permNeighbors, SEXP s_swig_copy)
+{
+  bool result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  int arg2 ;
+  std::vector< int,std::allocator< int > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_LargerPermLocalSA" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< int >(INTEGER(cnt)[0]);
+  res3 = SWIG_R_ConvertPtr(permNeighbors, &argp3, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "AbstractLocalSA_LargerPermLocalSA" "', argument " "3"" of type '" "std::vector< int,std::allocator< int > > &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "AbstractLocalSA_LargerPermLocalSA" "', argument " "3"" of type '" "std::vector< int,std::allocator< int > > &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< int,std::allocator< int > > * >(argp3);
+  result = (bool)(arg1)->LargerPermLocalSA(arg2,*arg3);
+  r_ans = Rf_ScalarLogical(result);
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_Run ( SEXP self)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_Run" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  (arg1)->Run();
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetSignificanceFilter ( SEXP self, SEXP filter_id)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetSignificanceFilter" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< int >(INTEGER(filter_id)[0]);
+  (arg1)->SetSignificanceFilter(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetSignificanceFilter ( SEXP self, SEXP s_swig_copy)
+{
+  int result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetSignificanceFilter" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (int)(arg1)->GetSignificanceFilter();
+  r_ans = Rf_ScalarInteger(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetSignificanceCutoff ( SEXP self, SEXP s_swig_copy)
+{
+  double result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetSignificanceCutoff" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (double)(arg1)->GetSignificanceCutoff();
+  r_ans = SWIG_From_double(static_cast< double >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetSignificanceCutoff ( SEXP self, SEXP val)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetSignificanceCutoff" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< double >(REAL(val)[0]);
+  (arg1)->SetSignificanceCutoff(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetUserCutoff ( SEXP self, SEXP s_swig_copy)
+{
+  double result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetUserCutoff" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (double)(arg1)->GetUserCutoff();
+  r_ans = SWIG_From_double(static_cast< double >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetUserCutoff ( SEXP self, SEXP val)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetUserCutoff" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< double >(REAL(val)[0]);
+  (arg1)->SetUserCutoff(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetBO ( SEXP self, SEXP s_swig_copy)
+{
+  double result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetBO" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (double)(arg1)->GetBO();
+  r_ans = SWIG_From_double(static_cast< double >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetBO ( SEXP self, SEXP val)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetBO" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< double >(REAL(val)[0]);
+  (arg1)->SetBO(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetFDR ( SEXP self, SEXP s_swig_copy)
+{
+  double result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetFDR" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (double)(arg1)->GetFDR();
+  r_ans = SWIG_From_double(static_cast< double >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetFDR ( SEXP self, SEXP val)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  double arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetFDR" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< double >(REAL(val)[0]);
+  (arg1)->SetFDR(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetNumPermutations ( SEXP self, SEXP s_swig_copy)
+{
+  int result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetNumPermutations" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (int)(arg1)->GetNumPermutations();
+  r_ans = Rf_ScalarInteger(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetNumPermutations ( SEXP self, SEXP val)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetNumPermutations" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< int >(INTEGER(val)[0]);
+  (arg1)->SetNumPermutations(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetLastUsedSeed ( SEXP self, SEXP s_swig_copy)
+{
+  uint64_t result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetLastUsedSeed" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (arg1)->GetLastUsedSeed();
+  r_ans = SWIG_R_NewPointerObj((new uint64_t(static_cast< const uint64_t& >(result))), SWIGTYPE_p_uint64_t, SWIG_POINTER_OWN |  0 );
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetLastUsedSeed ( SEXP self, SEXP seed)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  uint64_t arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetLastUsedSeed" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  {
+    res2 = SWIG_R_ConvertPtr(seed, &argp2, SWIGTYPE_p_uint64_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AbstractLocalSA_SetLastUsedSeed" "', argument " "2"" of type '" "uint64_t""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "AbstractLocalSA_SetLastUsedSeed" "', argument " "2"" of type '" "uint64_t""'");
+    } else {
+      arg2 = *(reinterpret_cast< uint64_t * >(argp2));
+    }
+  }
+  (arg1)->SetLastUsedSeed(arg2);
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_IsReuseLastSeed ( SEXP self, SEXP s_swig_copy)
+{
+  bool result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_IsReuseLastSeed" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (bool)(arg1)->IsReuseLastSeed();
+  r_ans = Rf_ScalarLogical(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetReuseLastSeed ( SEXP self, SEXP reuse)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  bool arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetReuseLastSeed" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = LOGICAL(reuse)[0] ? true : false;
+  (arg1)->SetReuseLastSeed(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetHasIsolates ( SEXP self, SEXP s_swig_copy)
+{
+  bool result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetHasIsolates" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (bool)(arg1)->GetHasIsolates();
+  r_ans = Rf_ScalarLogical(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetHasUndefined ( SEXP self, SEXP s_swig_copy)
+{
+  bool result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetHasUndefined" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (bool)(arg1)->GetHasUndefined();
+  r_ans = Rf_ScalarLogical(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetDefaultCategories ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< std::string,std::allocator< std::string > > result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetDefaultCategories" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (arg1)->GetDefaultCategories();
+  r_ans = swig::from(static_cast< std::vector< std::string,std::allocator< std::string > > >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetDefaultCutoffs ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< double,std::allocator< double > > result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetDefaultCutoffs" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (arg1)->GetDefaultCutoffs();
+  r_ans = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetLocalSignificanceValues ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< double,std::allocator< double > > result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetLocalSignificanceValues" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (arg1)->GetLocalSignificanceValues();
+  r_ans = swig::from(static_cast< std::vector< double,std::allocator< double > > >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetClusterIndicators ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetClusterIndicators" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (arg1)->GetClusterIndicators();
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetSigCatIndicators ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetSigCatIndicators" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (arg1)->GetSigCatIndicators();
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_IsRowStandardize ( SEXP self, SEXP s_swig_copy)
+{
+  bool result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_IsRowStandardize" "', argument " "1"" of type '" "AbstractLocalSA const *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (bool)((AbstractLocalSA const *)arg1)->IsRowStandardize();
+  r_ans = Rf_ScalarLogical(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetRowStandardize ( SEXP self, SEXP rowStandardize)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  bool arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetRowStandardize" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = LOGICAL(rowStandardize)[0] ? true : false;
+  (arg1)->SetRowStandardize(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_GetNumThreads ( SEXP self, SEXP s_swig_copy)
+{
+  int result;
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_GetNumThreads" "', argument " "1"" of type '" "AbstractLocalSA const *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  result = (int)((AbstractLocalSA const *)arg1)->GetNumThreads();
+  r_ans = Rf_ScalarInteger(result);
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_AbstractLocalSA_SetNumThreads ( SEXP self, SEXP n_threads)
+{
+  AbstractLocalSA *arg1 = (AbstractLocalSA *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_AbstractLocalSA, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "AbstractLocalSA_SetNumThreads" "', argument " "1"" of type '" "AbstractLocalSA *""'"); 
+  }
+  arg1 = reinterpret_cast< AbstractLocalSA * >(argp1);
+  arg2 = static_cast< int >(INTEGER(n_threads)[0]);
+  (arg1)->SetNumThreads(arg2);
+  r_ans = R_NilValue;
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_new_UniLisa ( SEXP num_obs, SEXP data, SEXP undefs, SEXP w)
+{
+  UniLisa *result = 0 ;
+  int arg1 ;
+  std::vector< double,std::allocator< double > > *arg2 = 0 ;
+  std::vector< bool,std::allocator< bool > > *arg3 = 0 ;
+  GeoDaWeight *arg4 = (GeoDaWeight *) 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  int res3 = SWIG_OLDOBJ ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  arg1 = static_cast< int >(INTEGER(num_obs)[0]);
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res2 = swig::asptr(data, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_UniLisa" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UniLisa" "', argument " "2"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    std::vector<bool> *ptr = (std::vector<bool> *)0;
+    res3 = swig::asptr(undefs, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "new_UniLisa" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UniLisa" "', argument " "3"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  res4 = SWIG_R_ConvertPtr(w, &argp4, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "new_UniLisa" "', argument " "4"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg4 = reinterpret_cast< GeoDaWeight * >(argp4);
+  result = (UniLisa *)new UniLisa(arg1,(std::vector< double,std::allocator< double > > const &)*arg2,(std::vector< bool,std::allocator< bool > > const &)*arg3,arg4);
+  r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UniLisa, SWIG_POINTER_OWN |  0 );
+  
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_delete_UniLisa ( SEXP self)
+{
+  UniLisa *arg1 = (UniLisa *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_UniLisa, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UniLisa" "', argument " "1"" of type '" "UniLisa *""'"); 
+  }
+  arg1 = reinterpret_cast< UniLisa * >(argp1);
+  delete arg1;
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  R_ClearExternalPtr(self);
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_UniLisa_ComputeLoalSA ( SEXP self)
+{
+  UniLisa *arg1 = (UniLisa *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_UniLisa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniLisa_ComputeLoalSA" "', argument " "1"" of type '" "UniLisa *""'"); 
+  }
+  arg1 = reinterpret_cast< UniLisa * >(argp1);
+  (arg1)->ComputeLoalSA();
+  r_ans = R_NilValue;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_UniLisa_LargerPermLocalSA ( SEXP self, SEXP cnt, SEXP permNeighbors, SEXP s_swig_copy)
+{
+  bool result;
+  UniLisa *arg1 = (UniLisa *) 0 ;
+  int arg2 ;
+  std::vector< int,std::allocator< int > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_UniLisa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniLisa_LargerPermLocalSA" "', argument " "1"" of type '" "UniLisa *""'"); 
+  }
+  arg1 = reinterpret_cast< UniLisa * >(argp1);
+  arg2 = static_cast< int >(INTEGER(cnt)[0]);
+  res3 = SWIG_R_ConvertPtr(permNeighbors, &argp3, SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "UniLisa_LargerPermLocalSA" "', argument " "3"" of type '" "std::vector< int,std::allocator< int > > &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UniLisa_LargerPermLocalSA" "', argument " "3"" of type '" "std::vector< int,std::allocator< int > > &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< int,std::allocator< int > > * >(argp3);
+  result = (bool)(arg1)->LargerPermLocalSA(arg2,*arg3);
+  r_ans = Rf_ScalarLogical(result);
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_UniLisa_GetClusterIndicators ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  UniLisa *arg1 = (UniLisa *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_UniLisa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniLisa_GetClusterIndicators" "', argument " "1"" of type '" "UniLisa *""'"); 
+  }
+  arg1 = reinterpret_cast< UniLisa * >(argp1);
+  result = (arg1)->GetClusterIndicators();
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_UniLisa_GetLagValues ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< double,std::allocator< double > > *result = 0 ;
+  UniLisa *arg1 = (UniLisa *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_UniLisa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniLisa_GetLagValues" "', argument " "1"" of type '" "UniLisa const *""'"); 
+  }
+  arg1 = reinterpret_cast< UniLisa * >(argp1);
+  result = (std::vector< double,std::allocator< double > > *) &((UniLisa const *)arg1)->GetLagValues();
+  r_ans = swig::from(static_cast< std::vector< double,std::allocator< double > > >(*result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_UniLisa_GetLocalMoranValues ( SEXP self, SEXP s_swig_copy)
+{
+  std::vector< double,std::allocator< double > > *result = 0 ;
+  UniLisa *arg1 = (UniLisa *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_UniLisa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UniLisa_GetLocalMoranValues" "', argument " "1"" of type '" "UniLisa const *""'"); 
+  }
+  arg1 = reinterpret_cast< UniLisa * >(argp1);
+  result = (std::vector< double,std::allocator< double > > *) &((UniLisa const *)arg1)->GetLocalMoranValues();
+  r_ans = swig::from(static_cast< std::vector< double,std::allocator< double > > >(*result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
 R_swig_new_GeoDa__SWIG_0 ( )
 {
   GeoDa *result = 0 ;
@@ -12698,7 +14104,7 @@ R_swig_delete_GeoDa ( SEXP self)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_getNumObs ( SEXP self, SEXP s_swig_copy)
+R_swig_GeoDa_GetNumObs ( SEXP self, SEXP s_swig_copy)
 {
   int result;
   GeoDa *arg1 = (GeoDa *) 0 ;
@@ -12710,10 +14116,10 @@ R_swig_GeoDa_getNumObs ( SEXP self, SEXP s_swig_copy)
   
   res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_getNumObs" "', argument " "1"" of type '" "GeoDa const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetNumObs" "', argument " "1"" of type '" "GeoDa const *""'"); 
   }
   arg1 = reinterpret_cast< GeoDa * >(argp1);
-  result = (int)((GeoDa const *)arg1)->getNumObs();
+  result = (int)((GeoDa const *)arg1)->GetNumObs();
   r_ans = Rf_ScalarInteger(result);
   
   vmaxset(r_vmax);
@@ -12724,7 +14130,7 @@ R_swig_GeoDa_getNumObs ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_getNumCols ( SEXP self, SEXP s_swig_copy)
+R_swig_GeoDa_GetNumCols ( SEXP self, SEXP s_swig_copy)
 {
   int result;
   GeoDa *arg1 = (GeoDa *) 0 ;
@@ -12736,10 +14142,10 @@ R_swig_GeoDa_getNumCols ( SEXP self, SEXP s_swig_copy)
   
   res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_getNumCols" "', argument " "1"" of type '" "GeoDa const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetNumCols" "', argument " "1"" of type '" "GeoDa const *""'"); 
   }
   arg1 = reinterpret_cast< GeoDa * >(argp1);
-  result = (int)((GeoDa const *)arg1)->getNumCols();
+  result = (int)((GeoDa const *)arg1)->GetNumCols();
   r_ans = Rf_ScalarInteger(result);
   
   vmaxset(r_vmax);
@@ -12750,9 +14156,9 @@ R_swig_GeoDa_getNumCols ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_getFieldTypes ( SEXP self, SEXP s_swig_copy)
+R_swig_GeoDa_GetFieldTypes ( SEXP self, SEXP s_swig_copy)
 {
-  std::vector< std::string,std::allocator< std::string > > *result = 0 ;
+  std::vector< std::string,std::allocator< std::string > > result;
   GeoDa *arg1 = (GeoDa *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -12762,11 +14168,11 @@ R_swig_GeoDa_getFieldTypes ( SEXP self, SEXP s_swig_copy)
   
   res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_getFieldTypes" "', argument " "1"" of type '" "GeoDa const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetFieldTypes" "', argument " "1"" of type '" "GeoDa *""'"); 
   }
   arg1 = reinterpret_cast< GeoDa * >(argp1);
-  result = (std::vector< std::string,std::allocator< std::string > > *) &((GeoDa const *)arg1)->getFieldTypes();
-  r_ans = swig::from(static_cast< std::vector< std::string,std::allocator< std::string > > >(*result));
+  result = (arg1)->GetFieldTypes();
+  r_ans = swig::from(static_cast< std::vector< std::string,std::allocator< std::string > > >(result));
   
   vmaxset(r_vmax);
   if(r_nprotect)  Rf_unprotect(r_nprotect);
@@ -12776,9 +14182,9 @@ R_swig_GeoDa_getFieldTypes ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_getFieldNames ( SEXP self, SEXP s_swig_copy)
+R_swig_GeoDa_GetFieldNames ( SEXP self, SEXP s_swig_copy)
 {
-  std::vector< std::string,std::allocator< std::string > > *result = 0 ;
+  std::vector< std::string,std::allocator< std::string > > result;
   GeoDa *arg1 = (GeoDa *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -12788,11 +14194,11 @@ R_swig_GeoDa_getFieldNames ( SEXP self, SEXP s_swig_copy)
   
   res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_getFieldNames" "', argument " "1"" of type '" "GeoDa const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetFieldNames" "', argument " "1"" of type '" "GeoDa *""'"); 
   }
   arg1 = reinterpret_cast< GeoDa * >(argp1);
-  result = (std::vector< std::string,std::allocator< std::string > > *) &((GeoDa const *)arg1)->getFieldNames();
-  r_ans = swig::from(static_cast< std::vector< std::string,std::allocator< std::string > > >(*result));
+  result = (arg1)->GetFieldNames();
+  r_ans = swig::from(static_cast< std::vector< std::string,std::allocator< std::string > > >(result));
   
   vmaxset(r_vmax);
   if(r_nprotect)  Rf_unprotect(r_nprotect);
@@ -12841,7 +14247,7 @@ R_swig_GeoDa_GetNumericCol ( SEXP self, SEXP col_name, SEXP s_swig_copy)
 SWIGEXPORT SEXP
 R_swig_GeoDa_GeIntegerCol ( SEXP self, SEXP col_name, SEXP s_swig_copy)
 {
-  SwigValueWrapper< std::vector< int64_t,std::allocator< int64_t > > > result;
+  SwigValueWrapper< std::vector< long long,std::allocator< long long > > > result;
   GeoDa *arg1 = (GeoDa *) 0 ;
   std::string arg2 ;
   void *argp1 = 0 ;
@@ -12865,7 +14271,7 @@ R_swig_GeoDa_GeIntegerCol ( SEXP self, SEXP col_name, SEXP s_swig_copy)
     if (SWIG_IsNewObj(res)) delete ptr;
   }
   result = (arg1)->GeIntegerCol(arg2);
-  r_ans = SWIG_R_NewPointerObj((new std::vector< int64_t,std::allocator< int64_t > >(static_cast< const std::vector< int64_t,std::allocator< int64_t > >& >(result))), SWIGTYPE_p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t, SWIG_POINTER_OWN |  0 );
+  r_ans = swig::from(static_cast< std::vector<long long int> >(result));
   
   
   vmaxset(r_vmax);
@@ -12913,6 +14319,43 @@ R_swig_GeoDa_GetStringCol ( SEXP self, SEXP col_name, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
+R_swig_GeoDa_GetUndefinesCol ( SEXP self, SEXP col_name, SEXP s_swig_copy)
+{
+  SwigValueWrapper< std::vector< bool,std::allocator< bool > > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  std::string arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetUndefinesCol" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(col_name, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_GetUndefinesCol" "', argument " "2"" of type '" "std::string""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (arg1)->GetUndefinesCol(arg2);
+  r_ans = swig::from(static_cast< std::vector<bool> >(result));
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
 R_swig_GeoDa_GetName ( SEXP self, SEXP s_swig_copy)
 {
   std::string result;
@@ -12939,7 +14382,90 @@ R_swig_GeoDa_GetName ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_CreateQueenWeights__SWIG_0 ( SEXP self, SEXP polyid)
+R_swig_GeoDa_CreateQueenWeights__SWIG_0 ( SEXP self, SEXP polyid, SEXP order, SEXP include_lower_order)
+{
+  GeoDaWeight *result = 0 ;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  std::string arg2 ;
+  int arg3 ;
+  bool arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_CreateQueenWeights" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(polyid, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_CreateQueenWeights" "', argument " "2"" of type '" "std::string""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  arg3 = static_cast< int >(INTEGER(order)[0]);
+  arg4 = LOGICAL(include_lower_order)[0] ? true : false;
+  result = (GeoDaWeight *)(arg1)->CreateQueenWeights(arg2,arg3,arg4);
+  r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_CreateQueenWeights__SWIG_1 ( SEXP self, SEXP polyid, SEXP order)
+{
+  GeoDaWeight *result = 0 ;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  std::string arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_CreateQueenWeights" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(polyid, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_CreateQueenWeights" "', argument " "2"" of type '" "std::string""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  arg3 = static_cast< int >(INTEGER(order)[0]);
+  result = (GeoDaWeight *)(arg1)->CreateQueenWeights(arg2,arg3);
+  r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_CreateQueenWeights__SWIG_2 ( SEXP self, SEXP polyid)
 {
   GeoDaWeight *result = 0 ;
   GeoDa *arg1 = (GeoDa *) 0 ;
@@ -12976,7 +14502,7 @@ R_swig_GeoDa_CreateQueenWeights__SWIG_0 ( SEXP self, SEXP polyid)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_CreateQueenWeights__SWIG_1 ( SEXP self)
+R_swig_GeoDa_CreateQueenWeights__SWIG_3 ( SEXP self)
 {
   GeoDaWeight *result = 0 ;
   GeoDa *arg1 = (GeoDa *) 0 ;
@@ -12993,6 +14519,708 @@ R_swig_GeoDa_CreateQueenWeights__SWIG_1 ( SEXP self)
   arg1 = reinterpret_cast< GeoDa * >(argp1);
   result = (GeoDaWeight *)(arg1)->CreateQueenWeights();
   r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_LISA__SWIG_0 ( SEXP self, SEXP w, SEXP data, SEXP undefs)
+{
+  UniLisa *result = 0 ;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  GeoDaWeight *arg2 = (GeoDaWeight *) 0 ;
+  std::vector< double,std::allocator< double > > *arg3 = 0 ;
+  std::vector< bool,std::allocator< bool > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  int res4 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_LISA" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  res2 = SWIG_R_ConvertPtr(w, &argp2, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GeoDa_LISA" "', argument " "2"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg2 = reinterpret_cast< GeoDaWeight * >(argp2);
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res3 = swig::asptr(data, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_LISA" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_LISA" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  {
+    std::vector<bool> *ptr = (std::vector<bool> *)0;
+    res4 = swig::asptr(undefs, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDa_LISA" "', argument " "4"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_LISA" "', argument " "4"" of type '" "std::vector< bool,std::allocator< bool > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  result = (UniLisa *)(arg1)->LISA(arg2,(std::vector< double,std::allocator< double > > const &)*arg3,(std::vector< bool,std::allocator< bool > > const &)*arg4);
+  r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UniLisa, 0 |  0 );
+  
+  
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_LISA__SWIG_1 ( SEXP self, SEXP w, SEXP data)
+{
+  UniLisa *result = 0 ;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  GeoDaWeight *arg2 = (GeoDaWeight *) 0 ;
+  std::vector< double,std::allocator< double > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_LISA" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  res2 = SWIG_R_ConvertPtr(w, &argp2, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GeoDa_LISA" "', argument " "2"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg2 = reinterpret_cast< GeoDaWeight * >(argp2);
+  {
+    std::vector< double,std::allocator< double > > *ptr = (std::vector< double,std::allocator< double > > *)0;
+    res3 = swig::asptr(data, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_LISA" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_LISA" "', argument " "3"" of type '" "std::vector< double,std::allocator< double > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  result = (UniLisa *)(arg1)->LISA(arg2,(std::vector< double,std::allocator< double > > const &)*arg3);
+  r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UniLisa, 0 |  0 );
+  
+  
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_0 ( SEXP self, SEXP k, SEXP w, SEXP col_names, SEXP distance_method, SEXP control_varible, SEXP control_threshold, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::string,std::allocator< std::string > > arg4 ;
+  std::string *arg5 = 0 ;
+  std::string *arg6 = 0 ;
+  double arg7 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  int res5 = SWIG_OLDOBJ ;
+  int res6 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    int res = swig::asptr(col_names, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::string,std::allocator< std::string > >""'"); 
+    }
+    arg4 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res5 = SWIG_AsPtr_std_string(distance_method, &ptr);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    arg5 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res6 = SWIG_AsPtr_std_string(control_varible, &ptr);
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    arg6 = ptr;
+  }
+  arg7 = static_cast< double >(REAL(control_threshold)[0]);
+  result = (arg1)->SKATER(arg2,arg3,arg4,(std::string const &)*arg5,(std::string const &)*arg6,arg7);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  if (SWIG_IsNewObj(res5)) delete arg5;
+  if (SWIG_IsNewObj(res6)) delete arg6;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_1 ( SEXP self, SEXP k, SEXP w, SEXP col_names, SEXP distance_method, SEXP control_varible, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::string,std::allocator< std::string > > arg4 ;
+  std::string *arg5 = 0 ;
+  std::string *arg6 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  int res5 = SWIG_OLDOBJ ;
+  int res6 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    int res = swig::asptr(col_names, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::string,std::allocator< std::string > >""'"); 
+    }
+    arg4 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res5 = SWIG_AsPtr_std_string(distance_method, &ptr);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    arg5 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res6 = SWIG_AsPtr_std_string(control_varible, &ptr);
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    arg6 = ptr;
+  }
+  result = (arg1)->SKATER(arg2,arg3,arg4,(std::string const &)*arg5,(std::string const &)*arg6);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  if (SWIG_IsNewObj(res5)) delete arg5;
+  if (SWIG_IsNewObj(res6)) delete arg6;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_2 ( SEXP self, SEXP k, SEXP w, SEXP col_names, SEXP distance_method, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::string,std::allocator< std::string > > arg4 ;
+  std::string *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  int res5 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    int res = swig::asptr(col_names, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::string,std::allocator< std::string > >""'"); 
+    }
+    arg4 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res5 = SWIG_AsPtr_std_string(distance_method, &ptr);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    arg5 = ptr;
+  }
+  result = (arg1)->SKATER(arg2,arg3,arg4,(std::string const &)*arg5);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  if (SWIG_IsNewObj(res5)) delete arg5;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_3 ( SEXP self, SEXP k, SEXP w, SEXP col_names, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::string,std::allocator< std::string > > arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  {
+    std::vector< std::string,std::allocator< std::string > > *ptr = (std::vector< std::string,std::allocator< std::string > > *)0;
+    int res = swig::asptr(col_names, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::string,std::allocator< std::string > >""'"); 
+    }
+    arg4 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (arg1)->SKATER(arg2,arg3,arg4);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_4 ( SEXP self, SEXP k, SEXP w, SEXP data, SEXP distance_method, SEXP control_varible, SEXP control_threshold, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > *arg4 = 0 ;
+  std::string *arg5 = 0 ;
+  std::string *arg6 = 0 ;
+  double arg7 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  int res5 = SWIG_OLDOBJ ;
+  int res6 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  res4 = SWIG_R_ConvertPtr(data, &argp4, SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > * >(argp4);
+  {
+    std::string *ptr = (std::string *)0;
+    res5 = SWIG_AsPtr_std_string(distance_method, &ptr);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    arg5 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res6 = SWIG_AsPtr_std_string(control_varible, &ptr);
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    arg6 = ptr;
+  }
+  arg7 = static_cast< double >(REAL(control_threshold)[0]);
+  result = (arg1)->SKATER(arg2,arg3,*arg4,(std::string const &)*arg5,(std::string const &)*arg6,arg7);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  if (SWIG_IsNewObj(res5)) delete arg5;
+  if (SWIG_IsNewObj(res6)) delete arg6;
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_5 ( SEXP self, SEXP k, SEXP w, SEXP data, SEXP distance_method, SEXP control_varible, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > *arg4 = 0 ;
+  std::string *arg5 = 0 ;
+  std::string *arg6 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  int res5 = SWIG_OLDOBJ ;
+  int res6 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  res4 = SWIG_R_ConvertPtr(data, &argp4, SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > * >(argp4);
+  {
+    std::string *ptr = (std::string *)0;
+    res5 = SWIG_AsPtr_std_string(distance_method, &ptr);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    arg5 = ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    res6 = SWIG_AsPtr_std_string(control_varible, &ptr);
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "6"" of type '" "std::string const &""'"); 
+    }
+    arg6 = ptr;
+  }
+  result = (arg1)->SKATER(arg2,arg3,*arg4,(std::string const &)*arg5,(std::string const &)*arg6);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  if (SWIG_IsNewObj(res5)) delete arg5;
+  if (SWIG_IsNewObj(res6)) delete arg6;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_6 ( SEXP self, SEXP k, SEXP w, SEXP data, SEXP distance_method, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > *arg4 = 0 ;
+  std::string *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  int res5 = SWIG_OLDOBJ ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  res4 = SWIG_R_ConvertPtr(data, &argp4, SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > * >(argp4);
+  {
+    std::string *ptr = (std::string *)0;
+    res5 = SWIG_AsPtr_std_string(distance_method, &ptr);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "5"" of type '" "std::string const &""'"); 
+    }
+    arg5 = ptr;
+  }
+  result = (arg1)->SKATER(arg2,arg3,*arg4,(std::string const &)*arg5);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
+  
+  if (SWIG_IsNewObj(res5)) delete arg5;
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
+R_swig_GeoDa_SKATER__SWIG_7 ( SEXP self, SEXP k, SEXP w, SEXP data, SEXP s_swig_copy)
+{
+  std::vector< int,std::allocator< int > > result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  unsigned int arg2 ;
+  GeoDaWeight *arg3 = (GeoDaWeight *) 0 ;
+  std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_SKATER" "', argument " "1"" of type '" "GeoDa *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  ecode2 = SWIG_AsVal_int(k, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GeoDa_SKATER" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  res3 = SWIG_R_ConvertPtr(w, &argp3, SWIGTYPE_p_GeoDaWeight, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "GeoDa_SKATER" "', argument " "3"" of type '" "GeoDaWeight *""'"); 
+  }
+  arg3 = reinterpret_cast< GeoDaWeight * >(argp3);
+  res4 = SWIG_R_ConvertPtr(data, &argp4, SWIGTYPE_p_std__vectorT_std__vectorT_double_std__allocatorT_double_t_t_std__allocatorT_std__vectorT_double_std__allocatorT_double_t_t_t_t,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDa_SKATER" "', argument " "4"" of type '" "std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > * >(argp4);
+  result = (arg1)->SKATER(arg2,arg3,*arg4);
+  r_ans = swig::from(static_cast< std::vector< int,std::allocator< int > > >(result));
+  
+  
+  
   
   vmaxset(r_vmax);
   if(r_nprotect)  Rf_unprotect(r_nprotect);
@@ -13024,8 +15252,13 @@ R_swig_test ( SEXP s_swig_copy)
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static void *_p_UniLisaTo_p_AbstractLocalSA(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((AbstractLocalSA *)  ((UniLisa *) x));
+}
+static swig_type_info _swigt__p_AbstractLocalSA = {"_p_AbstractLocalSA", "AbstractLocalSA *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GeoDa = {"_p_GeoDa", "GeoDa *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GeoDaWeight = {"_p_GeoDaWeight", "GeoDaWeight *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_UniLisa = {"_p_UniLisa", "UniLisa *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
@@ -13040,7 +15273,6 @@ static swig_type_info _swigt__p_std__allocatorT_std__vectorT_unsigned_char_std__
 static swig_type_info _swigt__p_std__allocatorT_unsigned_char_t = {"_p_std__allocatorT_unsigned_char_t", "std::vector< unsigned char >::allocator_type *|std::allocator< unsigned char > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_double_std__allocatorT_double_t_t = {"_p_std__vectorT_double_std__allocatorT_double_t_t", "std::vector< double,std::allocator< double > > *|std::vector< double > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_float_std__allocatorT_float_t_t = {"_p_std__vectorT_float_std__allocatorT_float_t_t", "std::vector< float > *|std::vector< float,std::allocator< float > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t = {"_p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t", "std::vector< int64_t,std::allocator< int64_t > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_int_std__allocatorT_int_t_t = {"_p_std__vectorT_int_std__allocatorT_int_t_t", "std::vector< int,std::allocator< int > > *|std::vector< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_long_std__allocatorT_long_t_t = {"_p_std__vectorT_long_std__allocatorT_long_t_t", "std::vector< long,std::allocator< long > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_std__vectorT_std__string_std__allocatorT_std__string_t_t", "std::vector< std::string,std::allocator< std::string > > *|std::vector< std::string > *", 0, 0, (void*)0, 0};
@@ -13050,12 +15282,15 @@ static swig_type_info _swigt__p_std__vectorT_std__vectorT_unsigned_char_std__all
 static swig_type_info _swigt__p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t = {"_p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t", "std::vector< unsigned char > *|std::vector< unsigned char,std::allocator< unsigned char > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t = {"_p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t", "std::vector< wxInt64,std::allocator< wxInt64 > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_wxString_std__allocatorT_wxString_t_t = {"_p_std__vectorT_wxString_std__allocatorT_wxString_t_t", "std::vector< wxString,std::allocator< wxString > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_uint64_t = {"_p_uint64_t", "uint64_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wxString = {"_p_wxString", "wxString *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
+  &_swigt__p_AbstractLocalSA,
   &_swigt__p_GeoDa,
   &_swigt__p_GeoDaWeight,
+  &_swigt__p_UniLisa,
   &_swigt__p_allocator_type,
   &_swigt__p_char,
   &_swigt__p_difference_type,
@@ -13070,7 +15305,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__allocatorT_unsigned_char_t,
   &_swigt__p_std__vectorT_double_std__allocatorT_double_t_t,
   &_swigt__p_std__vectorT_float_std__allocatorT_float_t_t,
-  &_swigt__p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t,
   &_swigt__p_std__vectorT_int_std__allocatorT_int_t_t,
   &_swigt__p_std__vectorT_long_std__allocatorT_long_t_t,
   &_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
@@ -13080,12 +15314,15 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t,
   &_swigt__p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t,
   &_swigt__p_std__vectorT_wxString_std__allocatorT_wxString_t_t,
+  &_swigt__p_uint64_t,
   &_swigt__p_value_type,
   &_swigt__p_wxString,
 };
 
+static swig_cast_info _swigc__p_AbstractLocalSA[] = {  {&_swigt__p_AbstractLocalSA, 0, 0, 0},  {&_swigt__p_UniLisa, _p_UniLisaTo_p_AbstractLocalSA, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GeoDa[] = {  {&_swigt__p_GeoDa, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GeoDaWeight[] = {  {&_swigt__p_GeoDaWeight, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_UniLisa[] = {  {&_swigt__p_UniLisa, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -13100,7 +15337,6 @@ static swig_cast_info _swigc__p_std__allocatorT_std__vectorT_unsigned_char_std__
 static swig_cast_info _swigc__p_std__allocatorT_unsigned_char_t[] = {  {&_swigt__p_std__allocatorT_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_double_std__allocatorT_double_t_t[] = {  {&_swigt__p_std__vectorT_double_std__allocatorT_double_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_float_std__allocatorT_float_t_t[] = {  {&_swigt__p_std__vectorT_float_std__allocatorT_float_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t[] = {  {&_swigt__p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_int_std__allocatorT_int_t_t[] = {  {&_swigt__p_std__vectorT_int_std__allocatorT_int_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_long_std__allocatorT_long_t_t[] = {  {&_swigt__p_std__vectorT_long_std__allocatorT_long_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t[] = {  {&_swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -13110,12 +15346,15 @@ static swig_cast_info _swigc__p_std__vectorT_std__vectorT_unsigned_char_std__all
 static swig_cast_info _swigc__p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t[] = {  {&_swigt__p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t[] = {  {&_swigt__p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_wxString_std__allocatorT_wxString_t_t[] = {  {&_swigt__p_std__vectorT_wxString_std__allocatorT_wxString_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_uint64_t[] = {  {&_swigt__p_uint64_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wxString[] = {  {&_swigt__p_wxString, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
+  _swigc__p_AbstractLocalSA,
   _swigc__p_GeoDa,
   _swigc__p_GeoDaWeight,
+  _swigc__p_UniLisa,
   _swigc__p_allocator_type,
   _swigc__p_char,
   _swigc__p_difference_type,
@@ -13130,7 +15369,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__allocatorT_unsigned_char_t,
   _swigc__p_std__vectorT_double_std__allocatorT_double_t_t,
   _swigc__p_std__vectorT_float_std__allocatorT_float_t_t,
-  _swigc__p_std__vectorT_int64_t_std__allocatorT_int64_t_t_t,
   _swigc__p_std__vectorT_int_std__allocatorT_int_t_t,
   _swigc__p_std__vectorT_long_std__allocatorT_long_t_t,
   _swigc__p_std__vectorT_std__string_std__allocatorT_std__string_t_t,
@@ -13140,6 +15378,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t,
   _swigc__p_std__vectorT_wxInt64_std__allocatorT_wxInt64_t_t,
   _swigc__p_std__vectorT_wxString_std__allocatorT_wxString_t_t,
+  _swigc__p_uint64_t,
   _swigc__p_value_type,
   _swigc__p_wxString,
 };
@@ -13394,301 +15633,359 @@ extern "C" {
 #endif
 
 SWIGINTERN R_CallMethodDef CallEntries[] = {
-   {"R_swig_VecUINT8_size", (DL_FUNC) &R_swig_VecUINT8_size, 2},
-   {"R_swig_VecVecUINT8_size", (DL_FUNC) &R_swig_VecVecUINT8_size, 2},
-   {"R_swig_GeoDaWeight_id_field_set", (DL_FUNC) &R_swig_GeoDaWeight_id_field_set, 2},
-   {"R_swig_VecString_size", (DL_FUNC) &R_swig_VecString_size, 2},
-   {"R_swig_VecInt_push_back", (DL_FUNC) &R_swig_VecInt_push_back, 2},
-   {"R_swig_VecVecDouble_push_back", (DL_FUNC) &R_swig_VecVecDouble_push_back, 2},
-   {"R_swig_VecDouble_push_back", (DL_FUNC) &R_swig_VecDouble_push_back, 2},
-   {"R_swig_VecFloat_push_back", (DL_FUNC) &R_swig_VecFloat_push_back, 2},
-   {"R_swig_VecString_push_back", (DL_FUNC) &R_swig_VecString_push_back, 2},
-   {"R_swig_VecVecInt_push_back", (DL_FUNC) &R_swig_VecVecInt_push_back, 2},
-   {"R_swig_VecUINT8_push_back", (DL_FUNC) &R_swig_VecUINT8_push_back, 2},
-   {"R_swig_VecVecUINT8_push_back", (DL_FUNC) &R_swig_VecVecUINT8_push_back, 2},
-   {"R_swig_VecVecInt___nonzero__", (DL_FUNC) &R_swig_VecVecInt___nonzero__, 2},
-   {"R_swig_VecInt___nonzero__", (DL_FUNC) &R_swig_VecInt___nonzero__, 2},
-   {"R_swig_VecVecDouble___nonzero__", (DL_FUNC) &R_swig_VecVecDouble___nonzero__, 2},
-   {"R_swig_VecString___nonzero__", (DL_FUNC) &R_swig_VecString___nonzero__, 2},
-   {"R_swig_VecFloat___nonzero__", (DL_FUNC) &R_swig_VecFloat___nonzero__, 2},
-   {"R_swig_VecDouble___nonzero__", (DL_FUNC) &R_swig_VecDouble___nonzero__, 2},
-   {"R_swig_VecUINT8___nonzero__", (DL_FUNC) &R_swig_VecUINT8___nonzero__, 2},
-   {"R_swig_VecVecUINT8___nonzero__", (DL_FUNC) &R_swig_VecVecUINT8___nonzero__, 2},
-   {"R_swig_GeoDa_getNumCols", (DL_FUNC) &R_swig_GeoDa_getNumCols, 2},
-   {"R_swig_VecInt_back", (DL_FUNC) &R_swig_VecInt_back, 2},
-   {"R_swig_VecVecInt_back", (DL_FUNC) &R_swig_VecVecInt_back, 2},
-   {"R_swig_GeoDa_getFieldTypes", (DL_FUNC) &R_swig_GeoDa_getFieldTypes, 2},
-   {"R_swig_VecUINT8_swap", (DL_FUNC) &R_swig_VecUINT8_swap, 2},
-   {"R_swig_VecVecUINT8_swap", (DL_FUNC) &R_swig_VecVecUINT8_swap, 2},
-   {"R_swig_GeoDaWeight_SaveDIDWeights", (DL_FUNC) &R_swig_GeoDaWeight_SaveDIDWeights, 6},
-   {"R_swig_GeoDaWeight_SaveSpaceTimeWeights", (DL_FUNC) &R_swig_GeoDaWeight_SaveSpaceTimeWeights, 5},
-   {"R_swig_VecString_swap", (DL_FUNC) &R_swig_VecString_swap, 2},
-   {"R_swig_GeoDaWeight_symmetry_checked_set", (DL_FUNC) &R_swig_GeoDaWeight_symmetry_checked_set, 2},
-   {"R_swig_GeoDaWeight_title_set", (DL_FUNC) &R_swig_GeoDaWeight_title_set, 2},
-   {"R_swig_GeoDaWeight_CheckNeighbor", (DL_FUNC) &R_swig_GeoDaWeight_CheckNeighbor, 4},
-   {"R_swig_GeoDaWeight_GetSparsity", (DL_FUNC) &R_swig_GeoDaWeight_GetSparsity, 2},
-   {"R_swig_VecInt_reserve", (DL_FUNC) &R_swig_VecInt_reserve, 2},
-   {"R_swig_VecVecDouble_reserve", (DL_FUNC) &R_swig_VecVecDouble_reserve, 2},
-   {"R_swig_VecDouble_reserve", (DL_FUNC) &R_swig_VecDouble_reserve, 2},
-   {"R_swig_VecFloat_reserve", (DL_FUNC) &R_swig_VecFloat_reserve, 2},
-   {"R_swig_VecString_reserve", (DL_FUNC) &R_swig_VecString_reserve, 2},
-   {"R_swig_VecVecInt_reserve", (DL_FUNC) &R_swig_VecVecInt_reserve, 2},
-   {"R_swig_VecUINT8_reserve", (DL_FUNC) &R_swig_VecUINT8_reserve, 2},
-   {"R_swig_VecVecUINT8_reserve", (DL_FUNC) &R_swig_VecVecUINT8_reserve, 2},
-   {"R_swig_delete_GeoDaWeight", (DL_FUNC) &R_swig_delete_GeoDaWeight, 1},
-   {"R_swig_delete_VecString", (DL_FUNC) &R_swig_delete_VecString, 1},
-   {"R_swig_GeoDaWeight_GetNumObs", (DL_FUNC) &R_swig_GeoDaWeight_GetNumObs, 2},
-   {"R_swig_GeoDa_getNumObs", (DL_FUNC) &R_swig_GeoDa_getNumObs, 2},
-   {"R_swig_VecVecDouble_size", (DL_FUNC) &R_swig_VecVecDouble_size, 2},
-   {"R_swig_VecDouble_size", (DL_FUNC) &R_swig_VecDouble_size, 2},
-   {"R_swig_VecUINT8_pop", (DL_FUNC) &R_swig_VecUINT8_pop, 2},
-   {"R_swig_VecVecUINT8_pop", (DL_FUNC) &R_swig_VecVecUINT8_pop, 2},
-   {"R_swig_VecVecDouble_empty", (DL_FUNC) &R_swig_VecVecDouble_empty, 2},
-   {"R_swig_VecString_empty", (DL_FUNC) &R_swig_VecString_empty, 2},
-   {"R_swig_VecDouble_empty", (DL_FUNC) &R_swig_VecDouble_empty, 2},
-   {"R_swig_VecFloat_size", (DL_FUNC) &R_swig_VecFloat_size, 2},
-   {"R_swig_VecVecDouble_pop", (DL_FUNC) &R_swig_VecVecDouble_pop, 2},
-   {"R_swig_VecDouble_pop", (DL_FUNC) &R_swig_VecDouble_pop, 2},
-   {"R_swig_GeoDaWeight_num_obs_get", (DL_FUNC) &R_swig_GeoDaWeight_num_obs_get, 2},
-   {"R_swig_GeoDaWeight_GetIDName", (DL_FUNC) &R_swig_GeoDaWeight_GetIDName, 2},
-   {"R_swig_GeoDaWeight_gal_type_get", (DL_FUNC) &R_swig_GeoDaWeight_gal_type_get, 1},
-   {"R_swig_GeoDaWeight_gwt_type_get", (DL_FUNC) &R_swig_GeoDaWeight_gwt_type_get, 1},
-   {"R_swig_GeoDaWeight_weight_type_get", (DL_FUNC) &R_swig_GeoDaWeight_weight_type_get, 2},
-   {"R_swig_VecFloat_pop", (DL_FUNC) &R_swig_VecFloat_pop, 2},
-   {"R_swig_delete_VecInt", (DL_FUNC) &R_swig_delete_VecInt, 1},
-   {"R_swig_delete_VecVecInt", (DL_FUNC) &R_swig_delete_VecVecInt, 1},
-   {"R_swig_VecInt_pop_back", (DL_FUNC) &R_swig_VecInt_pop_back, 1},
-   {"R_swig_VecVecDouble_pop_back", (DL_FUNC) &R_swig_VecVecDouble_pop_back, 1},
-   {"R_swig_VecDouble_pop_back", (DL_FUNC) &R_swig_VecDouble_pop_back, 1},
-   {"R_swig_VecFloat_pop_back", (DL_FUNC) &R_swig_VecFloat_pop_back, 1},
-   {"R_swig_VecString_pop_back", (DL_FUNC) &R_swig_VecString_pop_back, 1},
-   {"R_swig_VecVecDouble_swap", (DL_FUNC) &R_swig_VecVecDouble_swap, 2},
-   {"R_swig_VecDouble_swap", (DL_FUNC) &R_swig_VecDouble_swap, 2},
-   {"R_swig_VecVecInt_pop_back", (DL_FUNC) &R_swig_VecVecInt_pop_back, 1},
-   {"R_swig_VecUINT8_pop_back", (DL_FUNC) &R_swig_VecUINT8_pop_back, 1},
    {"R_swig_VecVecUINT8_pop_back", (DL_FUNC) &R_swig_VecVecUINT8_pop_back, 1},
-   {"R_swig_VecFloat_swap", (DL_FUNC) &R_swig_VecFloat_swap, 2},
-   {"R_swig_VecVecDouble_clear", (DL_FUNC) &R_swig_VecVecDouble_clear, 1},
-   {"R_swig_VecString_clear", (DL_FUNC) &R_swig_VecString_clear, 1},
-   {"R_swig_VecDouble_clear", (DL_FUNC) &R_swig_VecDouble_clear, 1},
-   {"R_swig_delete_VecFloat", (DL_FUNC) &R_swig_delete_VecFloat, 1},
-   {"R_swig_GeoDaWeight_min_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_min_nbrs_set, 2},
-   {"R_swig_GeoDaWeight_max_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_max_nbrs_set, 2},
-   {"R_swig_GeoDaWeight_mean_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_mean_nbrs_set, 2},
-   {"R_swig_GeoDaWeight_median_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_median_nbrs_set, 2},
-   {"R_swig_VecVecInt_empty", (DL_FUNC) &R_swig_VecVecInt_empty, 2},
-   {"R_swig_VecInt_empty", (DL_FUNC) &R_swig_VecInt_empty, 2},
-   {"R_swig_VecFloat_empty", (DL_FUNC) &R_swig_VecFloat_empty, 2},
-   {"R_swig_VecInt_assign", (DL_FUNC) &R_swig_VecInt_assign, 3},
-   {"R_swig_VecVecDouble_assign", (DL_FUNC) &R_swig_VecVecDouble_assign, 3},
-   {"R_swig_VecDouble_assign", (DL_FUNC) &R_swig_VecDouble_assign, 3},
-   {"R_swig_VecFloat_assign", (DL_FUNC) &R_swig_VecFloat_assign, 3},
-   {"R_swig_VecString_assign", (DL_FUNC) &R_swig_VecString_assign, 3},
-   {"R_swig_VecVecInt_assign", (DL_FUNC) &R_swig_VecVecInt_assign, 3},
-   {"R_swig_VecUINT8_empty", (DL_FUNC) &R_swig_VecUINT8_empty, 2},
-   {"R_swig_VecUINT8_assign", (DL_FUNC) &R_swig_VecUINT8_assign, 3},
-   {"R_swig_VecVecUINT8_empty", (DL_FUNC) &R_swig_VecVecUINT8_empty, 2},
-   {"R_swig_VecVecUINT8_assign", (DL_FUNC) &R_swig_VecVecUINT8_assign, 3},
-   {"R_swig_GeoDa_GetStringCol", (DL_FUNC) &R_swig_GeoDa_GetStringCol, 3},
-   {"R_swig_VecInt_size", (DL_FUNC) &R_swig_VecInt_size, 2},
-   {"R_swig_VecVecInt_size", (DL_FUNC) &R_swig_VecVecInt_size, 2},
-   {"R_swig_GeoDaWeight_GetNeighbors", (DL_FUNC) &R_swig_GeoDaWeight_GetNeighbors, 3},
-   {"R_swig_GeoDaWeight_HasIsolates", (DL_FUNC) &R_swig_GeoDaWeight_HasIsolates, 2},
-   {"R_swig_GeoDaWeight_wflnm_get", (DL_FUNC) &R_swig_GeoDaWeight_wflnm_get, 2},
-   {"R_swig_GeoDaWeight_GetNbrStats", (DL_FUNC) &R_swig_GeoDaWeight_GetNbrStats, 1},
-   {"R_swig_GeoDaWeight_GetTitle", (DL_FUNC) &R_swig_GeoDaWeight_GetTitle, 2},
-   {"R_swig_VecInt_swap", (DL_FUNC) &R_swig_VecInt_swap, 2},
-   {"R_swig_VecVecInt_swap", (DL_FUNC) &R_swig_VecVecInt_swap, 2},
-   {"R_swig_GeoDaWeight_is_internal_use_get", (DL_FUNC) &R_swig_GeoDaWeight_is_internal_use_get, 2},
-   {"R_swig_VecInt_clear", (DL_FUNC) &R_swig_VecInt_clear, 1},
-   {"R_swig_VecFloat_clear", (DL_FUNC) &R_swig_VecFloat_clear, 1},
-   {"R_swig_VecVecInt_clear", (DL_FUNC) &R_swig_VecVecInt_clear, 1},
-   {"R_swig_VecUINT8_clear", (DL_FUNC) &R_swig_VecUINT8_clear, 1},
-   {"R_swig_VecVecUINT8_clear", (DL_FUNC) &R_swig_VecVecUINT8_clear, 1},
-   {"R_swig_test", (DL_FUNC) &R_swig_test, 1},
-   {"R_swig_VecVecInt_append", (DL_FUNC) &R_swig_VecVecInt_append, 2},
-   {"R_swig_VecInt_append", (DL_FUNC) &R_swig_VecInt_append, 2},
-   {"R_swig_VecVecDouble_append", (DL_FUNC) &R_swig_VecVecDouble_append, 2},
-   {"R_swig_VecFloat_append", (DL_FUNC) &R_swig_VecFloat_append, 2},
-   {"R_swig_VecString_append", (DL_FUNC) &R_swig_VecString_append, 2},
-   {"R_swig_VecDouble_append", (DL_FUNC) &R_swig_VecDouble_append, 2},
-   {"R_swig_VecUINT8_append", (DL_FUNC) &R_swig_VecUINT8_append, 2},
-   {"R_swig_VecVecUINT8_append", (DL_FUNC) &R_swig_VecVecUINT8_append, 2},
-   {"R_swig_GeoDaWeight_sparsity_get", (DL_FUNC) &R_swig_GeoDaWeight_sparsity_get, 2},
-   {"R_swig_GeoDaWeight_density_get", (DL_FUNC) &R_swig_GeoDaWeight_density_get, 2},
-   {"R_swig_GeoDaWeight_is_symmetric_get", (DL_FUNC) &R_swig_GeoDaWeight_is_symmetric_get, 2},
-   {"R_swig_GeoDaWeight_Update", (DL_FUNC) &R_swig_GeoDaWeight_Update, 2},
-   {"R_swig_new_VecVecInt__SWIG_0", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_0, 0},
-   {"R_swig_VecInt_resize__SWIG_0", (DL_FUNC) &R_swig_VecInt_resize__SWIG_0, 2},
-   {"R_swig_new_VecInt__SWIG_0", (DL_FUNC) &R_swig_new_VecInt__SWIG_0, 0},
-   {"R_swig_VecVecDouble_resize__SWIG_0", (DL_FUNC) &R_swig_VecVecDouble_resize__SWIG_0, 2},
-   {"R_swig_new_VecVecDouble__SWIG_0", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_0, 0},
-   {"R_swig_VecDouble_resize__SWIG_0", (DL_FUNC) &R_swig_VecDouble_resize__SWIG_0, 2},
-   {"R_swig_VecFloat_resize__SWIG_0", (DL_FUNC) &R_swig_VecFloat_resize__SWIG_0, 2},
-   {"R_swig_new_VecFloat__SWIG_0", (DL_FUNC) &R_swig_new_VecFloat__SWIG_0, 0},
-   {"R_swig_new_VecString__SWIG_0", (DL_FUNC) &R_swig_new_VecString__SWIG_0, 0},
-   {"R_swig_VecString_resize__SWIG_0", (DL_FUNC) &R_swig_VecString_resize__SWIG_0, 2},
-   {"R_swig_new_VecDouble__SWIG_0", (DL_FUNC) &R_swig_new_VecDouble__SWIG_0, 0},
-   {"R_swig_VecVecInt_resize__SWIG_0", (DL_FUNC) &R_swig_VecVecInt_resize__SWIG_0, 2},
-   {"R_swig_new_VecUINT8__SWIG_0", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_0, 0},
-   {"R_swig_VecUINT8_resize__SWIG_0", (DL_FUNC) &R_swig_VecUINT8_resize__SWIG_0, 2},
-   {"R_swig_new_VecVecUINT8__SWIG_0", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_0, 0},
-   {"R_swig_VecVecUINT8_resize__SWIG_0", (DL_FUNC) &R_swig_VecVecUINT8_resize__SWIG_0, 2},
-   {"R_swig_new_GeoDa__SWIG_0", (DL_FUNC) &R_swig_new_GeoDa__SWIG_0, 0},
-   {"R_swig_GeoDa_CreateQueenWeights__SWIG_0", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_0, 2},
-   {"R_swig_new_VecVecInt__SWIG_1", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_1, 1},
-   {"R_swig_VecInt_resize__SWIG_1", (DL_FUNC) &R_swig_VecInt_resize__SWIG_1, 3},
-   {"R_swig_new_VecInt__SWIG_1", (DL_FUNC) &R_swig_new_VecInt__SWIG_1, 1},
-   {"R_swig_VecVecDouble_resize__SWIG_1", (DL_FUNC) &R_swig_VecVecDouble_resize__SWIG_1, 3},
-   {"R_swig_new_VecVecDouble__SWIG_1", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_1, 1},
-   {"R_swig_VecDouble_resize__SWIG_1", (DL_FUNC) &R_swig_VecDouble_resize__SWIG_1, 3},
-   {"R_swig_VecFloat_resize__SWIG_1", (DL_FUNC) &R_swig_VecFloat_resize__SWIG_1, 3},
-   {"R_swig_new_VecFloat__SWIG_1", (DL_FUNC) &R_swig_new_VecFloat__SWIG_1, 1},
-   {"R_swig_new_VecString__SWIG_1", (DL_FUNC) &R_swig_new_VecString__SWIG_1, 1},
-   {"R_swig_VecString_resize__SWIG_1", (DL_FUNC) &R_swig_VecString_resize__SWIG_1, 3},
-   {"R_swig_new_VecDouble__SWIG_1", (DL_FUNC) &R_swig_new_VecDouble__SWIG_1, 1},
-   {"R_swig_VecVecInt_resize__SWIG_1", (DL_FUNC) &R_swig_VecVecInt_resize__SWIG_1, 3},
-   {"R_swig_new_VecUINT8__SWIG_1", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_1, 1},
-   {"R_swig_VecUINT8_resize__SWIG_1", (DL_FUNC) &R_swig_VecUINT8_resize__SWIG_1, 3},
-   {"R_swig_new_VecVecUINT8__SWIG_1", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_1, 1},
-   {"R_swig_VecVecUINT8_resize__SWIG_1", (DL_FUNC) &R_swig_VecVecUINT8_resize__SWIG_1, 3},
-   {"R_swig_new_GeoDa__SWIG_1", (DL_FUNC) &R_swig_new_GeoDa__SWIG_1, 1},
-   {"R_swig_GeoDa_CreateQueenWeights__SWIG_1", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_1, 1},
-   {"R_swig_new_VecInt__SWIG_2", (DL_FUNC) &R_swig_new_VecInt__SWIG_2, 1},
-   {"R_swig_new_VecVecDouble__SWIG_2", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_2, 1},
-   {"R_swig_new_VecDouble__SWIG_2", (DL_FUNC) &R_swig_new_VecDouble__SWIG_2, 1},
-   {"R_swig_new_VecFloat__SWIG_2", (DL_FUNC) &R_swig_new_VecFloat__SWIG_2, 1},
-   {"R_swig_new_VecString__SWIG_2", (DL_FUNC) &R_swig_new_VecString__SWIG_2, 1},
-   {"R_swig_new_VecVecInt__SWIG_2", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_2, 1},
-   {"R_swig_new_VecUINT8__SWIG_2", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_2, 1},
-   {"R_swig_new_VecVecUINT8__SWIG_2", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_2, 1},
-   {"R_swig_new_VecInt__SWIG_3", (DL_FUNC) &R_swig_new_VecInt__SWIG_3, 2},
-   {"R_swig_new_VecVecDouble__SWIG_3", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_3, 2},
-   {"R_swig_new_VecDouble__SWIG_3", (DL_FUNC) &R_swig_new_VecDouble__SWIG_3, 2},
-   {"R_swig_new_VecFloat__SWIG_3", (DL_FUNC) &R_swig_new_VecFloat__SWIG_3, 2},
-   {"R_swig_new_VecString__SWIG_3", (DL_FUNC) &R_swig_new_VecString__SWIG_3, 2},
-   {"R_swig_new_VecVecInt__SWIG_3", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_3, 2},
-   {"R_swig_new_VecUINT8__SWIG_3", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_3, 2},
-   {"R_swig_new_VecVecUINT8__SWIG_3", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_3, 2},
-   {"R_swig_GeoDaWeight_id_field_get", (DL_FUNC) &R_swig_GeoDaWeight_id_field_get, 2},
-   {"R_swig_GeoDaWeight_num_obs_set", (DL_FUNC) &R_swig_GeoDaWeight_num_obs_set, 2},
-   {"R_swig_VecVecInt_pop", (DL_FUNC) &R_swig_VecVecInt_pop, 2},
-   {"R_swig_VecInt_pop", (DL_FUNC) &R_swig_VecInt_pop, 2},
-   {"R_swig_GeoDaWeight_IsInternalUse", (DL_FUNC) &R_swig_GeoDaWeight_IsInternalUse, 2},
-   {"R_swig_GeoDaWeight_weight_type_set", (DL_FUNC) &R_swig_GeoDaWeight_weight_type_set, 2},
-   {"R_swig_GeoDa_getFieldNames", (DL_FUNC) &R_swig_GeoDa_getFieldNames, 2},
-   {"R_swig_delete_GeoDa", (DL_FUNC) &R_swig_delete_GeoDa, 1},
-   {"R_swig_GeoDaWeight_Equal", (DL_FUNC) &R_swig_GeoDaWeight_Equal, 3},
-   {"R_swig_VecInt_get_allocator", (DL_FUNC) &R_swig_VecInt_get_allocator, 2},
-   {"R_swig_VecVecDouble_get_allocator", (DL_FUNC) &R_swig_VecVecDouble_get_allocator, 2},
-   {"R_swig_VecDouble_get_allocator", (DL_FUNC) &R_swig_VecDouble_get_allocator, 2},
-   {"R_swig_VecFloat_get_allocator", (DL_FUNC) &R_swig_VecFloat_get_allocator, 2},
-   {"R_swig_VecString_get_allocator", (DL_FUNC) &R_swig_VecString_get_allocator, 2},
-   {"R_swig_VecVecInt_get_allocator", (DL_FUNC) &R_swig_VecVecInt_get_allocator, 2},
-   {"R_swig_VecUINT8_get_allocator", (DL_FUNC) &R_swig_VecUINT8_get_allocator, 2},
-   {"R_swig_VecVecUINT8_get_allocator", (DL_FUNC) &R_swig_VecVecUINT8_get_allocator, 2},
-   {"R_swig_GeoDa_GetName", (DL_FUNC) &R_swig_GeoDa_GetName, 2},
-   {"R_swig_GeoDaWeight_symmetry_checked_get", (DL_FUNC) &R_swig_GeoDaWeight_symmetry_checked_get, 2},
-   {"R_swig_VecUINT8_back", (DL_FUNC) &R_swig_VecUINT8_back, 2},
-   {"R_swig_VecVecUINT8_back", (DL_FUNC) &R_swig_VecVecUINT8_back, 2},
-   {"R_swig_GeoDaWeight_title_get", (DL_FUNC) &R_swig_GeoDaWeight_title_get, 2},
-   {"R_swig_VecString_back", (DL_FUNC) &R_swig_VecString_back, 2},
-   {"R_swig_delete_VecUINT8", (DL_FUNC) &R_swig_delete_VecUINT8, 1},
-   {"R_swig_delete_VecVecUINT8", (DL_FUNC) &R_swig_delete_VecVecUINT8, 1},
-   {"R_swig_VecVecInt___delslice__", (DL_FUNC) &R_swig_VecVecInt___delslice__, 3},
-   {"R_swig_VecVecInt___setslice__", (DL_FUNC) &R_swig_VecVecInt___setslice__, 4},
-   {"R_swig_VecVecInt___getslice__", (DL_FUNC) &R_swig_VecVecInt___getslice__, 3},
-   {"R_swig_VecInt___delslice__", (DL_FUNC) &R_swig_VecInt___delslice__, 3},
-   {"R_swig_VecInt___setslice__", (DL_FUNC) &R_swig_VecInt___setslice__, 4},
-   {"R_swig_VecInt___getslice__", (DL_FUNC) &R_swig_VecInt___getslice__, 3},
-   {"R_swig_VecVecDouble___delslice__", (DL_FUNC) &R_swig_VecVecDouble___delslice__, 3},
-   {"R_swig_VecVecDouble___setslice__", (DL_FUNC) &R_swig_VecVecDouble___setslice__, 4},
-   {"R_swig_VecVecDouble___getslice__", (DL_FUNC) &R_swig_VecVecDouble___getslice__, 3},
-   {"R_swig_VecString___setslice__", (DL_FUNC) &R_swig_VecString___setslice__, 4},
-   {"R_swig_VecString___getslice__", (DL_FUNC) &R_swig_VecString___getslice__, 3},
-   {"R_swig_VecFloat___getslice__", (DL_FUNC) &R_swig_VecFloat___getslice__, 3},
-   {"R_swig_VecFloat___setslice__", (DL_FUNC) &R_swig_VecFloat___setslice__, 4},
-   {"R_swig_VecFloat___delslice__", (DL_FUNC) &R_swig_VecFloat___delslice__, 3},
-   {"R_swig_VecString___delslice__", (DL_FUNC) &R_swig_VecString___delslice__, 3},
-   {"R_swig_VecDouble___getslice__", (DL_FUNC) &R_swig_VecDouble___getslice__, 3},
-   {"R_swig_VecDouble___setslice__", (DL_FUNC) &R_swig_VecDouble___setslice__, 4},
-   {"R_swig_VecDouble___delslice__", (DL_FUNC) &R_swig_VecDouble___delslice__, 3},
-   {"R_swig_VecUINT8___getslice__", (DL_FUNC) &R_swig_VecUINT8___getslice__, 3},
-   {"R_swig_VecUINT8___setslice__", (DL_FUNC) &R_swig_VecUINT8___setslice__, 4},
-   {"R_swig_VecUINT8___delslice__", (DL_FUNC) &R_swig_VecUINT8___delslice__, 3},
-   {"R_swig_VecVecUINT8___getslice__", (DL_FUNC) &R_swig_VecVecUINT8___getslice__, 3},
-   {"R_swig_VecVecUINT8___setslice__", (DL_FUNC) &R_swig_VecVecUINT8___setslice__, 4},
-   {"R_swig_VecVecUINT8___delslice__", (DL_FUNC) &R_swig_VecVecUINT8___delslice__, 3},
-   {"R_swig_VecVecInt___setitem__", (DL_FUNC) &R_swig_VecVecInt___setitem__, 3},
-   {"R_swig_VecVecInt___getitem__", (DL_FUNC) &R_swig_VecVecInt___getitem__, 3},
-   {"R_swig_VecVecInt___delitem__", (DL_FUNC) &R_swig_VecVecInt___delitem__, 2},
-   {"R_swig_VecInt___setitem__", (DL_FUNC) &R_swig_VecInt___setitem__, 3},
-   {"R_swig_VecInt___getitem__", (DL_FUNC) &R_swig_VecInt___getitem__, 3},
-   {"R_swig_VecInt___delitem__", (DL_FUNC) &R_swig_VecInt___delitem__, 2},
-   {"R_swig_VecVecDouble___setitem__", (DL_FUNC) &R_swig_VecVecDouble___setitem__, 3},
-   {"R_swig_VecVecDouble___getitem__", (DL_FUNC) &R_swig_VecVecDouble___getitem__, 3},
-   {"R_swig_VecVecDouble___delitem__", (DL_FUNC) &R_swig_VecVecDouble___delitem__, 2},
-   {"R_swig_VecFloat___delitem__", (DL_FUNC) &R_swig_VecFloat___delitem__, 2},
-   {"R_swig_VecFloat___getitem__", (DL_FUNC) &R_swig_VecFloat___getitem__, 3},
-   {"R_swig_VecFloat___setitem__", (DL_FUNC) &R_swig_VecFloat___setitem__, 3},
-   {"R_swig_VecString___delitem__", (DL_FUNC) &R_swig_VecString___delitem__, 2},
-   {"R_swig_VecString___getitem__", (DL_FUNC) &R_swig_VecString___getitem__, 3},
-   {"R_swig_VecString___setitem__", (DL_FUNC) &R_swig_VecString___setitem__, 3},
-   {"R_swig_VecDouble___delitem__", (DL_FUNC) &R_swig_VecDouble___delitem__, 2},
-   {"R_swig_VecDouble___getitem__", (DL_FUNC) &R_swig_VecDouble___getitem__, 3},
-   {"R_swig_VecDouble___setitem__", (DL_FUNC) &R_swig_VecDouble___setitem__, 3},
-   {"R_swig_VecUINT8___delitem__", (DL_FUNC) &R_swig_VecUINT8___delitem__, 2},
-   {"R_swig_VecUINT8___getitem__", (DL_FUNC) &R_swig_VecUINT8___getitem__, 3},
-   {"R_swig_VecUINT8___setitem__", (DL_FUNC) &R_swig_VecUINT8___setitem__, 3},
-   {"R_swig_VecVecUINT8___delitem__", (DL_FUNC) &R_swig_VecVecUINT8___delitem__, 2},
-   {"R_swig_VecVecUINT8___getitem__", (DL_FUNC) &R_swig_VecVecUINT8___getitem__, 3},
-   {"R_swig_VecVecUINT8___setitem__", (DL_FUNC) &R_swig_VecVecUINT8___setitem__, 3},
-   {"R_swig_GeoDaWeight_wflnm_set", (DL_FUNC) &R_swig_GeoDaWeight_wflnm_set, 2},
-   {"R_swig_delete_VecVecDouble", (DL_FUNC) &R_swig_delete_VecVecDouble, 1},
-   {"R_swig_delete_VecDouble", (DL_FUNC) &R_swig_delete_VecDouble, 1},
-   {"R_swig_VecVecDouble_front", (DL_FUNC) &R_swig_VecVecDouble_front, 2},
-   {"R_swig_VecDouble_front", (DL_FUNC) &R_swig_VecDouble_front, 2},
-   {"R_swig_VecString_front", (DL_FUNC) &R_swig_VecString_front, 2},
+   {"R_swig_VecUINT8_pop_back", (DL_FUNC) &R_swig_VecUINT8_pop_back, 1},
+   {"R_swig_VecVecInt_pop_back", (DL_FUNC) &R_swig_VecVecInt_pop_back, 1},
+   {"R_swig_VecString_pop_back", (DL_FUNC) &R_swig_VecString_pop_back, 1},
+   {"R_swig_VecFloat_pop_back", (DL_FUNC) &R_swig_VecFloat_pop_back, 1},
+   {"R_swig_VecDouble_pop_back", (DL_FUNC) &R_swig_VecDouble_pop_back, 1},
+   {"R_swig_VecVecDouble_pop_back", (DL_FUNC) &R_swig_VecVecDouble_pop_back, 1},
+   {"R_swig_VecInt_pop_back", (DL_FUNC) &R_swig_VecInt_pop_back, 1},
    {"R_swig_VecString_pop", (DL_FUNC) &R_swig_VecString_pop, 2},
-   {"R_swig_GeoDaWeight_GetDensity", (DL_FUNC) &R_swig_GeoDaWeight_GetDensity, 2},
-   {"R_swig_GeoDaWeight_is_internal_use_set", (DL_FUNC) &R_swig_GeoDaWeight_is_internal_use_set, 2},
-   {"R_swig_GeoDa_GetNumericCol", (DL_FUNC) &R_swig_GeoDa_GetNumericCol, 3},
-   {"R_swig_GeoDa_GeIntegerCol", (DL_FUNC) &R_swig_GeoDa_GeIntegerCol, 3},
-   {"R_swig_GeoDaWeight_sparsity_set", (DL_FUNC) &R_swig_GeoDaWeight_sparsity_set, 2},
+   {"R_swig_GeoDa_GetName", (DL_FUNC) &R_swig_GeoDa_GetName, 2},
    {"R_swig_GeoDaWeight_density_set", (DL_FUNC) &R_swig_GeoDaWeight_density_set, 2},
-   {"R_swig_GeoDaWeight_GetMinNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMinNumNbrs, 2},
-   {"R_swig_GeoDaWeight_GetMaxNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMaxNumNbrs, 2},
-   {"R_swig_GeoDaWeight_GetMeanNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMeanNumNbrs, 2},
-   {"R_swig_GeoDaWeight_GetMedianNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMedianNumNbrs, 2},
-   {"R_swig_VecVecDouble_back", (DL_FUNC) &R_swig_VecVecDouble_back, 2},
+   {"R_swig_GeoDaWeight_sparsity_set", (DL_FUNC) &R_swig_GeoDaWeight_sparsity_set, 2},
+   {"R_swig_AbstractLocalSA_SetNumThreads", (DL_FUNC) &R_swig_AbstractLocalSA_SetNumThreads, 2},
+   {"R_swig_AbstractLocalSA_GetNumThreads", (DL_FUNC) &R_swig_AbstractLocalSA_GetNumThreads, 2},
    {"R_swig_VecDouble_back", (DL_FUNC) &R_swig_VecDouble_back, 2},
-   {"R_swig_GeoDaWeight_is_symmetric_set", (DL_FUNC) &R_swig_GeoDaWeight_is_symmetric_set, 2},
-   {"R_swig_VecFloat_back", (DL_FUNC) &R_swig_VecFloat_back, 2},
-   {"R_swig_GeoDaWeight_min_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_min_nbrs_get, 2},
-   {"R_swig_GeoDaWeight_max_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_max_nbrs_get, 2},
-   {"R_swig_GeoDaWeight_mean_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_mean_nbrs_get, 2},
-   {"R_swig_GeoDaWeight_median_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_median_nbrs_get, 2},
-   {"R_swig_VecInt_capacity", (DL_FUNC) &R_swig_VecInt_capacity, 2},
-   {"R_swig_VecVecDouble_capacity", (DL_FUNC) &R_swig_VecVecDouble_capacity, 2},
-   {"R_swig_VecDouble_capacity", (DL_FUNC) &R_swig_VecDouble_capacity, 2},
-   {"R_swig_VecFloat_capacity", (DL_FUNC) &R_swig_VecFloat_capacity, 2},
-   {"R_swig_VecString_capacity", (DL_FUNC) &R_swig_VecString_capacity, 2},
-   {"R_swig_VecVecInt___len__", (DL_FUNC) &R_swig_VecVecInt___len__, 2},
-   {"R_swig_VecInt___len__", (DL_FUNC) &R_swig_VecInt___len__, 2},
-   {"R_swig_VecVecDouble___len__", (DL_FUNC) &R_swig_VecVecDouble___len__, 2},
-   {"R_swig_VecString___len__", (DL_FUNC) &R_swig_VecString___len__, 2},
-   {"R_swig_VecFloat___len__", (DL_FUNC) &R_swig_VecFloat___len__, 2},
-   {"R_swig_VecDouble___len__", (DL_FUNC) &R_swig_VecDouble___len__, 2},
-   {"R_swig_VecVecInt_capacity", (DL_FUNC) &R_swig_VecVecInt_capacity, 2},
-   {"R_swig_VecUINT8___len__", (DL_FUNC) &R_swig_VecUINT8___len__, 2},
-   {"R_swig_VecUINT8_capacity", (DL_FUNC) &R_swig_VecUINT8_capacity, 2},
+   {"R_swig_VecVecDouble_back", (DL_FUNC) &R_swig_VecVecDouble_back, 2},
+   {"R_swig_GeoDaWeight_is_internal_use_set", (DL_FUNC) &R_swig_GeoDaWeight_is_internal_use_set, 2},
+   {"R_swig_GeoDaWeight_is_symmetric_get", (DL_FUNC) &R_swig_GeoDaWeight_is_symmetric_get, 2},
+   {"R_swig_UniLisa_LargerPermLocalSA", (DL_FUNC) &R_swig_UniLisa_LargerPermLocalSA, 4},
+   {"R_swig_AbstractLocalSA_LargerPermLocalSA", (DL_FUNC) &R_swig_AbstractLocalSA_LargerPermLocalSA, 4},
+   {"R_swig_delete_AbstractLocalSA", (DL_FUNC) &R_swig_delete_AbstractLocalSA, 1},
+   {"R_swig_VecDouble_empty", (DL_FUNC) &R_swig_VecDouble_empty, 2},
+   {"R_swig_VecString_empty", (DL_FUNC) &R_swig_VecString_empty, 2},
+   {"R_swig_VecVecDouble_empty", (DL_FUNC) &R_swig_VecVecDouble_empty, 2},
+   {"R_swig_VecVecUINT8_empty", (DL_FUNC) &R_swig_VecVecUINT8_empty, 2},
+   {"R_swig_VecUINT8_empty", (DL_FUNC) &R_swig_VecUINT8_empty, 2},
+   {"R_swig_VecFloat_empty", (DL_FUNC) &R_swig_VecFloat_empty, 2},
+   {"R_swig_VecInt_empty", (DL_FUNC) &R_swig_VecInt_empty, 2},
+   {"R_swig_VecVecInt_empty", (DL_FUNC) &R_swig_VecVecInt_empty, 2},
+   {"R_swig_VecVecUINT8_swap", (DL_FUNC) &R_swig_VecVecUINT8_swap, 2},
+   {"R_swig_VecUINT8_swap", (DL_FUNC) &R_swig_VecUINT8_swap, 2},
+   {"R_swig_GeoDa_GetFieldNames", (DL_FUNC) &R_swig_GeoDa_GetFieldNames, 2},
    {"R_swig_VecVecUINT8___len__", (DL_FUNC) &R_swig_VecVecUINT8___len__, 2},
+   {"R_swig_VecUINT8___len__", (DL_FUNC) &R_swig_VecUINT8___len__, 2},
+   {"R_swig_VecDouble___len__", (DL_FUNC) &R_swig_VecDouble___len__, 2},
+   {"R_swig_VecFloat___len__", (DL_FUNC) &R_swig_VecFloat___len__, 2},
+   {"R_swig_VecString___len__", (DL_FUNC) &R_swig_VecString___len__, 2},
+   {"R_swig_VecVecDouble___len__", (DL_FUNC) &R_swig_VecVecDouble___len__, 2},
+   {"R_swig_VecInt___len__", (DL_FUNC) &R_swig_VecInt___len__, 2},
+   {"R_swig_VecVecInt___len__", (DL_FUNC) &R_swig_VecVecInt___len__, 2},
+   {"R_swig_VecVecUINT8_append", (DL_FUNC) &R_swig_VecVecUINT8_append, 2},
+   {"R_swig_VecUINT8_append", (DL_FUNC) &R_swig_VecUINT8_append, 2},
+   {"R_swig_VecDouble_append", (DL_FUNC) &R_swig_VecDouble_append, 2},
+   {"R_swig_VecString_append", (DL_FUNC) &R_swig_VecString_append, 2},
+   {"R_swig_VecFloat_append", (DL_FUNC) &R_swig_VecFloat_append, 2},
+   {"R_swig_VecVecDouble_append", (DL_FUNC) &R_swig_VecVecDouble_append, 2},
+   {"R_swig_VecInt_append", (DL_FUNC) &R_swig_VecInt_append, 2},
+   {"R_swig_VecVecInt_append", (DL_FUNC) &R_swig_VecVecInt_append, 2},
+   {"R_swig_AbstractLocalSA_SetLastUsedSeed", (DL_FUNC) &R_swig_AbstractLocalSA_SetLastUsedSeed, 2},
+   {"R_swig_AbstractLocalSA_GetLastUsedSeed", (DL_FUNC) &R_swig_AbstractLocalSA_GetLastUsedSeed, 2},
+   {"R_swig_GeoDaWeight_CheckNeighbor", (DL_FUNC) &R_swig_GeoDaWeight_CheckNeighbor, 4},
+   {"R_swig_VecVecUINT8_size", (DL_FUNC) &R_swig_VecVecUINT8_size, 2},
+   {"R_swig_VecUINT8_size", (DL_FUNC) &R_swig_VecUINT8_size, 2},
+   {"R_swig_GeoDaWeight_num_obs_get", (DL_FUNC) &R_swig_GeoDaWeight_num_obs_get, 2},
+   {"R_swig_GeoDaWeight_is_symmetric_set", (DL_FUNC) &R_swig_GeoDaWeight_is_symmetric_set, 2},
+   {"R_swig_delete_GeoDa", (DL_FUNC) &R_swig_delete_GeoDa, 1},
+   {"R_swig_UniLisa_ComputeLoalSA", (DL_FUNC) &R_swig_UniLisa_ComputeLoalSA, 1},
+   {"R_swig_AbstractLocalSA_ComputeLoalSA", (DL_FUNC) &R_swig_AbstractLocalSA_ComputeLoalSA, 1},
+   {"R_swig_GeoDa_GetNumericCol", (DL_FUNC) &R_swig_GeoDa_GetNumericCol, 3},
+   {"R_swig_GeoDaWeight_weight_type_get", (DL_FUNC) &R_swig_GeoDaWeight_weight_type_get, 2},
+   {"R_swig_GeoDaWeight_gwt_type_get", (DL_FUNC) &R_swig_GeoDaWeight_gwt_type_get, 1},
+   {"R_swig_GeoDaWeight_gal_type_get", (DL_FUNC) &R_swig_GeoDaWeight_gal_type_get, 1},
+   {"R_swig_AbstractLocalSA_GetDefaultCategories", (DL_FUNC) &R_swig_AbstractLocalSA_GetDefaultCategories, 2},
    {"R_swig_VecVecUINT8_capacity", (DL_FUNC) &R_swig_VecVecUINT8_capacity, 2},
-   {"R_swig_VecInt_front", (DL_FUNC) &R_swig_VecInt_front, 2},
-   {"R_swig_VecFloat_front", (DL_FUNC) &R_swig_VecFloat_front, 2},
-   {"R_swig_VecVecInt_front", (DL_FUNC) &R_swig_VecVecInt_front, 2},
-   {"R_swig_VecUINT8_front", (DL_FUNC) &R_swig_VecUINT8_front, 2},
+   {"R_swig_VecUINT8_capacity", (DL_FUNC) &R_swig_VecUINT8_capacity, 2},
+   {"R_swig_VecVecInt_capacity", (DL_FUNC) &R_swig_VecVecInt_capacity, 2},
+   {"R_swig_VecString_capacity", (DL_FUNC) &R_swig_VecString_capacity, 2},
+   {"R_swig_VecFloat_capacity", (DL_FUNC) &R_swig_VecFloat_capacity, 2},
+   {"R_swig_VecDouble_capacity", (DL_FUNC) &R_swig_VecDouble_capacity, 2},
+   {"R_swig_VecVecDouble_capacity", (DL_FUNC) &R_swig_VecVecDouble_capacity, 2},
+   {"R_swig_VecInt_capacity", (DL_FUNC) &R_swig_VecInt_capacity, 2},
+   {"R_swig_AbstractLocalSA_GetDefaultCutoffs", (DL_FUNC) &R_swig_AbstractLocalSA_GetDefaultCutoffs, 2},
+   {"R_swig_AbstractLocalSA_SetBO", (DL_FUNC) &R_swig_AbstractLocalSA_SetBO, 2},
+   {"R_swig_VecVecUINT8_back", (DL_FUNC) &R_swig_VecVecUINT8_back, 2},
+   {"R_swig_VecUINT8_back", (DL_FUNC) &R_swig_VecUINT8_back, 2},
+   {"R_swig_GeoDaWeight_SpatialLag", (DL_FUNC) &R_swig_GeoDaWeight_SpatialLag, 4},
+   {"R_swig_VecString_front", (DL_FUNC) &R_swig_VecString_front, 2},
+   {"R_swig_VecDouble_front", (DL_FUNC) &R_swig_VecDouble_front, 2},
+   {"R_swig_VecVecDouble_front", (DL_FUNC) &R_swig_VecVecDouble_front, 2},
+   {"R_swig_GeoDaWeight_GetNumObs", (DL_FUNC) &R_swig_GeoDaWeight_GetNumObs, 2},
+   {"R_swig_GeoDa_GetNumObs", (DL_FUNC) &R_swig_GeoDa_GetNumObs, 2},
    {"R_swig_VecVecUINT8_front", (DL_FUNC) &R_swig_VecVecUINT8_front, 2},
+   {"R_swig_VecUINT8_front", (DL_FUNC) &R_swig_VecUINT8_front, 2},
+   {"R_swig_VecVecInt_front", (DL_FUNC) &R_swig_VecVecInt_front, 2},
+   {"R_swig_VecFloat_front", (DL_FUNC) &R_swig_VecFloat_front, 2},
+   {"R_swig_VecInt_front", (DL_FUNC) &R_swig_VecInt_front, 2},
+   {"R_swig_GeoDaWeight_GetIDName", (DL_FUNC) &R_swig_GeoDaWeight_GetIDName, 2},
+   {"R_swig_AbstractLocalSA_SetReuseLastSeed", (DL_FUNC) &R_swig_AbstractLocalSA_SetReuseLastSeed, 2},
+   {"R_swig_AbstractLocalSA_IsReuseLastSeed", (DL_FUNC) &R_swig_AbstractLocalSA_IsReuseLastSeed, 2},
+   {"R_swig_GeoDaWeight_num_obs_set", (DL_FUNC) &R_swig_GeoDaWeight_num_obs_set, 2},
+   {"R_swig_GeoDaWeight_GetTitle", (DL_FUNC) &R_swig_GeoDaWeight_GetTitle, 2},
+   {"R_swig_UniLisa_GetLocalMoranValues", (DL_FUNC) &R_swig_UniLisa_GetLocalMoranValues, 2},
+   {"R_swig_UniLisa_GetLagValues", (DL_FUNC) &R_swig_UniLisa_GetLagValues, 2},
+   {"R_swig_AbstractLocalSA_GetLocalSignificanceValues", (DL_FUNC) &R_swig_AbstractLocalSA_GetLocalSignificanceValues, 2},
+   {"R_swig_VecVecUINT8___setitem__", (DL_FUNC) &R_swig_VecVecUINT8___setitem__, 3},
+   {"R_swig_VecVecUINT8___getitem__", (DL_FUNC) &R_swig_VecVecUINT8___getitem__, 3},
+   {"R_swig_VecVecUINT8___delitem__", (DL_FUNC) &R_swig_VecVecUINT8___delitem__, 2},
+   {"R_swig_VecUINT8___setitem__", (DL_FUNC) &R_swig_VecUINT8___setitem__, 3},
+   {"R_swig_VecUINT8___getitem__", (DL_FUNC) &R_swig_VecUINT8___getitem__, 3},
+   {"R_swig_VecUINT8___delitem__", (DL_FUNC) &R_swig_VecUINT8___delitem__, 2},
+   {"R_swig_VecDouble___setitem__", (DL_FUNC) &R_swig_VecDouble___setitem__, 3},
+   {"R_swig_VecDouble___getitem__", (DL_FUNC) &R_swig_VecDouble___getitem__, 3},
+   {"R_swig_VecDouble___delitem__", (DL_FUNC) &R_swig_VecDouble___delitem__, 2},
+   {"R_swig_VecString___setitem__", (DL_FUNC) &R_swig_VecString___setitem__, 3},
+   {"R_swig_VecString___getitem__", (DL_FUNC) &R_swig_VecString___getitem__, 3},
+   {"R_swig_VecString___delitem__", (DL_FUNC) &R_swig_VecString___delitem__, 2},
+   {"R_swig_VecFloat___setitem__", (DL_FUNC) &R_swig_VecFloat___setitem__, 3},
+   {"R_swig_VecFloat___getitem__", (DL_FUNC) &R_swig_VecFloat___getitem__, 3},
+   {"R_swig_VecFloat___delitem__", (DL_FUNC) &R_swig_VecFloat___delitem__, 2},
+   {"R_swig_VecVecDouble___delitem__", (DL_FUNC) &R_swig_VecVecDouble___delitem__, 2},
+   {"R_swig_VecVecDouble___getitem__", (DL_FUNC) &R_swig_VecVecDouble___getitem__, 3},
+   {"R_swig_VecVecDouble___setitem__", (DL_FUNC) &R_swig_VecVecDouble___setitem__, 3},
+   {"R_swig_VecInt___delitem__", (DL_FUNC) &R_swig_VecInt___delitem__, 2},
+   {"R_swig_VecInt___getitem__", (DL_FUNC) &R_swig_VecInt___getitem__, 3},
+   {"R_swig_VecInt___setitem__", (DL_FUNC) &R_swig_VecInt___setitem__, 3},
+   {"R_swig_VecVecInt___delitem__", (DL_FUNC) &R_swig_VecVecInt___delitem__, 2},
+   {"R_swig_VecVecInt___getitem__", (DL_FUNC) &R_swig_VecVecInt___getitem__, 3},
+   {"R_swig_VecVecInt___setitem__", (DL_FUNC) &R_swig_VecVecInt___setitem__, 3},
+   {"R_swig_VecVecUINT8___nonzero__", (DL_FUNC) &R_swig_VecVecUINT8___nonzero__, 2},
+   {"R_swig_VecUINT8___nonzero__", (DL_FUNC) &R_swig_VecUINT8___nonzero__, 2},
+   {"R_swig_VecDouble___nonzero__", (DL_FUNC) &R_swig_VecDouble___nonzero__, 2},
+   {"R_swig_VecFloat___nonzero__", (DL_FUNC) &R_swig_VecFloat___nonzero__, 2},
+   {"R_swig_VecString___nonzero__", (DL_FUNC) &R_swig_VecString___nonzero__, 2},
+   {"R_swig_VecVecDouble___nonzero__", (DL_FUNC) &R_swig_VecVecDouble___nonzero__, 2},
+   {"R_swig_VecInt___nonzero__", (DL_FUNC) &R_swig_VecInt___nonzero__, 2},
+   {"R_swig_VecVecInt___nonzero__", (DL_FUNC) &R_swig_VecVecInt___nonzero__, 2},
+   {"R_swig_GeoDaWeight_weight_type_set", (DL_FUNC) &R_swig_GeoDaWeight_weight_type_set, 2},
+   {"R_swig_GeoDaWeight_symmetry_checked_get", (DL_FUNC) &R_swig_GeoDaWeight_symmetry_checked_get, 2},
+   {"R_swig_AbstractLocalSA_CalcPseudoP_range", (DL_FUNC) &R_swig_AbstractLocalSA_CalcPseudoP_range, 4},
+   {"R_swig_VecVecUINT8___delslice__", (DL_FUNC) &R_swig_VecVecUINT8___delslice__, 3},
+   {"R_swig_VecVecUINT8___setslice__", (DL_FUNC) &R_swig_VecVecUINT8___setslice__, 4},
+   {"R_swig_VecVecUINT8___getslice__", (DL_FUNC) &R_swig_VecVecUINT8___getslice__, 3},
+   {"R_swig_VecUINT8___delslice__", (DL_FUNC) &R_swig_VecUINT8___delslice__, 3},
+   {"R_swig_VecUINT8___setslice__", (DL_FUNC) &R_swig_VecUINT8___setslice__, 4},
+   {"R_swig_VecUINT8___getslice__", (DL_FUNC) &R_swig_VecUINT8___getslice__, 3},
+   {"R_swig_VecDouble___delslice__", (DL_FUNC) &R_swig_VecDouble___delslice__, 3},
+   {"R_swig_VecDouble___setslice__", (DL_FUNC) &R_swig_VecDouble___setslice__, 4},
+   {"R_swig_VecDouble___getslice__", (DL_FUNC) &R_swig_VecDouble___getslice__, 3},
+   {"R_swig_VecString___delslice__", (DL_FUNC) &R_swig_VecString___delslice__, 3},
+   {"R_swig_VecFloat___delslice__", (DL_FUNC) &R_swig_VecFloat___delslice__, 3},
+   {"R_swig_VecFloat___setslice__", (DL_FUNC) &R_swig_VecFloat___setslice__, 4},
+   {"R_swig_VecFloat___getslice__", (DL_FUNC) &R_swig_VecFloat___getslice__, 3},
+   {"R_swig_VecString___getslice__", (DL_FUNC) &R_swig_VecString___getslice__, 3},
+   {"R_swig_VecString___setslice__", (DL_FUNC) &R_swig_VecString___setslice__, 4},
+   {"R_swig_VecVecDouble___getslice__", (DL_FUNC) &R_swig_VecVecDouble___getslice__, 3},
+   {"R_swig_VecVecDouble___setslice__", (DL_FUNC) &R_swig_VecVecDouble___setslice__, 4},
+   {"R_swig_VecVecDouble___delslice__", (DL_FUNC) &R_swig_VecVecDouble___delslice__, 3},
+   {"R_swig_VecInt___getslice__", (DL_FUNC) &R_swig_VecInt___getslice__, 3},
+   {"R_swig_VecInt___setslice__", (DL_FUNC) &R_swig_VecInt___setslice__, 4},
+   {"R_swig_VecInt___delslice__", (DL_FUNC) &R_swig_VecInt___delslice__, 3},
+   {"R_swig_VecVecInt___getslice__", (DL_FUNC) &R_swig_VecVecInt___getslice__, 3},
+   {"R_swig_VecVecInt___setslice__", (DL_FUNC) &R_swig_VecVecInt___setslice__, 4},
+   {"R_swig_VecVecInt___delslice__", (DL_FUNC) &R_swig_VecVecInt___delslice__, 3},
+   {"R_swig_GeoDaWeight_IsInternalUse", (DL_FUNC) &R_swig_GeoDaWeight_IsInternalUse, 2},
+   {"R_swig_GeoDaWeight_SaveSpaceTimeWeights", (DL_FUNC) &R_swig_GeoDaWeight_SaveSpaceTimeWeights, 5},
+   {"R_swig_GeoDaWeight_SaveDIDWeights", (DL_FUNC) &R_swig_GeoDaWeight_SaveDIDWeights, 6},
+   {"R_swig_VecDouble_clear", (DL_FUNC) &R_swig_VecDouble_clear, 1},
+   {"R_swig_VecString_clear", (DL_FUNC) &R_swig_VecString_clear, 1},
+   {"R_swig_VecVecDouble_clear", (DL_FUNC) &R_swig_VecVecDouble_clear, 1},
+   {"R_swig_VecVecUINT8_clear", (DL_FUNC) &R_swig_VecVecUINT8_clear, 1},
+   {"R_swig_VecUINT8_clear", (DL_FUNC) &R_swig_VecUINT8_clear, 1},
+   {"R_swig_VecVecInt_clear", (DL_FUNC) &R_swig_VecVecInt_clear, 1},
+   {"R_swig_VecFloat_clear", (DL_FUNC) &R_swig_VecFloat_clear, 1},
+   {"R_swig_VecInt_clear", (DL_FUNC) &R_swig_VecInt_clear, 1},
+   {"R_swig_VecDouble_pop", (DL_FUNC) &R_swig_VecDouble_pop, 2},
+   {"R_swig_VecVecDouble_pop", (DL_FUNC) &R_swig_VecVecDouble_pop, 2},
+   {"R_swig_AbstractLocalSA_GetBO", (DL_FUNC) &R_swig_AbstractLocalSA_GetBO, 2},
+   {"R_swig_AbstractLocalSA_CalcPseudoP", (DL_FUNC) &R_swig_AbstractLocalSA_CalcPseudoP, 1},
+   {"R_swig_delete_VecString", (DL_FUNC) &R_swig_delete_VecString, 1},
+   {"R_swig_VecFloat_swap", (DL_FUNC) &R_swig_VecFloat_swap, 2},
+   {"R_swig_VecVecInt_swap", (DL_FUNC) &R_swig_VecVecInt_swap, 2},
+   {"R_swig_VecInt_swap", (DL_FUNC) &R_swig_VecInt_swap, 2},
+   {"R_swig_GeoDaWeight_symmetry_checked_set", (DL_FUNC) &R_swig_GeoDaWeight_symmetry_checked_set, 2},
+   {"R_swig_delete_VecDouble", (DL_FUNC) &R_swig_delete_VecDouble, 1},
+   {"R_swig_delete_VecVecDouble", (DL_FUNC) &R_swig_delete_VecVecDouble, 1},
+   {"R_swig_GeoDaWeight_GetNbrSize", (DL_FUNC) &R_swig_GeoDaWeight_GetNbrSize, 3},
+   {"R_swig_GeoDa_GetNumCols", (DL_FUNC) &R_swig_GeoDa_GetNumCols, 2},
+   {"R_swig_AbstractLocalSA_SetFDR", (DL_FUNC) &R_swig_AbstractLocalSA_SetFDR, 2},
+   {"R_swig_VecVecUINT8_reserve", (DL_FUNC) &R_swig_VecVecUINT8_reserve, 2},
+   {"R_swig_VecUINT8_reserve", (DL_FUNC) &R_swig_VecUINT8_reserve, 2},
+   {"R_swig_VecVecInt_reserve", (DL_FUNC) &R_swig_VecVecInt_reserve, 2},
+   {"R_swig_VecString_reserve", (DL_FUNC) &R_swig_VecString_reserve, 2},
+   {"R_swig_VecFloat_reserve", (DL_FUNC) &R_swig_VecFloat_reserve, 2},
+   {"R_swig_VecDouble_reserve", (DL_FUNC) &R_swig_VecDouble_reserve, 2},
+   {"R_swig_VecVecDouble_reserve", (DL_FUNC) &R_swig_VecVecDouble_reserve, 2},
+   {"R_swig_VecInt_reserve", (DL_FUNC) &R_swig_VecInt_reserve, 2},
+   {"R_swig_GeoDaWeight_Update", (DL_FUNC) &R_swig_GeoDaWeight_Update, 2},
+   {"R_swig_AbstractLocalSA_SetRowStandardize", (DL_FUNC) &R_swig_AbstractLocalSA_SetRowStandardize, 2},
+   {"R_swig_AbstractLocalSA_IsRowStandardize", (DL_FUNC) &R_swig_AbstractLocalSA_IsRowStandardize, 2},
+   {"R_swig_VecFloat_size", (DL_FUNC) &R_swig_VecFloat_size, 2},
+   {"R_swig_VecVecInt_size", (DL_FUNC) &R_swig_VecVecInt_size, 2},
+   {"R_swig_VecInt_size", (DL_FUNC) &R_swig_VecInt_size, 2},
+   {"R_swig_GeoDa_GetStringCol", (DL_FUNC) &R_swig_GeoDa_GetStringCol, 3},
+   {"R_swig_delete_UniLisa", (DL_FUNC) &R_swig_delete_UniLisa, 1},
+   {"R_swig_new_UniLisa", (DL_FUNC) &R_swig_new_UniLisa, 4},
+   {"R_swig_VecVecUINT8_assign", (DL_FUNC) &R_swig_VecVecUINT8_assign, 3},
+   {"R_swig_VecUINT8_assign", (DL_FUNC) &R_swig_VecUINT8_assign, 3},
+   {"R_swig_VecVecInt_assign", (DL_FUNC) &R_swig_VecVecInt_assign, 3},
+   {"R_swig_VecString_assign", (DL_FUNC) &R_swig_VecString_assign, 3},
+   {"R_swig_VecFloat_assign", (DL_FUNC) &R_swig_VecFloat_assign, 3},
+   {"R_swig_VecDouble_assign", (DL_FUNC) &R_swig_VecDouble_assign, 3},
+   {"R_swig_VecVecDouble_assign", (DL_FUNC) &R_swig_VecVecDouble_assign, 3},
+   {"R_swig_VecInt_assign", (DL_FUNC) &R_swig_VecInt_assign, 3},
+   {"R_swig_GeoDa_GeIntegerCol", (DL_FUNC) &R_swig_GeoDa_GeIntegerCol, 3},
+   {"R_swig_GeoDaWeight_SaveToFile__SWIG_0", (DL_FUNC) &R_swig_GeoDaWeight_SaveToFile__SWIG_0, 6},
+   {"R_swig_VecVecUINT8_resize__SWIG_0", (DL_FUNC) &R_swig_VecVecUINT8_resize__SWIG_0, 2},
+   {"R_swig_new_VecVecUINT8__SWIG_0", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_0, 0},
+   {"R_swig_VecUINT8_resize__SWIG_0", (DL_FUNC) &R_swig_VecUINT8_resize__SWIG_0, 2},
+   {"R_swig_new_VecUINT8__SWIG_0", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_0, 0},
+   {"R_swig_VecVecInt_resize__SWIG_0", (DL_FUNC) &R_swig_VecVecInt_resize__SWIG_0, 2},
+   {"R_swig_new_VecDouble__SWIG_0", (DL_FUNC) &R_swig_new_VecDouble__SWIG_0, 0},
+   {"R_swig_VecString_resize__SWIG_0", (DL_FUNC) &R_swig_VecString_resize__SWIG_0, 2},
+   {"R_swig_new_VecString__SWIG_0", (DL_FUNC) &R_swig_new_VecString__SWIG_0, 0},
+   {"R_swig_new_VecFloat__SWIG_0", (DL_FUNC) &R_swig_new_VecFloat__SWIG_0, 0},
+   {"R_swig_VecFloat_resize__SWIG_0", (DL_FUNC) &R_swig_VecFloat_resize__SWIG_0, 2},
+   {"R_swig_VecDouble_resize__SWIG_0", (DL_FUNC) &R_swig_VecDouble_resize__SWIG_0, 2},
+   {"R_swig_new_VecVecDouble__SWIG_0", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_0, 0},
+   {"R_swig_VecVecDouble_resize__SWIG_0", (DL_FUNC) &R_swig_VecVecDouble_resize__SWIG_0, 2},
+   {"R_swig_new_VecInt__SWIG_0", (DL_FUNC) &R_swig_new_VecInt__SWIG_0, 0},
+   {"R_swig_VecInt_resize__SWIG_0", (DL_FUNC) &R_swig_VecInt_resize__SWIG_0, 2},
+   {"R_swig_new_VecVecInt__SWIG_0", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_0, 0},
+   {"R_swig_new_GeoDa__SWIG_0", (DL_FUNC) &R_swig_new_GeoDa__SWIG_0, 0},
+   {"R_swig_GeoDa_CreateQueenWeights__SWIG_0", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_0, 4},
+   {"R_swig_GeoDa_LISA__SWIG_0", (DL_FUNC) &R_swig_GeoDa_LISA__SWIG_0, 4},
+   {"R_swig_GeoDa_SKATER__SWIG_0", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_0, 8},
+   {"R_swig_GeoDaWeight_SaveToFile__SWIG_1", (DL_FUNC) &R_swig_GeoDaWeight_SaveToFile__SWIG_1, 6},
+   {"R_swig_VecVecUINT8_resize__SWIG_1", (DL_FUNC) &R_swig_VecVecUINT8_resize__SWIG_1, 3},
+   {"R_swig_new_VecVecUINT8__SWIG_1", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_1, 1},
+   {"R_swig_VecUINT8_resize__SWIG_1", (DL_FUNC) &R_swig_VecUINT8_resize__SWIG_1, 3},
+   {"R_swig_new_VecUINT8__SWIG_1", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_1, 1},
+   {"R_swig_VecVecInt_resize__SWIG_1", (DL_FUNC) &R_swig_VecVecInt_resize__SWIG_1, 3},
+   {"R_swig_new_VecDouble__SWIG_1", (DL_FUNC) &R_swig_new_VecDouble__SWIG_1, 1},
+   {"R_swig_VecString_resize__SWIG_1", (DL_FUNC) &R_swig_VecString_resize__SWIG_1, 3},
+   {"R_swig_new_VecString__SWIG_1", (DL_FUNC) &R_swig_new_VecString__SWIG_1, 1},
+   {"R_swig_new_VecFloat__SWIG_1", (DL_FUNC) &R_swig_new_VecFloat__SWIG_1, 1},
+   {"R_swig_VecFloat_resize__SWIG_1", (DL_FUNC) &R_swig_VecFloat_resize__SWIG_1, 3},
+   {"R_swig_VecDouble_resize__SWIG_1", (DL_FUNC) &R_swig_VecDouble_resize__SWIG_1, 3},
+   {"R_swig_new_VecVecDouble__SWIG_1", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_1, 1},
+   {"R_swig_VecVecDouble_resize__SWIG_1", (DL_FUNC) &R_swig_VecVecDouble_resize__SWIG_1, 3},
+   {"R_swig_new_VecInt__SWIG_1", (DL_FUNC) &R_swig_new_VecInt__SWIG_1, 1},
+   {"R_swig_VecInt_resize__SWIG_1", (DL_FUNC) &R_swig_VecInt_resize__SWIG_1, 3},
+   {"R_swig_new_VecVecInt__SWIG_1", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_1, 1},
+   {"R_swig_new_GeoDa__SWIG_1", (DL_FUNC) &R_swig_new_GeoDa__SWIG_1, 1},
+   {"R_swig_GeoDa_CreateQueenWeights__SWIG_1", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_1, 3},
+   {"R_swig_GeoDa_LISA__SWIG_1", (DL_FUNC) &R_swig_GeoDa_LISA__SWIG_1, 3},
+   {"R_swig_GeoDa_SKATER__SWIG_1", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_1, 7},
+   {"R_swig_new_VecVecUINT8__SWIG_2", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_2, 1},
+   {"R_swig_new_VecUINT8__SWIG_2", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_2, 1},
+   {"R_swig_new_VecVecInt__SWIG_2", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_2, 1},
+   {"R_swig_new_VecString__SWIG_2", (DL_FUNC) &R_swig_new_VecString__SWIG_2, 1},
+   {"R_swig_new_VecFloat__SWIG_2", (DL_FUNC) &R_swig_new_VecFloat__SWIG_2, 1},
+   {"R_swig_new_VecDouble__SWIG_2", (DL_FUNC) &R_swig_new_VecDouble__SWIG_2, 1},
+   {"R_swig_new_VecVecDouble__SWIG_2", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_2, 1},
+   {"R_swig_new_VecInt__SWIG_2", (DL_FUNC) &R_swig_new_VecInt__SWIG_2, 1},
+   {"R_swig_GeoDa_CreateQueenWeights__SWIG_2", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_2, 2},
+   {"R_swig_GeoDa_SKATER__SWIG_2", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_2, 6},
+   {"R_swig_new_VecVecUINT8__SWIG_3", (DL_FUNC) &R_swig_new_VecVecUINT8__SWIG_3, 2},
+   {"R_swig_new_VecUINT8__SWIG_3", (DL_FUNC) &R_swig_new_VecUINT8__SWIG_3, 2},
+   {"R_swig_new_VecVecInt__SWIG_3", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_3, 2},
+   {"R_swig_new_VecString__SWIG_3", (DL_FUNC) &R_swig_new_VecString__SWIG_3, 2},
+   {"R_swig_new_VecFloat__SWIG_3", (DL_FUNC) &R_swig_new_VecFloat__SWIG_3, 2},
+   {"R_swig_new_VecDouble__SWIG_3", (DL_FUNC) &R_swig_new_VecDouble__SWIG_3, 2},
+   {"R_swig_new_VecVecDouble__SWIG_3", (DL_FUNC) &R_swig_new_VecVecDouble__SWIG_3, 2},
+   {"R_swig_new_VecInt__SWIG_3", (DL_FUNC) &R_swig_new_VecInt__SWIG_3, 2},
+   {"R_swig_GeoDa_CreateQueenWeights__SWIG_3", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_3, 1},
+   {"R_swig_GeoDa_SKATER__SWIG_3", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_3, 5},
+   {"R_swig_GeoDa_SKATER__SWIG_4", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_4, 8},
+   {"R_swig_GeoDa_SKATER__SWIG_5", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_5, 7},
+   {"R_swig_GeoDaWeight_title_get", (DL_FUNC) &R_swig_GeoDaWeight_title_get, 2},
+   {"R_swig_GeoDaWeight_GetNbrStats", (DL_FUNC) &R_swig_GeoDaWeight_GetNbrStats, 1},
+   {"R_swig_GeoDa_SKATER__SWIG_6", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_6, 6},
+   {"R_swig_GeoDa_SKATER__SWIG_7", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_7, 5},
+   {"R_swig_AbstractLocalSA_GetFDR", (DL_FUNC) &R_swig_AbstractLocalSA_GetFDR, 2},
+   {"R_swig_AbstractLocalSA_SetUserCutoff", (DL_FUNC) &R_swig_AbstractLocalSA_SetUserCutoff, 2},
+   {"R_swig_AbstractLocalSA_GetUserCutoff", (DL_FUNC) &R_swig_AbstractLocalSA_GetUserCutoff, 2},
+   {"R_swig_VecFloat_back", (DL_FUNC) &R_swig_VecFloat_back, 2},
+   {"R_swig_AbstractLocalSA_SetSignificanceCutoff", (DL_FUNC) &R_swig_AbstractLocalSA_SetSignificanceCutoff, 2},
+   {"R_swig_AbstractLocalSA_GetSignificanceCutoff", (DL_FUNC) &R_swig_AbstractLocalSA_GetSignificanceCutoff, 2},
+   {"R_swig_GeoDaWeight_wflnm_get", (DL_FUNC) &R_swig_GeoDaWeight_wflnm_get, 2},
+   {"R_swig_VecVecInt_back", (DL_FUNC) &R_swig_VecVecInt_back, 2},
+   {"R_swig_VecInt_back", (DL_FUNC) &R_swig_VecInt_back, 2},
+   {"R_swig_GeoDaWeight_median_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_median_nbrs_get, 2},
+   {"R_swig_GeoDaWeight_mean_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_mean_nbrs_get, 2},
+   {"R_swig_GeoDaWeight_max_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_max_nbrs_get, 2},
+   {"R_swig_GeoDaWeight_min_nbrs_get", (DL_FUNC) &R_swig_GeoDaWeight_min_nbrs_get, 2},
+   {"R_swig_VecVecUINT8_get_allocator", (DL_FUNC) &R_swig_VecVecUINT8_get_allocator, 2},
+   {"R_swig_VecUINT8_get_allocator", (DL_FUNC) &R_swig_VecUINT8_get_allocator, 2},
+   {"R_swig_VecVecInt_get_allocator", (DL_FUNC) &R_swig_VecVecInt_get_allocator, 2},
+   {"R_swig_VecString_get_allocator", (DL_FUNC) &R_swig_VecString_get_allocator, 2},
+   {"R_swig_VecFloat_get_allocator", (DL_FUNC) &R_swig_VecFloat_get_allocator, 2},
+   {"R_swig_VecDouble_get_allocator", (DL_FUNC) &R_swig_VecDouble_get_allocator, 2},
+   {"R_swig_VecVecDouble_get_allocator", (DL_FUNC) &R_swig_VecVecDouble_get_allocator, 2},
+   {"R_swig_VecInt_get_allocator", (DL_FUNC) &R_swig_VecInt_get_allocator, 2},
+   {"R_swig_VecString_swap", (DL_FUNC) &R_swig_VecString_swap, 2},
+   {"R_swig_GeoDaWeight_id_field_get", (DL_FUNC) &R_swig_GeoDaWeight_id_field_get, 2},
+   {"R_swig_AbstractLocalSA_CalcPseudoP_threaded", (DL_FUNC) &R_swig_AbstractLocalSA_CalcPseudoP_threaded, 1},
+   {"R_swig_delete_VecVecInt", (DL_FUNC) &R_swig_delete_VecVecInt, 1},
+   {"R_swig_delete_VecInt", (DL_FUNC) &R_swig_delete_VecInt, 1},
+   {"R_swig_GeoDaWeight_title_set", (DL_FUNC) &R_swig_GeoDaWeight_title_set, 2},
+   {"R_swig_AbstractLocalSA_GetHasUndefined", (DL_FUNC) &R_swig_AbstractLocalSA_GetHasUndefined, 2},
+   {"R_swig_test", (DL_FUNC) &R_swig_test, 1},
+   {"R_swig_GeoDa_GetFieldTypes", (DL_FUNC) &R_swig_GeoDa_GetFieldTypes, 2},
+   {"R_swig_GeoDaWeight_Equal", (DL_FUNC) &R_swig_GeoDaWeight_Equal, 3},
+   {"R_swig_VecInt_pop", (DL_FUNC) &R_swig_VecInt_pop, 2},
+   {"R_swig_VecVecInt_pop", (DL_FUNC) &R_swig_VecVecInt_pop, 2},
+   {"R_swig_delete_VecFloat", (DL_FUNC) &R_swig_delete_VecFloat, 1},
+   {"R_swig_VecVecUINT8_push_back", (DL_FUNC) &R_swig_VecVecUINT8_push_back, 2},
+   {"R_swig_VecUINT8_push_back", (DL_FUNC) &R_swig_VecUINT8_push_back, 2},
+   {"R_swig_VecVecInt_push_back", (DL_FUNC) &R_swig_VecVecInt_push_back, 2},
+   {"R_swig_VecString_push_back", (DL_FUNC) &R_swig_VecString_push_back, 2},
+   {"R_swig_VecFloat_push_back", (DL_FUNC) &R_swig_VecFloat_push_back, 2},
+   {"R_swig_VecDouble_push_back", (DL_FUNC) &R_swig_VecDouble_push_back, 2},
+   {"R_swig_VecVecDouble_push_back", (DL_FUNC) &R_swig_VecVecDouble_push_back, 2},
+   {"R_swig_VecInt_push_back", (DL_FUNC) &R_swig_VecInt_push_back, 2},
+   {"R_swig_VecString_size", (DL_FUNC) &R_swig_VecString_size, 2},
+   {"R_swig_GeoDaWeight_wflnm_set", (DL_FUNC) &R_swig_GeoDaWeight_wflnm_set, 2},
+   {"R_swig_UniLisa_GetClusterIndicators", (DL_FUNC) &R_swig_UniLisa_GetClusterIndicators, 2},
+   {"R_swig_AbstractLocalSA_GetSigCatIndicators", (DL_FUNC) &R_swig_AbstractLocalSA_GetSigCatIndicators, 2},
+   {"R_swig_AbstractLocalSA_GetClusterIndicators", (DL_FUNC) &R_swig_AbstractLocalSA_GetClusterIndicators, 2},
+   {"R_swig_AbstractLocalSA_SetNumPermutations", (DL_FUNC) &R_swig_AbstractLocalSA_SetNumPermutations, 2},
+   {"R_swig_AbstractLocalSA_GetNumPermutations", (DL_FUNC) &R_swig_AbstractLocalSA_GetNumPermutations, 2},
+   {"R_swig_GeoDaWeight_GetNeighbors", (DL_FUNC) &R_swig_GeoDaWeight_GetNeighbors, 3},
+   {"R_swig_GeoDaWeight_median_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_median_nbrs_set, 2},
+   {"R_swig_GeoDaWeight_mean_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_mean_nbrs_set, 2},
+   {"R_swig_GeoDaWeight_max_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_max_nbrs_set, 2},
+   {"R_swig_GeoDaWeight_min_nbrs_set", (DL_FUNC) &R_swig_GeoDaWeight_min_nbrs_set, 2},
+   {"R_swig_GeoDaWeight_id_field_set", (DL_FUNC) &R_swig_GeoDaWeight_id_field_set, 2},
+   {"R_swig_GeoDaWeight_GetMedianNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMedianNumNbrs, 2},
+   {"R_swig_GeoDaWeight_GetMeanNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMeanNumNbrs, 2},
+   {"R_swig_GeoDaWeight_GetMaxNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMaxNumNbrs, 2},
+   {"R_swig_GeoDaWeight_GetMinNumNbrs", (DL_FUNC) &R_swig_GeoDaWeight_GetMinNumNbrs, 2},
+   {"R_swig_delete_GeoDaWeight", (DL_FUNC) &R_swig_delete_GeoDaWeight, 1},
+   {"R_swig_AbstractLocalSA_GetHasIsolates", (DL_FUNC) &R_swig_AbstractLocalSA_GetHasIsolates, 2},
+   {"R_swig_GeoDaWeight_HasIsolates", (DL_FUNC) &R_swig_GeoDaWeight_HasIsolates, 2},
+   {"R_swig_VecString_back", (DL_FUNC) &R_swig_VecString_back, 2},
+   {"R_swig_VecDouble_swap", (DL_FUNC) &R_swig_VecDouble_swap, 2},
+   {"R_swig_VecVecDouble_swap", (DL_FUNC) &R_swig_VecVecDouble_swap, 2},
+   {"R_swig_delete_VecVecUINT8", (DL_FUNC) &R_swig_delete_VecVecUINT8, 1},
+   {"R_swig_delete_VecUINT8", (DL_FUNC) &R_swig_delete_VecUINT8, 1},
+   {"R_swig_GeoDaWeight_density_get", (DL_FUNC) &R_swig_GeoDaWeight_density_get, 2},
+   {"R_swig_GeoDaWeight_sparsity_get", (DL_FUNC) &R_swig_GeoDaWeight_sparsity_get, 2},
+   {"R_swig_GeoDa_GetUndefinesCol", (DL_FUNC) &R_swig_GeoDa_GetUndefinesCol, 3},
+   {"R_swig_GeoDaWeight_is_internal_use_get", (DL_FUNC) &R_swig_GeoDaWeight_is_internal_use_get, 2},
+   {"R_swig_AbstractLocalSA_GetSignificanceFilter", (DL_FUNC) &R_swig_AbstractLocalSA_GetSignificanceFilter, 2},
+   {"R_swig_AbstractLocalSA_SetSignificanceFilter", (DL_FUNC) &R_swig_AbstractLocalSA_SetSignificanceFilter, 2},
+   {"R_swig_VecDouble_size", (DL_FUNC) &R_swig_VecDouble_size, 2},
+   {"R_swig_VecVecDouble_size", (DL_FUNC) &R_swig_VecVecDouble_size, 2},
+   {"R_swig_GeoDaWeight_GetSparsity", (DL_FUNC) &R_swig_GeoDaWeight_GetSparsity, 2},
+   {"R_swig_VecFloat_pop", (DL_FUNC) &R_swig_VecFloat_pop, 2},
+   {"R_swig_GeoDaWeight_GetDensity", (DL_FUNC) &R_swig_GeoDaWeight_GetDensity, 2},
+   {"R_swig_AbstractLocalSA_Run", (DL_FUNC) &R_swig_AbstractLocalSA_Run, 1},
+   {"R_swig_VecVecUINT8_pop", (DL_FUNC) &R_swig_VecVecUINT8_pop, 2},
+   {"R_swig_VecUINT8_pop", (DL_FUNC) &R_swig_VecUINT8_pop, 2},
    {NULL, NULL, 0}
 };
 

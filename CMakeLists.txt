@@ -76,6 +76,8 @@ set (GEOS_LIBRARIES
 ###########################################################
 set (GEODA_INCLUDE_FILES
         src/libgeoda.h
+        src/AbstractLocalSA.h
+        src/UniLisa.h
         src/geoda/ShapeOperations/GalWeight.h
         src/geoda/ShapeOperations/GeodaWeight.h
         src/geoda/ShapeOperations/WeightsManState.h
@@ -89,9 +91,13 @@ set (GEODA_SOURCE_FILES
         src/geoda/ShapeOperations/GalWeight.cpp
         src/geoda/ShapeOperations/PolysToContigWeights.cpp
         src/geoda/ShapeOperations/WeightsManState.cpp
-        src/AbstractLocalSA.cpp src/AbstractLocalSA.h)
+        src/geoda/Algorithms/cluster.cpp
+        src/geoda/Algorithms/redcap.cpp
+        src/AbstractLocalSA.cpp
+        src/UniLisa.cpp
+)
 
-add_library(geoda STATIC ${GEODA_SOURCE_FILES} src/AbstractLocalSA.cpp src/AbstractLocalSA.h)
+add_library(geoda STATIC ${GEODA_SOURCE_FILES})
 
 # Setup public headers for libgeoda
 #set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})
@@ -162,8 +168,8 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set (TEST_SOURCE_FILES
         test/testgtest.cpp
         test/test_weights.cpp
-)
-add_executable( runUnitTests ${TEST_SOURCE_FILES})
+        test/test_localSA.cpp test/test_clustering.cpp)
+add_executable( runUnitTests ${TEST_SOURCE_FILES} test/test_localSA.cpp)
 
 set_target_properties(runUnitTests PROPERTIES
     CXX_STANDARD 11

@@ -9,40 +9,12 @@
 #include <wx/string.h>
 #include <wx/thread.h>
 
-#include "./geoda/ShapeOperations/GeodaWeight.h"
-#include "./geoda/ShapeOperations/GalWeight.h"
-
-class AbstractLocalSA;
-
-class AbstractWorkerThread : public wxThread
-{
-public:
-    AbstractWorkerThread(int obs_start,
-                         int obs_end,
-                         uint64_t seed_start,
-                         AbstractLocalSA* a_coord,
-                         wxMutex* worker_list_mutex,
-                         wxCondition* worker_list_empty_cond,
-                         std::list<wxThread*> *worker_list,
-                         int thread_id);
-    virtual ~AbstractWorkerThread();
-    virtual void* Entry();  // thread execution starts here
-
-    int obs_start;
-    int obs_end;
-    uint64_t seed_start;
-    int thread_id;
-
-    AbstractLocalSA* a_coord;
-    wxMutex* worker_list_mutex;
-    wxCondition* worker_list_empty_cond;
-    std::list<wxThread*> *worker_list;
-};
+class GeoDaWeight;
 
 class AbstractLocalSA
 {
 public:
-    AbstractLocalSA();
+    AbstractLocalSA(int num_obs, GeoDaWeight* w);
 
     virtual ~AbstractLocalSA(){};
 
@@ -97,9 +69,19 @@ public:
 
     virtual std::vector<int> GetSigCatIndicators();
 
+    virtual bool IsRowStandardize() const;
+
+    virtual void SetRowStandardize(bool rowStandardize);
+
+    virtual int GetNumThreads() const;
+
+    virtual void SetNumThreads(int n_threads);
+
 protected:
     int nCPUs;
     int num_obs; // total # obs including neighborless obs
+
+    bool row_standardize;
 
     int significance_filter; // 0: >0.05 1: 0.05, 2: 0.01, 3: 0.001, 4: 0.0001
     int permutations; // any number from 9 to 99999, 99 will be default
@@ -115,7 +97,7 @@ protected:
     uint64_t last_seed_used;
     bool reuse_last_seed;
 
-    GalWeight* weights;
+    GeoDaWeight* weights;
 
     std::vector<double> sig_local_vec;
     std::vector<int> sig_cat_vec;

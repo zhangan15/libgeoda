@@ -16,16 +16,13 @@ namespace std {
 }
 
 %{
-    #include <libgeoda.h>
     #include <GeodaWeight.h>
+    #include <AbstractLocalSA.h>
+    #include <UniLisa.h>
+    #include <libgeoda.h>
 %}
 
-#include <vector>
-
-using namespace std;
-
 %include <GeodaWeight.h>
+%include <AbstractLocalSA.h>
+%include <UniLisa.h>
 %include <libgeoda.h>
-
-//%template(GeoDaInt) GeoDa<int>;
-//%template(GeoDaString) GeoDa<std::string>;
