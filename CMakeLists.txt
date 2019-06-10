@@ -61,8 +61,8 @@ if (APPLE)
 endif()
 
 ## gdal library (minimal)
-set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/include)
-set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/lib/${DEP_OS_SUB}/libgdal.a)
+set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.2.4/include)
+set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.2.4/lib/${DEP_OS_SUB}/libgdal.a)
 
 ## geos library
 set (GEOS_LIBRARIES

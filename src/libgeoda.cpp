@@ -21,10 +21,24 @@ const std::string GeoDa::DT_STRING = "string";
 const std::string GeoDa::DT_INTEGER= "integer";
 const std::string GeoDa::DT_NUMERIC = "numeric";
 
-GeoDa::GeoDa()
+GeoDa::GeoDa(const std::string& layer_name)
 : poDS(NULL), poLayer(NULL)
 {
+    std::string ds_name = "/vsimem/" + layer_name + ".shp";
+    OGRSpatialReference *poSpatialRef = NULL;
+    OGRwkbGeometryType eGType;
 
+    GDALAllRegister();
+    GDALDriver *poDriver = NULL;
+    poDriver = GetGDALDriverManager()->GetDriverByName("ESRI Shapefile");
+
+    if (poDriver) {
+        poDS = poDriver->Create( ds_name.c_str(), 0,0,0,GDT_Unknown, NULL);
+        if( poDS ) {
+            std::cout << "create a in-memory data source" << std::endl;
+            poLayer = poDS->CreateLayer(layer_name.c_str(), poSpatialRef, eGType);
+        }
+    }
 }
 
 GeoDa::GeoDa(const char* poDsPath)

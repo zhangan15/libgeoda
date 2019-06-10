@@ -11,14 +11,20 @@ using namespace testing;
 
 namespace {
 
+    TEST(LayerFunctions, memory) {
+        std::string ds = "memory";
+        GeoDa gda(ds);
+        EXPECT_THAT(gda.GetNumObs(), 3085);
+    }
+
     TEST(LayerFunctions, getNumObs) {
         GeoDa gda("../data/natregimes.shp");
-        EXPECT_THAT(gda.getNumObs(), 3085);
+        EXPECT_THAT(gda.GetNumObs(), 3085);
     }
 
     TEST(LayerFunctions, getNumCols) {
         GeoDa gda("../data/natregimes.shp");
-        EXPECT_THAT(gda.getNumCols(), 12);
+        EXPECT_THAT(gda.GetNumCols(), 12);
     }
 }
 

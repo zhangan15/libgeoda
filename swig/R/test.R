@@ -1,6 +1,6 @@
-library(libgeoda)
-a <- test()
-gda <- GeoDa("/Users/xun/Box/test_data/natregimes/natregimes.shp")
-w <- gda$CreateQueenWeights()
-w$num_obs
-w$density
+dyn.load("libgeoda.so")
+source("libgeoda.R")
+cacheMetaData(1)
+
+library(sf)
+nc <- st_read(system.file("shape/nc.shp", package="sf"))

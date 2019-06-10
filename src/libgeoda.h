@@ -11,7 +11,7 @@ class GeoDaWeight;
 class GeoDa {
 public:
     //
-    GeoDa();
+    GeoDa(const std::string& layer_name);
     GeoDa(const char* pDsPath);
 
     // create GeoDa instance from table+geometries directly,
