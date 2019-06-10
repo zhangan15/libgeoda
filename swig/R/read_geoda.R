@@ -1,6 +1,7 @@
 
 create_geoda_from_sf = function(obj) {
   print ("create geoda from sf object")
+  
 }
 
 read_geoda = function(obj) {

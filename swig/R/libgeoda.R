@@ -6066,9 +6066,10 @@ setMethod('$', '_p_UniLisa', function(x, name)
 setMethod('delete', '_p_UniLisa', function(obj) {delete_UniLisa(obj)})
 # Start of new_GeoDa
 
-`GeoDa__SWIG_0` = function()
+`GeoDa__SWIG_0` = function(layer_name)
 {
-  ;ans = .Call('R_swig_new_GeoDa__SWIG_0', PACKAGE='libgeoda');
+  layer_name = as(layer_name, "character"); 
+  ;ans = .Call('R_swig_new_GeoDa__SWIG_0', layer_name, PACKAGE='libgeoda');
   ans <- if (is.null(ans)) ans
   else new("_p_GeoDa", ref=ans);
   
@@ -6078,6 +6079,7 @@ setMethod('delete', '_p_UniLisa', function(obj) {delete_UniLisa(obj)})
 }
 
 attr(`GeoDa__SWIG_0`, 'returnType') = '_p_GeoDa'
+attr(`GeoDa__SWIG_0`, "inputTypes") = c('character')
 class(`GeoDa__SWIG_0`) = c("SWIGFunction", class('GeoDa__SWIG_0'))
 
 # Start of new_GeoDa
@@ -6103,10 +6105,11 @@ class(`GeoDa__SWIG_1`) = c("SWIGFunction", class('GeoDa__SWIG_1'))
   argv <- list(...);
   argc <- length(argtypes);
 # dispatch functions 2
-  if (argc == 0) {
-    f <- GeoDa__SWIG_0; 
-  } else if (argc == 1) {
-    if (is.character(argv[[1]])) {
+  if (argc == 1) {
+    if (is.character(argv[[1]]) && length(argv[[1]]) == 1) {
+      f <- GeoDa__SWIG_0; 
+    }
+    else if (is.character(argv[[1]])) {
       f <- GeoDa__SWIG_1; 
     }
   } else {

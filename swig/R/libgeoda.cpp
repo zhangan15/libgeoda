@@ -14034,15 +14034,29 @@ R_swig_UniLisa_GetLocalMoranValues ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_new_GeoDa__SWIG_0 ( )
+R_swig_new_GeoDa__SWIG_0 ( SEXP layer_name)
 {
   GeoDa *result = 0 ;
+  std::string *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
   unsigned int r_nprotect = 0;
   SEXP r_ans = R_NilValue ;
   VMAXTYPE r_vmax = vmaxget() ;
   
-  result = (GeoDa *)new GeoDa();
+  {
+    std::string *ptr = (std::string *)0;
+    res1 = SWIG_AsPtr_std_string(layer_name, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GeoDa" "', argument " "1"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_GeoDa" "', argument " "1"" of type '" "std::string const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  result = (GeoDa *)new GeoDa((std::string const &)*arg1);
   r_ans = SWIG_R_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GeoDa, SWIG_POINTER_OWN |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
   vmaxset(r_vmax);
   if(r_nprotect)  Rf_unprotect(r_nprotect);
   
@@ -15854,7 +15868,7 @@ SWIGINTERN R_CallMethodDef CallEntries[] = {
    {"R_swig_new_VecInt__SWIG_0", (DL_FUNC) &R_swig_new_VecInt__SWIG_0, 0},
    {"R_swig_VecInt_resize__SWIG_0", (DL_FUNC) &R_swig_VecInt_resize__SWIG_0, 2},
    {"R_swig_new_VecVecInt__SWIG_0", (DL_FUNC) &R_swig_new_VecVecInt__SWIG_0, 0},
-   {"R_swig_new_GeoDa__SWIG_0", (DL_FUNC) &R_swig_new_GeoDa__SWIG_0, 0},
+   {"R_swig_new_GeoDa__SWIG_0", (DL_FUNC) &R_swig_new_GeoDa__SWIG_0, 1},
    {"R_swig_GeoDa_CreateQueenWeights__SWIG_0", (DL_FUNC) &R_swig_GeoDa_CreateQueenWeights__SWIG_0, 4},
    {"R_swig_GeoDa_LISA__SWIG_0", (DL_FUNC) &R_swig_GeoDa_LISA__SWIG_0, 4},
    {"R_swig_GeoDa_SKATER__SWIG_0", (DL_FUNC) &R_swig_GeoDa_SKATER__SWIG_0, 8},
