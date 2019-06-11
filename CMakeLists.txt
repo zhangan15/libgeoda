@@ -11,16 +11,16 @@ project(geoda)
 
 message(STATUS "Binary dir: ${CMAKE_BINARY_DIR}")
 
-set(CMAKE_MACOSX_RPATH 1)
-
 set (DEP_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/deps)
 set (DEP_OS_SUB "")
 if ( APPLE )
+    set(CMAKE_MACOSX_RPATH 1)
     set (DEP_OS_SUB "osx")
     set (CMAKE_OSX_ARCHITECTURES "x86_64")
     set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -arch x86_64")
 elseif (UNIX)
-    set (DEP_OS_SUB "ubuntu")
+    set (DEP_OS_SUB "bionic")
+    set (CMAKE_CXX_FLAGS  "-Wl,--no-as-needed")
 elseif (MSVC)
     set (DEP_OS_SUB "win64")
 endif()
@@ -32,7 +32,9 @@ endif()
 #
 ###########################################################
 ## libcurl
-find_package(CURL REQUIRED)
+if (APPLE)
+    find_package(CURL REQUIRED)
+endif()
 
 ## ANN library
 set (ANN_INCLUDE_DIR ${DEP_LIBRARY_PATH}/ann/include)
@@ -45,7 +47,6 @@ set (Boost_LIBRARIES
     ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_system-mt.a
     ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_chrono-mt.a
     ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_date_time-mt.a
-    ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_atomic-mt.a
 )
 
 ## wxWidgets library (non-ui)
@@ -65,9 +66,11 @@ set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.2.4/include)
 set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.2.4/lib/${DEP_OS_SUB}/libgdal.a)
 
 ## geos library
+#set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include)
+set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include/geos)
 set (GEOS_LIBRARIES
-        ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos.a
-        ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos_c.a)
+        ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos_c.a
+        ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos.a)
 
 ###########################################################
 #
@@ -101,6 +104,11 @@ add_library(geoda STATIC ${GEODA_SOURCE_FILES})
 
 # Setup public headers for libgeoda
 #set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})
+set_target_properties(geoda PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED YES
+        CXX_EXTENSIONS NO
+        )
 
 
 # Add install target for libgeoda
@@ -114,13 +122,16 @@ install(TARGETS ${PROJECT_NAME}
 # PUBLIC - use it for specified target and for targets which links with this project
 # INTERFACE -- use it only for targets which links with the current project
 
-target_include_directories(geoda PUBLIC ${CURL_INCLUDE_DIR})
-target_link_libraries(geoda ${CURL_LIBRARIES})
+if (APPLE)
+    target_include_directories(geoda PUBLIC ${CURL_INCLUDE_DIR})
+    target_link_libraries(geoda ${CURL_LIBRARIES})
+endif()
+
+#target_include_directories(geoda PUBLIC ${GEOS_INCLUDE_DIR} )
+#target_link_libraries(geoda ${GEOS_LIBRARIES})
 
 target_include_directories(geoda PUBLIC ${GDAL_INCLUDE_DIR} )
 target_link_libraries(geoda ${GDAL_LIBRARIES})
-
-target_link_libraries(geoda ${GEOS_LIBRARIES})
 
 target_include_directories(geoda PUBLIC ${ANN_INCLUDE_DIR} )
 target_link_libraries(geoda ${ANN_LIBRARIES} )
@@ -130,8 +141,11 @@ target_link_libraries(geoda ${Boost_LIBRARIES})
 
 target_include_directories(geoda PUBLIC ${WX_INCLUDE_DIR} )
 target_link_libraries(geoda ${WX_LIBRARIES})
-if (UNIX)
+
+if (APPLE)
     target_link_libraries(geoda iconv)
+elseif(UNIX)
+    target_link_libraries(geoda "${DEP_LIBRARY_PATH}/iconv/lib/${DEP_OS_SUB}/libiconv.a")
 endif()
 
 
@@ -155,6 +169,7 @@ add_custom_command(
 #  googletest testing framework
 #
 ###########################################################
+# git clone https://github.com/google/googletest.git
 ADD_SUBDIRECTORY (googletest)
 enable_testing()
 
@@ -168,8 +183,10 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set (TEST_SOURCE_FILES
         test/testgtest.cpp
         test/test_weights.cpp
-        test/test_localSA.cpp test/test_clustering.cpp)
-add_executable( runUnitTests ${TEST_SOURCE_FILES} test/test_localSA.cpp)
+        test/test_localSA.cpp
+        test/test_clustering.cpp
+)
+add_executable( runUnitTests ${TEST_SOURCE_FILES} )
 
 set_target_properties(runUnitTests PROPERTIES
     CXX_STANDARD 11
@@ -177,15 +194,22 @@ set_target_properties(runUnitTests PROPERTIES
     CXX_EXTENSIONS NO
 )
 
+if (UNIX AND NOT APPLE)
+    set_property(TARGET runUnitTests APPEND_STRING PROPERTY LINK_FLAGS " -Wl,--no-as-needed ")
+endif()
+
 target_include_directories(runUnitTests PUBLIC
         ${gtest_SOURCE_DIR}/include
         ${gmock_SOURCE_DIR}/include
         ${geoda_SOURCE_DIR}/src
         ${geoda_SOURCE_DIR}/src/geoda/ShapeOperations
 )
-
 # Link test executable against gtest & gtest_main
-target_link_libraries(runUnitTests gtest gtest_main geoda)
+target_link_libraries(runUnitTests gtest gtest_main)
+target_link_libraries(runUnitTests geoda)
+target_link_libraries(runUnitTests ${GDAL_LIBRARIES})
+target_link_libraries(runUnitTests ${GEOS_LIBRARIES})
+
 if (APPLE)
     find_library(CoreServices CoreServices)
     find_library(IOKit IOKit)
@@ -197,5 +221,8 @@ if (APPLE)
             ${System}
             ${ApplicationServices}
     )
+elseif(UNIX)
+    target_link_libraries(runUnitTests dl)
 endif()
+
 add_test( runUnitTests runUnitTests )
