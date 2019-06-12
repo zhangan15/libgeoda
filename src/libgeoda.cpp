@@ -1,6 +1,7 @@
 #include "libgeoda.h"
 
 #include <iostream>
+#include <string.h>
 
 #include <ANN/ANN.h>
 #include <wx/wx.h>
@@ -21,27 +22,101 @@ const std::string GeoDa::DT_STRING = "string";
 const std::string GeoDa::DT_INTEGER= "integer";
 const std::string GeoDa::DT_NUMERIC = "numeric";
 
-GeoDa::GeoDa(const std::string& layer_name)
-: poDS(NULL), poLayer(NULL)
+GeoDa::GeoDa(const std::string &layer_name,
+             const std::string& map_type,
+        int num_features,
+        const std::vector<GeoDaColumn *> &cols,
+        const std::vector<unsigned char*>& wkbs,
+        const std::vector<int>& wkb_bytes_len,
+        const char* pszProj4)
+: poDS(NULL), poLayer(NULL), numObs(num_features), numCols(cols.size())
 {
     std::string ds_name = "/vsimem/" + layer_name + ".shp";
-    OGRSpatialReference *poSpatialRef = NULL;
-    OGRwkbGeometryType eGType;
+    poSpatialRef = new OGRSpatialReference();
+    poSpatialRef->importFromProj4(pszProj4);
+
+    OGRwkbGeometryType eGType = wkbPolygon;
+    if (map_type == "map_polygons") {
+        mapType = polygon_type;
+    } else if (map_type == "map_points") {
+        eGType = wkbPoint;
+        mapType = point_type;
+    } else if (map_type == "map_lines") {
+        eGType = wkbLineString;
+        mapType = line_type;
+    } else {
+        std::cout << "map type is not supported." << std::endl;
+    }
 
     GDALAllRegister();
     GDALDriver *poDriver = NULL;
     poDriver = GetGDALDriverManager()->GetDriverByName("ESRI Shapefile");
 
     if (poDriver) {
-        poDS = poDriver->Create( ds_name.c_str(), 0,0,0,GDT_Unknown, NULL);
+        poDS = poDriver->Create( ds_name.c_str(), 0,0,0, GDT_Unknown, NULL);
         if( poDS ) {
             std::cout << "create a in-memory data source" << std::endl;
             poLayer = poDS->CreateLayer(layer_name.c_str(), poSpatialRef, eGType);
+            // create fields
+            for (size_t i=0; i<cols.size(); ++i) {
+                GeoDaColumn* col = cols[i];
+
+                OGRFieldType ft = OFTString;
+                if (col->field_type == GeoDaColumn::integer_type) ft = OFTInteger64;
+                else if (col->field_type == GeoDaColumn::real_type) ft = OFTReal;
+                OGRFieldDefn oField(col->name.c_str(), ft);
+                oField.SetWidth(col->field_length);
+                if (col->field_type == GeoDaColumn::real_type) oField.SetPrecision(col->field_decimals);
+
+                if( poLayer->CreateField( &oField ) != OGRERR_NONE ) {
+                    std::cout << "Creating field " << col->name << " failed." << std::endl;
+                }
+                fieldNames.push_back(col->name);
+                fieldNameIdx[col->name] = i;
+                if (ft == OFTInteger64 || ft == OFTInteger) {
+                    fieldTypes.push_back(DT_INTEGER);
+                } else if (ft == OFTReal) {
+                    fieldTypes.push_back(DT_NUMERIC);
+                } else {
+                    fieldTypes.push_back(DT_STRING);
+                }
+            }
+            // create features
+            for (size_t i=0; i<num_features; ++i) {
+                OGRFeature *poFeature;
+                poFeature = OGRFeature::CreateFeature(poLayer->GetLayerDefn());
+                for (size_t j=0; j<cols.size(); ++j) {
+                    GeoDaColumn *col = cols[j];
+                    if (col->field_type == GeoDaColumn::integer_type) {
+                        GeoDaIntColumn *int_col = (GeoDaIntColumn*)col;
+                        std::vector<long long>& data = int_col->GetData();
+                        poFeature->SetField(col->name.c_str(), data[i]);
+
+                    } else if (col->field_type == GeoDaColumn::real_type) {
+                        GeoDaRealColumn *real_col = (GeoDaRealColumn*)col;
+                        std::vector<double>& data = real_col->GetData();
+                        poFeature->SetField(col->name.c_str(), data[i]);
+
+                    } else if (col->field_type == GeoDaColumn::string_type) {
+                        GeoDaStringColumn *_col = (GeoDaStringColumn*)col;
+                        std::vector<std::string>& data = _col->GetData();
+                        poFeature->SetField(col->name.c_str(), data[i].c_str());
+                    }
+                }
+
+                OGRGeometry* geom = CreateOGRGeomFromWkb(wkbs[i], wkb_bytes_len[i]);
+                poFeature->SetGeometry(geom);
+
+                if( poLayer->CreateFeature( poFeature ) != OGRERR_NONE ) {
+                    std::cout << "Failed to create feature in shapefile.\n" << std::endl;
+                }
+                OGRFeature::DestroyFeature( poFeature );
+            }
         }
     }
 }
 
-GeoDa::GeoDa(const char* poDsPath)
+GeoDa::GeoDa(const char* poDsPath, const char* layer_name)
 : poDS(NULL), poLayer(NULL), numLayers(0), numObs(0)
 {
     wxFileName wx_fn(poDsPath);
@@ -51,8 +126,18 @@ GeoDa::GeoDa(const char* poDsPath)
     if( poDS ) {
         numLayers = poDS->GetLayerCount();
         if (numLayers > 0) {
-            poLayer = poDS->GetLayer(0);
+            int lyr_idx = 0;
+            if (layer_name != NULL) {
+                for (size_t i=0; i<numLayers;++i) {
+                    if (strcmp(layer_name, poDS->GetLayer(i)->GetName()) == 0) {
+                        lyr_idx = i;
+                        break;
+                    }
+                }
+            }
+            poLayer = poDS->GetLayer(lyr_idx);
             numObs = poLayer->GetFeatureCount(true);
+            poSpatialRef = poLayer->GetSpatialRef();
             std::cout << "feature count:" << numObs << std::endl;
         }
         // read field info
@@ -89,7 +174,14 @@ GeoDa::~GeoDa() {
 }
 
 
-
+OGRGeometry* GeoDa::CreateOGRGeomFromWkb(unsigned char* wkb, int n)
+{
+    OGRGeometry* geom = 0;
+    OGRGeometryFactory::createFromWkb(wkb, 0, &geom, n);
+    //char* json = geom->exportToJson();
+    //std::cout << geom->WkbSize() << "json:" << json << std::endl;
+    return geom;
+}
 
 std::string GeoDa::GetName() {
     return "Name";
@@ -336,3 +428,80 @@ double** GeoDa::fullRaggedMatrix(double** matrix, int n, int k, bool isSqrt) {
 
 
 int test() { return 100;}
+
+void test_wkb1(int n, unsigned char* wkb) {
+    OGRPolygon* geom = new OGRPolygon();
+    geom->importFromWkb(wkb, n);
+    delete geom;
+}
+void test_wkb2(unsigned char* wkb, int n) {
+    OGRPolygon* geom = new OGRPolygon();
+    geom->importFromWkb(wkb, n);
+    delete geom;
+}
+
+void test_wkb(const std::vector<void*>& wkbs) {
+
+    //for (size_t i=0; i<wkbs.size(); ++i) {
+        int len = wkbs.size();
+        unsigned char* val = new unsigned char[len];
+        for (size_t j=0; j<len; ++j) {
+            val[j] = *(unsigned char*)wkbs[j];
+            std::cout << val[j] <<std::endl;
+        }
+
+        //OGRGeometryFactory::createFromWkb(val, 0, &geom, len);
+        OGRPolygon* geom = new OGRPolygon();
+        geom->importFromWkb(val, len);
+        char* json = geom->exportToJson();
+        std::cout << geom->WkbSize() << "json:" << json << std::endl;
+        delete[] val;
+        delete geom;
+}
+
+void test_cols(std::vector<GeoDaColumn*> cols)
+{
+    for (size_t i=0; i<cols.size(); ++i) {
+        std::cout << cols[i]->name << std::endl;
+    }
+}
+
+
+GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col)
+{
+    return (GeoDaColumn*) col;
+}
+
+GeoDaColumn *ToGeoDaColumn(GeoDaIntColumn *col) {
+    return (GeoDaColumn*) col;
+}
+
+GeoDaColumn *ToGeoDaColumn(GeoDaRealColumn *col) {
+    return (GeoDaColumn*) col;
+}
+
+void test_wkb3(int n, std::vector<int> &m, unsigned char **wkbs) {
+
+}
+
+void test_wkb4(int n, std::vector<int> &m, std::vector<unsigned char *> &wkbs) {
+    for (size_t i=0; i<n; ++i) {
+        unsigned char* wkb = wkbs[i];
+        for (size_t j=0; j<m[i]; ++j) {
+            OGRPolygon* geom = new OGRPolygon();
+            geom->importFromWkb(wkb, m[i]);
+            delete geom;
+        }
+    }
+}
+
+void test_wkb5(std::vector<unsigned char *> &wkbs, std::vector<int> m) {
+    for (size_t i=0; i<m.size(); ++i) {
+        unsigned char* wkb = wkbs[i];
+        for (size_t j=0; j<m[i]; ++j) {
+            OGRPolygon* geom = new OGRPolygon();
+            geom->importFromWkb(wkb, m[i]);
+            delete geom;
+        }
+    }
+}

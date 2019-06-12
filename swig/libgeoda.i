@@ -5,14 +5,17 @@
 %include "std_vector.i"
 
 namespace std {
-  %template(VecFloat) vector<float>;
-  %template(VecString) vector<string>;
-  %template(VecDouble) vector<double>;
-  %template(VecVecDouble) vector< vector<double> >;
-  %template(VecInt) vector<int>;
-  %template(VecVecInt) vector< vector<int> >;
-  %template(VecUINT8) vector<unsigned char>;
-  %template(VecVecUINT8) vector<vector<unsigned char> >;
+        %template(VecVoid) vector<void*>;
+        %template(VecFloat) vector<float>;
+        %template(VecString) vector<string>;
+        %template(VecDouble) vector<double>;
+        %template(VecChar) vector<char>;
+        %template(VecVecDouble) vector< vector<double> >;
+        %template(VecInt) vector<int>;
+        %template(VecVecInt) vector< vector<int> >;
+        %template(VecUINT8) vector<unsigned char>;
+        %template(VecVecUINT8) vector<vector<unsigned char> >;
+        %template(VecVecChar) vector<vector<char> >;
 }
 
 %{
@@ -26,3 +29,8 @@ namespace std {
 %include <AbstractLocalSA.h>
 %include <UniLisa.h>
 %include <libgeoda.h>
+
+namespace std {
+        %template(VecGeoDaColumn) vector<GeoDaColumn*>;
+        %template(VecRaw) vector<unsigned char*>;
+}
