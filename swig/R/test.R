@@ -2,11 +2,12 @@ dyn.load("libgeoda.so")
 source("libgeoda.R")
 cacheMetaData(1)
 
-gda <- GeoDa(system.file("extdata", "natregimes.shp", package = "libgeoda"))
+gda <- GeoDa("../../data/natregimes.shp")
+a <- gda$GetGeometryWKB(0)
 
 library(wkb)
 library(rgdal)
-nat_sp <- readOGR(system.file("extdata", "natregimes.shp", package = "libgeoda"))
+nat_sp <- readOGR("../../data/natregimes.shp")
 
 source("sf_geoda.R")
 nat <- sp_to_geoda(nat_sp)

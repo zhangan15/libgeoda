@@ -21,7 +21,6 @@ public:
     GeoDaColumn(const std::string& nm, FieldType ft, int flen, int fdec)
     : name(nm), field_type(ft), field_length(flen), field_decimals(fdec) {}
     virtual ~GeoDaColumn() {}
-    virtual void SetData(const std::vector<long long>& vals) { }
 };
 
 class GeoDaIntColumn : public GeoDaColumn {
@@ -115,7 +114,7 @@ public:
     std::vector<std::string> GetFieldNames();
 
     // Geometry functions
-    char* GetGeometryWKB(int i);
+    std::vector<unsigned char> GetGeometryWKB(int i);
     //void SpatialCount(const char* pDSPath);
 
     // Data functions

@@ -56,7 +56,7 @@ set (Boost_LIBRARIES
 set (WX_INCLUDE_DIR
         ${DEP_LIBRARY_PATH}/wx/include/wx-3.0
         ${DEP_LIBRARY_PATH}/wx/lib/${DEP_OS_SUB}/wx/include/base-unicode-static-3.0)
-#set (CMAKE_CXX_FLAGS  ${CMAKE_CXX_FLAGS} "-D_FILE_OFFSET_BITS=64")
+set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -D_FILE_OFFSET_BITS=64")
 set (WX_LIBRARIES
         ${DEP_LIBRARY_PATH}/wx/lib/${DEP_OS_SUB}/libwx_baseu-3.0.a
         ${DEP_LIBRARY_PATH}/wx/lib/${DEP_OS_SUB}/libwxregexu-3.0.a)
@@ -65,8 +65,8 @@ if (APPLE)
 endif()
 
 ## gdal library (minimal)
-set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.4.0/include)
-set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.4.0/lib/${DEP_OS_SUB}/libgdal.a)
+set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.2.4/include)
+set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.2.4/lib/${DEP_OS_SUB}/libgdal.a)
 
 ## geos library
 #set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include)
@@ -74,6 +74,8 @@ set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include/geos)
 set (GEOS_LIBRARIES
         ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos_c.a
         ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos.a)
+
+set (PROJ4_LIBRARIES ${DEP_LIBRARY_PATH}/proj/5.2.0/lib/${DEP_OS_SUB}/libproj.a)
 
 ###########################################################
 #
@@ -111,11 +113,7 @@ add_library(geoda STATIC ${GEODA_SOURCE_FILES})
 
 # Setup public headers for libgeoda
 #set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})
-set_target_properties(geoda PROPERTIES
-        CXX_STANDARD 11
-        CXX_STANDARD_REQUIRED YES
-        CXX_EXTENSIONS NO
-        )
+#set_target_properties(geoda PROPERTIES  CXX_STANDARD 11  CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
 
 
 # Add install target for libgeoda
@@ -218,20 +216,11 @@ if (APPLE)
     target_include_directories(runUnitTests PUBLIC ${CURL_INCLUDE_DIR})
     target_link_libraries(runUnitTests ${CURL_LIBRARIES})
     target_link_libraries(runUnitTests iconv)
-    target_link_libraries(runUnitTests "/usr/local/Cellar/geos/3.7.2/lib/libgeos.a")
-    target_link_libraries(runUnitTests "/usr/local/Cellar/geos/3.7.2/lib/libgeos_c.a")
-    target_link_libraries(runUnitTests "/usr/local/opt/proj/lib/libproj.a")
-    target_link_libraries(runUnitTests "/usr/local/opt/sqlite3/lib/libsqlite3.a")
 endif()
 
-#target_include_directories(runUnitTests PUBLIC ${ANN_INCLUDE_DIR} )
-#target_link_libraries(runUnitTests ${ANN_LIBRARIES} )
-#target_include_directories(runUnitTests PUBLIC ${Boost_INCLUDE_DIR} )
-#target_link_libraries(runUnitTests ${Boost_LIBRARIES})
-#target_include_directories(runUnitTests PUBLIC ${WX_INCLUDE_DIR} )
-#target_link_libraries(runUnitTests ${WX_LIBRARIES})
-#target_include_directories(runUnitTests PUBLIC ${GEOS_INCLUDE_DIR} )
-#target_link_libraries(runUnitTests ${GEOS_LIBRARIES})
+target_link_libraries(runUnitTests ${GDAL_LIBRARIES})
+target_link_libraries(runUnitTests ${GEOS_LIBRARIES})
+target_link_libraries(runUnitTests ${PROJ4_LIBRARIES})
 
 if (APPLE)
     find_library(CoreServices CoreServices)

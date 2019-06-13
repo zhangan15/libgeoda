@@ -8009,25 +8009,11 @@ attr(`delete_GeoDaColumn`, 'returnType') = 'void'
 attr(`delete_GeoDaColumn`, "inputTypes") = c('_p_GeoDaColumn')
 class(`delete_GeoDaColumn`) = c("SWIGFunction", class('delete_GeoDaColumn'))
 
-# Start of GeoDaColumn_SetData
-
-`GeoDaColumn_SetData` = function(self, vals)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  vals = as.integer(vals);
-  ;.Call('R_swig_GeoDaColumn_SetData', self, vals, PACKAGE='libgeoda');
-  
-}
-
-attr(`GeoDaColumn_SetData`, 'returnType') = 'void'
-attr(`GeoDaColumn_SetData`, "inputTypes") = c('_p_GeoDaColumn', 'integer')
-class(`GeoDaColumn_SetData`) = c("SWIGFunction", class('GeoDaColumn_SetData'))
-
 # Start of accessor method for GeoDaColumn
 setMethod('$', '_p_GeoDaColumn', function(x, name)
 
 {
-  accessorFuns = list('name' = GeoDaColumn_name_get, 'field_type' = GeoDaColumn_field_type_get, 'field_length' = GeoDaColumn_field_length_get, 'field_decimals' = GeoDaColumn_field_decimals_get, 'SetData' = GeoDaColumn_SetData);
+  accessorFuns = list('name' = GeoDaColumn_name_get, 'field_type' = GeoDaColumn_field_type_get, 'field_length' = GeoDaColumn_field_length_get, 'field_decimals' = GeoDaColumn_field_decimals_get);
   vaccessors = c('name', 'field_type', 'field_length', 'field_decimals');
   ;        idx = pmatch(name, names(accessorFuns));
   if(is.na(idx)) 
@@ -8853,7 +8839,7 @@ class(`GeoDa_GetFieldNames`) = c("SWIGFunction", class('GeoDa_GetFieldNames'))
 
 # Start of GeoDa_GetGeometryWKB
 
-`GeoDa_GetGeometryWKB` = function(self, i)
+`GeoDa_GetGeometryWKB` = function(self, i, .copy = FALSE)
 {
   if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
   i = as.integer(i);
@@ -8862,11 +8848,11 @@ class(`GeoDa_GetFieldNames`) = c("SWIGFunction", class('GeoDa_GetFieldNames'))
     warning("using only the first element of i");
   };
   
-  ;.Call('R_swig_GeoDa_GetGeometryWKB', self, i, PACKAGE='libgeoda');
+  ;.Call('R_swig_GeoDa_GetGeometryWKB', self, i, as.logical(.copy), PACKAGE='libgeoda');
   
 }
 
-attr(`GeoDa_GetGeometryWKB`, 'returnType') = 'character'
+attr(`GeoDa_GetGeometryWKB`, 'returnType') = 'integer'
 attr(`GeoDa_GetGeometryWKB`, "inputTypes") = c('_p_GeoDa', 'integer')
 class(`GeoDa_GetGeometryWKB`) = c("SWIGFunction", class('GeoDa_GetGeometryWKB'))
 

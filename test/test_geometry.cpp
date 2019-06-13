@@ -14,8 +14,7 @@ namespace {
 
     TEST(GeomFunctions, wkb) {
         GeoDa gda("../data/natregimes.shp");
-        char* wkb = gda.GetGeometryWKB(2);
-        size_t len = strlen((char*)wkb);
+        std::vector<unsigned char> wkb = gda.GetGeometryWKB(0);
         EXPECT_THAT(gda.GetNumObs(), 3085);
     }
 }

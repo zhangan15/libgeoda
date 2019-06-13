@@ -146,28 +146,40 @@ GeoDa::GeoDa(const char* poDsPath, const char* layer_name)
             numObs = poLayer->GetFeatureCount(true);
             poSpatialRef = poLayer->GetSpatialRef();
             std::cout << "feature count:" << numObs << std::endl;
-        }
-        // read field info
-        OGRFeatureDefn* featureDefn = poLayer->GetLayerDefn();
-        numCols = featureDefn->GetFieldCount();
-        std::cout << "field names count:" << numCols << std::endl;
-
-        for (size_t col_idx=0; col_idx < numCols; col_idx++) {
-            OGRFieldDefn *fieldDefn = featureDefn->GetFieldDefn(col_idx);
-            std::string fieldName = fieldDefn->GetNameRef();
-            fieldNames.push_back(fieldName);
-            fieldNameIdx[fieldName] = col_idx;
-            OGRFieldType fieldType = fieldDefn->GetType();
-            if (fieldType == OFTInteger64 || fieldType == OFTInteger) {
-                fieldTypes.push_back(DT_INTEGER);
-            } else if (fieldType == OFTReal) {
-                fieldTypes.push_back(DT_NUMERIC);
-            } else {
-                fieldTypes.push_back(DT_STRING);
+            OGRwkbGeometryType geom_type = poLayer->GetGeomType();
+            if (geom_type == wkbPolygon || geom_type == wkbMultiPolygon || geom_type == wkbPolygon25D || geom_type ==
+            wkbMultiPolygon25D)
+                mapType = polygon_type;
+            else if (geom_type == wkbPoint || geom_type == wkbMultiPoint || geom_type == wkbPoint25D || geom_type ==
+            wkbMultiPoint25D)
+                mapType = point_type;
+            else if (geom_type == wkbLineString || geom_type == wkbMultiLineString)
+                mapType = line_type;
+            else {
+                std::cout << "map type is not supported" << std::endl;
+                return;
             }
-            //std::cout << "field name: " << fieldName << " field type: " << fieldType << std::endl;
-        }
+            // read field info
+            OGRFeatureDefn* featureDefn = poLayer->GetLayerDefn();
+            numCols = featureDefn->GetFieldCount();
+            std::cout << "field names count:" << numCols << std::endl;
 
+            for (size_t col_idx=0; col_idx < numCols; col_idx++) {
+                OGRFieldDefn *fieldDefn = featureDefn->GetFieldDefn(col_idx);
+                std::string fieldName = fieldDefn->GetNameRef();
+                fieldNames.push_back(fieldName);
+                fieldNameIdx[fieldName] = col_idx;
+                OGRFieldType fieldType = fieldDefn->GetType();
+                if (fieldType == OFTInteger64 || fieldType == OFTInteger) {
+                    fieldTypes.push_back(DT_INTEGER);
+                } else if (fieldType == OFTReal) {
+                    fieldTypes.push_back(DT_NUMERIC);
+                } else {
+                    fieldTypes.push_back(DT_STRING);
+                }
+                //std::cout << "field name: " << fieldName << " field type: " << fieldType << std::endl;
+            }
+        }
     } else {
         std::cout << "posDS is NULL" << std::endl;
     }
@@ -471,24 +483,29 @@ double** GeoDa::fullRaggedMatrix(double** matrix, int n, int k, bool isSqrt) {
 }
 
 // i starts from 1
-char *GeoDa::GetGeometryWKB(int i) {
+std::vector<unsigned char> GeoDa::GetGeometryWKB(int idx) {
+    std::vector<unsigned char> rst;
     OGRFeature *feature = NULL;
     poLayer->ResetReading();
     int row = 0;
     while ((feature = poLayer->GetNextFeature()) != NULL) {
-        if (row == i) {
+        if (row == idx) {
             OGRGeometry* geom = feature->GetGeometryRef();
-            int sz = geom->WkbSize()+1;
+            int sz = geom->WkbSize();
+            rst.resize(sz);
             unsigned char *data = (unsigned char*) malloc(sz);
-            OGRErr err = geom->exportToWkb(wkbXDR, data, wkbVariantOldOgc);
-            // NOTE: this function doesn't work and always return empty
+            OGRErr err = geom->exportToWkb(wkbNDR, data, wkbVariantIso);
             //char *text = NULL;
             //geom->exportToWkt(&text);
-            return (char*)data;
+            for (size_t i=0; i<sz; ++i) {
+                rst[i] = data[i];
+            }
+            free(data);
+            return rst;
         }
         row ++;
     }
-    return 0;
+    return rst;
 }
 
 GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col)

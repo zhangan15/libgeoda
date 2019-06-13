@@ -62,7 +62,7 @@ geoda_to_sp = function(gda) {
   wkb <- list()
   n_obs <- gda$GetNumObs()
   for (i in 1:n_obs) {
-    append(wkb, as.raw(gda$GetGeometryWKB(i)))
+    append(wkb, as.raw(gda$GetGeometryWKB(i-1)))
   }
   obj <- readWKB(
     wkb,

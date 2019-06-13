@@ -1,5 +1,5 @@
 # Import required packages
-# none so far
+#import(wkb)
 
 # Load dynamic libraries (shared object files)
 useDynLib(libgeoda, .registration = TRUE)

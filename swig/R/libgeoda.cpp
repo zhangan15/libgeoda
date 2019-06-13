@@ -17709,45 +17709,6 @@ R_swig_delete_GeoDaColumn ( SEXP self)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDaColumn_SetData ( SEXP self, SEXP vals)
-{
-  GeoDaColumn *arg1 = (GeoDaColumn *) 0 ;
-  std::vector< long long,std::allocator< long long > > *arg2 = 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 = SWIG_OLDOBJ ;
-  unsigned int r_nprotect = 0;
-  SEXP r_ans = R_NilValue ;
-  VMAXTYPE r_vmax = vmaxget() ;
-  
-  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDaColumn, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDaColumn_SetData" "', argument " "1"" of type '" "GeoDaColumn *""'"); 
-  }
-  arg1 = reinterpret_cast< GeoDaColumn * >(argp1);
-  {
-    std::vector<long long int> *ptr = (std::vector<long long int> *)0;
-    res2 = swig::asptr(vals, &ptr);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GeoDaColumn_SetData" "', argument " "2"" of type '" "std::vector< long long,std::allocator< long long > > const &""'"); 
-    }
-    if (!ptr) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GeoDaColumn_SetData" "', argument " "2"" of type '" "std::vector< long long,std::allocator< long long > > const &""'"); 
-    }
-    arg2 = ptr;
-  }
-  (arg1)->SetData((std::vector< long long,std::allocator< long long > > const &)*arg2);
-  r_ans = R_NilValue;
-  
-  if (SWIG_IsNewObj(res2)) delete arg2;
-  vmaxset(r_vmax);
-  if(r_nprotect)  Rf_unprotect(r_nprotect);
-  
-  return r_ans;
-}
-
-
-SWIGEXPORT SEXP
 R_swig_GeoDaIntColumn_data_set ( SEXP self, SEXP s_data)
 {
   GeoDaIntColumn *arg1 = (GeoDaIntColumn *) 0 ;
@@ -18977,9 +18938,9 @@ R_swig_GeoDa_GetFieldNames ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_GetGeometryWKB ( SEXP self, SEXP i)
+R_swig_GeoDa_GetGeometryWKB ( SEXP self, SEXP i, SEXP s_swig_copy)
 {
-  char *result = 0 ;
+  std::vector< unsigned char,std::allocator< unsigned char > > result;
   GeoDa *arg1 = (GeoDa *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -18994,8 +18955,8 @@ R_swig_GeoDa_GetGeometryWKB ( SEXP self, SEXP i)
   }
   arg1 = reinterpret_cast< GeoDa * >(argp1);
   arg2 = static_cast< int >(INTEGER(i)[0]);
-  result = (char *)(arg1)->GetGeometryWKB(arg2);
-  r_ans = result ? Rf_mkString(reinterpret_cast< char * >(result)) : R_NilValue;
+  result = (arg1)->GetGeometryWKB(arg2);
+  r_ans = swig::from(static_cast< std::vector< unsigned char,std::allocator< unsigned char > > >(result));
   
   
   vmaxset(r_vmax);
@@ -22965,7 +22926,7 @@ SWIGINTERN R_CallMethodDef CallEntries[] = {
    {"R_swig_GeoDaWeight_weight_type_set", (DL_FUNC) &R_swig_GeoDaWeight_weight_type_set, 2},
    {"R_swig_GeoDaColumn_field_type_set", (DL_FUNC) &R_swig_GeoDaColumn_field_type_set, 2},
    {"R_swig_GeoDaWeight_symmetry_checked_get", (DL_FUNC) &R_swig_GeoDaWeight_symmetry_checked_get, 2},
-   {"R_swig_GeoDa_GetGeometryWKB", (DL_FUNC) &R_swig_GeoDa_GetGeometryWKB, 2},
+   {"R_swig_GeoDa_GetGeometryWKB", (DL_FUNC) &R_swig_GeoDa_GetGeometryWKB, 3},
    {"R_swig_VecRaw_back", (DL_FUNC) &R_swig_VecRaw_back, 2},
    {"R_swig_AbstractLocalSA_CalcPseudoP_range", (DL_FUNC) &R_swig_AbstractLocalSA_CalcPseudoP_range, 4},
    {"R_swig_GeoDaIntColumn_data_set", (DL_FUNC) &R_swig_GeoDaIntColumn_data_set, 2},
@@ -23241,7 +23202,6 @@ SWIGINTERN R_CallMethodDef CallEntries[] = {
    {"R_swig_AbstractLocalSA_CalcPseudoP_threaded", (DL_FUNC) &R_swig_AbstractLocalSA_CalcPseudoP_threaded, 1},
    {"R_swig_delete_VecVecInt", (DL_FUNC) &R_swig_delete_VecVecInt, 1},
    {"R_swig_delete_VecInt", (DL_FUNC) &R_swig_delete_VecInt, 1},
-   {"R_swig_GeoDaColumn_SetData", (DL_FUNC) &R_swig_GeoDaColumn_SetData, 2},
    {"R_swig_GeoDaIntColumn_GetData", (DL_FUNC) &R_swig_GeoDaIntColumn_GetData, 2},
    {"R_swig_GeoDaIntColumn_SetData", (DL_FUNC) &R_swig_GeoDaIntColumn_SetData, 2},
    {"R_swig_GeoDaStringColumn_GetData", (DL_FUNC) &R_swig_GeoDaStringColumn_GetData, 2},
