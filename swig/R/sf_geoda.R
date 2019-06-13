@@ -4,14 +4,24 @@ random_string <- function(n = 5000) {
 }
 
 sf_to_geoda = function(sf_obj) {
-  if (!requireNamespace("sf")) {
+  if (!require("sf")) {
     stop("package sf not available: install first?")
   }
 }
 
+geoda_to_sf = function(gda) {
+  if (!require("sf")) {
+    stop("package sf not available: install first?")
+  }
+}
+
+# create a GeoDa object from a sp object
 sp_to_geoda = function(sp_obj) {
-  if (!requireNamespace("sp")) {
+  if (!require("sp")) {
     stop("package sp not available: install first?")
+  }
+  if (!require("wkb")) {
+    stop("package wkb not available: install first?")
   }
   # geometries
   geoms_wkb = writeWKB(sp_obj)
@@ -58,25 +68,55 @@ sp_to_geoda = function(sp_obj) {
   return(gda)
 }
 
-geoda_to_sp = function(gda) {
+# create a sp object from a GeoDa object
+geoda_to_sp = function(gda, geometry_only=TRUE) {
+  if (!require("sp")) {
+    stop("package sp not available: install first?")
+  }
+  if (!require("wkb")) {
+    stop("package wkb not available: install first?")
+  }
   # map_type
   map_type <- gda$GetMapType()
-  if (map_type == "polygon_type") {
-    # Creation of spatial polygons
 
-  }
   # geometries
-  wkb <- list()
   n_obs <- gda$GetNumObs()
-  for (i in 1:n_obs) {
-    append(wkb, as.raw(gda$GetGeometryWKB(i-1)))
-  }
-  obj <- readWKB(
+  wkb <- gda$GetGeometryWKB()
+  wkb <- I(wkb)
+
+  # create Spatial object
+  sp_obj <- readWKB(
     wkb,
-    id = c("San Francisco", "New York"),
+    #id = c("San Francisco", "New York"), using default sequential ids
     proj4string = sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
   )
 
-  # use the WKB as a column in a data frame
-  #ds <- data.frame(ID = c("a","b"), Geometry = wkb)
+  # create data frome
+  df <- data.frame(row.names=row.names(sp_obj))
+  if (geometry_only == FALSE) {
+      n_cols <- gda$GetNumCols()
+      col_nms <- gda$GetFieldNames()
+      col_tps <- gda$GetFieldTypes()
+      for (i in 1:n_cols) {
+        col_nm <- col_nms[[i]]
+        col_tp <- col_tps[[i]]
+        if (col_tp == "integer") {
+          df[, col_nm] <- gda$GetIntegerCol(col_nm)
+        } else if (col_tp == "numeric") {
+          df[, col_nm] <- gda$GetNumericCol(col_nm)
+        } else {
+          df[, col_nm] <- gda$GetStringCol(col_nm)
+        }
+      }
+  }
+
+  # create spatial dataframe
+  if (map_type == "polygon_type") {
+    return(SpatialPolygonsDataFrame(sp_obj, data = df))
+  } else if(map_type == "point_type") {
+    return(SpatialPointsDataFrame(sp_obj, data = df))
+  } else if (map_type == "line_type") {
+    return(SpatialLinesDataFrame(sp_obj, data = df))
+  }
+  return (NULL)
 }

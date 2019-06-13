@@ -190,7 +190,7 @@ set (TEST_SOURCE_FILES
         test/test_weights.cpp
         test/test_localSA.cpp
         test/test_clustering.cpp
-        test/test_geometry.cpp)
+        test/test_geometry.cpp test/test_table.cpp)
 add_executable( runUnitTests ${TEST_SOURCE_FILES} )
 
 set_target_properties(runUnitTests PROPERTIES

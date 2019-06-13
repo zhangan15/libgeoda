@@ -183,7 +183,6 @@ setClass('_p_GeoDaRealColumn', contains = c('_p_GeoDaColumn'))
 setClass('_p_GeoDaTable', contains = 'C++Reference')
 setClass('_p_GeoDa', contains = 'C++Reference')
 setClass('_p_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t', contains = 'C++Reference')
-setClass('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', contains = 'C++Reference')
 
 
 
@@ -8859,8 +8858,7 @@ class(`GeoDa_GetFieldNames`) = c("SWIGFunction", class('GeoDa_GetFieldNames'))
 {
   if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
   ;ans = .Call('R_swig_GeoDa_GetGeometryWKB', self, as.logical(.copy), PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t", ref=ans);
+# override SWIG generate return an unkonwn type
   
   ans
   
@@ -8869,6 +8867,19 @@ class(`GeoDa_GetFieldNames`) = c("SWIGFunction", class('GeoDa_GetFieldNames'))
 attr(`GeoDa_GetGeometryWKB`, 'returnType') = '_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t'
 attr(`GeoDa_GetGeometryWKB`, "inputTypes") = c('_p_GeoDa')
 class(`GeoDa_GetGeometryWKB`) = c("SWIGFunction", class('GeoDa_GetGeometryWKB'))
+
+# Start of GeoDa_GetGeometryWKT
+
+`GeoDa_GetGeometryWKT` = function(self, .copy = FALSE)
+{
+  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
+  ;.Call('R_swig_GeoDa_GetGeometryWKT', self, as.logical(.copy), PACKAGE='libgeoda');
+  
+}
+
+attr(`GeoDa_GetGeometryWKT`, 'returnType') = 'character'
+attr(`GeoDa_GetGeometryWKT`, "inputTypes") = c('_p_GeoDa')
+class(`GeoDa_GetGeometryWKT`) = c("SWIGFunction", class('GeoDa_GetGeometryWKT'))
 
 # Start of GeoDa_GetNumericCol
 
@@ -8884,19 +8895,19 @@ attr(`GeoDa_GetNumericCol`, 'returnType') = 'numeric'
 attr(`GeoDa_GetNumericCol`, "inputTypes") = c('_p_GeoDa', 'character')
 class(`GeoDa_GetNumericCol`) = c("SWIGFunction", class('GeoDa_GetNumericCol'))
 
-# Start of GeoDa_GeIntegerCol
+# Start of GeoDa_GetIntegerCol
 
-`GeoDa_GeIntegerCol` = function(self, col_name, .copy = FALSE)
+`GeoDa_GetIntegerCol` = function(self, col_name, .copy = FALSE)
 {
   if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
   col_name = as(col_name, "character"); 
-  ;.Call('R_swig_GeoDa_GeIntegerCol', self, col_name, as.logical(.copy), PACKAGE='libgeoda');
+  ;.Call('R_swig_GeoDa_GetIntegerCol', self, col_name, as.logical(.copy), PACKAGE='libgeoda');
   
 }
 
-attr(`GeoDa_GeIntegerCol`, 'returnType') = 'integer'
-attr(`GeoDa_GeIntegerCol`, "inputTypes") = c('_p_GeoDa', 'character')
-class(`GeoDa_GeIntegerCol`) = c("SWIGFunction", class('GeoDa_GeIntegerCol'))
+attr(`GeoDa_GetIntegerCol`, 'returnType') = 'integer'
+attr(`GeoDa_GetIntegerCol`, "inputTypes") = c('_p_GeoDa', 'character')
+class(`GeoDa_GetIntegerCol`) = c("SWIGFunction", class('GeoDa_GetIntegerCol'))
 
 # Start of GeoDa_GetStringCol
 
@@ -9471,7 +9482,7 @@ class(`GeoDa_SKATER__SWIG_7`) = c("SWIGFunction", class('GeoDa_SKATER__SWIG_7'))
 setMethod('$', '_p_GeoDa', function(x, name)
 
 {
-  accessorFuns = list('GetMapType' = GeoDa_GetMapType, 'GetNumObs' = GeoDa_GetNumObs, 'GetNumCols' = GeoDa_GetNumCols, 'GetFieldTypes' = GeoDa_GetFieldTypes, 'GetFieldNames' = GeoDa_GetFieldNames, 'GetGeometryWKB' = GeoDa_GetGeometryWKB, 'GetNumericCol' = GeoDa_GetNumericCol, 'GeIntegerCol' = GeoDa_GeIntegerCol, 'GetStringCol' = GeoDa_GetStringCol, 'GetUndefinesCol' = GeoDa_GetUndefinesCol, 'GetName' = GeoDa_GetName, 'CreateContiguityWeights' = GeoDa_CreateContiguityWeights, 'CreateDistanceWeights' = GeoDa_CreateDistanceWeights, 'LISA' = GeoDa_LISA, 'SKATER' = GeoDa_SKATER);
+  accessorFuns = list('GetMapType' = GeoDa_GetMapType, 'GetNumObs' = GeoDa_GetNumObs, 'GetNumCols' = GeoDa_GetNumCols, 'GetFieldTypes' = GeoDa_GetFieldTypes, 'GetFieldNames' = GeoDa_GetFieldNames, 'GetGeometryWKB' = GeoDa_GetGeometryWKB, 'GetGeometryWKT' = GeoDa_GetGeometryWKT, 'GetNumericCol' = GeoDa_GetNumericCol, 'GetIntegerCol' = GeoDa_GetIntegerCol, 'GetStringCol' = GeoDa_GetStringCol, 'GetUndefinesCol' = GeoDa_GetUndefinesCol, 'GetName' = GeoDa_GetName, 'CreateContiguityWeights' = GeoDa_CreateContiguityWeights, 'CreateDistanceWeights' = GeoDa_CreateDistanceWeights, 'LISA' = GeoDa_LISA, 'SKATER' = GeoDa_SKATER);
   ;        idx = pmatch(name, names(accessorFuns));
   if(is.na(idx)) 
   return(callNextMethod(x, name));
@@ -10147,584 +10158,20 @@ setMethod('$', '_p_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t'
 );
 # end of accessor method for std::vector<(p.GeoDaColumn)>
 setMethod('delete', '_p_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t', function(obj) {delete_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t(obj)})
-# Start of VecRaw___nonzero__
+# Start of func
 
-`VecRaw___nonzero__` = function(self, .copy = FALSE)
+`func` = function(.copy = FALSE)
 {
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw___nonzero__', self, as.logical(.copy), PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw___nonzero__`, 'returnType') = 'logical'
-attr(`VecRaw___nonzero__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw___nonzero__`) = c("SWIGFunction", class('VecRaw___nonzero__'))
-
-# Start of VecRaw___len__
-
-`VecRaw___len__` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw___len__', self, as.logical(.copy), PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw___len__`, 'returnType') = 'integer'
-attr(`VecRaw___len__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw___len__`) = c("SWIGFunction", class('VecRaw___len__'))
-
-# Start of VecRaw_pop
-
-`VecRaw_pop` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;ans = .Call('R_swig_VecRaw_pop', self, as.logical(.copy), PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_unsigned_char", ref=ans);
+  ;ans = .Call('R_swig_func', as.logical(.copy), PACKAGE='libgeoda');
+# override SWIG generate return an unkonwn type
   
   ans
   
 }
 
-attr(`VecRaw_pop`, 'returnType') = 'integer'
-attr(`VecRaw_pop`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_pop`) = c("SWIGFunction", class('VecRaw_pop'))
+attr(`func`, 'returnType') = '_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t'
+class(`func`) = c("SWIGFunction", class('func'))
 
-# Start of VecRaw___getslice__
-
-`VecRaw___getslice__` = function(self, i, j)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
-  
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  j = as.integer(j);
-  
-  if(length(j) > 1) {
-    warning("using only the first element of j");
-  };
-  
-  ;ans = .Call('R_swig_VecRaw___getslice__', self, i, j, PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t", ref=ans);
-  
-  ans
-  
-}
-
-attr(`VecRaw___getslice__`, 'returnType') = '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t'
-attr(`VecRaw___getslice__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer', 'integer')
-class(`VecRaw___getslice__`) = c("SWIGFunction", class('VecRaw___getslice__'))
-
-# Start of VecRaw___setslice__
-
-`VecRaw___setslice__` = function(self, i, j, v)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
-  
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  j = as.integer(j);
-  
-  if(length(j) > 1) {
-    warning("using only the first element of j");
-  };
-  
-  if (inherits(v, "ExternalReference")) v = slot(v,"ref") 
-  ;.Call('R_swig_VecRaw___setslice__', self, i, j, v, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw___setslice__`, 'returnType') = 'void'
-attr(`VecRaw___setslice__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer', 'integer', '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw___setslice__`) = c("SWIGFunction", class('VecRaw___setslice__'))
-
-# Start of VecRaw___delslice__
-
-`VecRaw___delslice__` = function(self, i, j)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
-  
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  j = as.integer(j);
-  
-  if(length(j) > 1) {
-    warning("using only the first element of j");
-  };
-  
-  ;.Call('R_swig_VecRaw___delslice__', self, i, j, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw___delslice__`, 'returnType') = 'void'
-attr(`VecRaw___delslice__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer', 'integer')
-class(`VecRaw___delslice__`) = c("SWIGFunction", class('VecRaw___delslice__'))
-
-# Start of VecRaw___delitem__
-
-`VecRaw___delitem__` = function(self, i)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
-  
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  ;.Call('R_swig_VecRaw___delitem__', self, i, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw___delitem__`, 'returnType') = 'void'
-attr(`VecRaw___delitem__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer')
-class(`VecRaw___delitem__`) = c("SWIGFunction", class('VecRaw___delitem__'))
-
-# Start of VecRaw___getitem__
-
-`VecRaw___getitem__` = function(self, i, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
-  
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  ;ans = .Call('R_swig_VecRaw___getitem__', self, i, as.logical(.copy), PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_unsigned_char", ref=ans);
-  
-  ans
-  
-}
-
-attr(`VecRaw___getitem__`, 'returnType') = 'integer'
-attr(`VecRaw___getitem__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer')
-class(`VecRaw___getitem__`) = c("SWIGFunction", class('VecRaw___getitem__'))
-
-# Start of VecRaw___setitem__
-
-`VecRaw___setitem__` = function(self, i, x)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
-  
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  x = as.integer(x);
-  ;.Call('R_swig_VecRaw___setitem__', self, i, x, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw___setitem__`, 'returnType') = 'void'
-attr(`VecRaw___setitem__`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer', 'integer')
-class(`VecRaw___setitem__`) = c("SWIGFunction", class('VecRaw___setitem__'))
-
-# Start of VecRaw_append
-
-`VecRaw_append` = function(self, x)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  x = as.integer(x);
-  ;.Call('R_swig_VecRaw_append', self, x, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_append`, 'returnType') = 'void'
-attr(`VecRaw_append`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer')
-class(`VecRaw_append`) = c("SWIGFunction", class('VecRaw_append'))
-
-# Start of new_VecRaw
-
-`VecRaw__SWIG_0` = function()
-{
-  ;ans = .Call('R_swig_new_VecRaw__SWIG_0', PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t", ref=ans);
-  
-  reg.finalizer(ans@ref, delete_VecRaw)
-  ans
-  
-}
-
-attr(`VecRaw__SWIG_0`, 'returnType') = '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t'
-class(`VecRaw__SWIG_0`) = c("SWIGFunction", class('VecRaw__SWIG_0'))
-
-# Start of new_VecRaw
-
-`VecRaw__SWIG_1` = function(other)
-{
-  if (inherits(other, "ExternalReference")) other = slot(other,"ref") 
-  ;ans = .Call('R_swig_new_VecRaw__SWIG_1', other, PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t", ref=ans);
-  
-  reg.finalizer(ans@ref, delete_VecRaw)
-  ans
-  
-}
-
-attr(`VecRaw__SWIG_1`, 'returnType') = '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t'
-attr(`VecRaw__SWIG_1`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw__SWIG_1`) = c("SWIGFunction", class('VecRaw__SWIG_1'))
-
-# Start of VecRaw_empty
-
-`VecRaw_empty` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw_empty', self, as.logical(.copy), PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_empty`, 'returnType') = 'logical'
-attr(`VecRaw_empty`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_empty`) = c("SWIGFunction", class('VecRaw_empty'))
-
-# Start of VecRaw_size
-
-`VecRaw_size` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw_size', self, as.logical(.copy), PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_size`, 'returnType') = 'integer'
-attr(`VecRaw_size`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_size`) = c("SWIGFunction", class('VecRaw_size'))
-
-# Start of VecRaw_swap
-
-`VecRaw_swap` = function(self, v)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  if (inherits(v, "ExternalReference")) v = slot(v,"ref") 
-  ;.Call('R_swig_VecRaw_swap', self, v, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_swap`, 'returnType') = 'void'
-attr(`VecRaw_swap`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_swap`) = c("SWIGFunction", class('VecRaw_swap'))
-
-# Start of VecRaw_clear
-
-`VecRaw_clear` = function(self)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw_clear', self, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_clear`, 'returnType') = 'void'
-attr(`VecRaw_clear`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_clear`) = c("SWIGFunction", class('VecRaw_clear'))
-
-# Start of VecRaw_get_allocator
-
-`VecRaw_get_allocator` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;ans = .Call('R_swig_VecRaw_get_allocator', self, as.logical(.copy), PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__allocatorT_unsigned_char_p_t", ref=ans);
-  
-  ans
-  
-}
-
-attr(`VecRaw_get_allocator`, 'returnType') = '_p_std__allocatorT_unsigned_char_p_t'
-attr(`VecRaw_get_allocator`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_get_allocator`) = c("SWIGFunction", class('VecRaw_get_allocator'))
-
-# Start of new_VecRaw
-
-`VecRaw__SWIG_2` = function(size)
-{
-  size = as.integer(size);
-  
-  if(length(size) > 1) {
-    warning("using only the first element of size");
-  };
-  
-  ;ans = .Call('R_swig_new_VecRaw__SWIG_2', size, PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t", ref=ans);
-  
-  reg.finalizer(ans@ref, delete_VecRaw)
-  ans
-  
-}
-
-attr(`VecRaw__SWIG_2`, 'returnType') = '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t'
-attr(`VecRaw__SWIG_2`, "inputTypes") = c('integer')
-class(`VecRaw__SWIG_2`) = c("SWIGFunction", class('VecRaw__SWIG_2'))
-
-# Start of VecRaw_pop_back
-
-`VecRaw_pop_back` = function(self)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw_pop_back', self, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_pop_back`, 'returnType') = 'void'
-attr(`VecRaw_pop_back`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_pop_back`) = c("SWIGFunction", class('VecRaw_pop_back'))
-
-# Start of VecRaw_resize
-
-`VecRaw_resize__SWIG_0` = function(self, new_size)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  new_size = as.integer(new_size);
-  
-  if(length(new_size) > 1) {
-    warning("using only the first element of new_size");
-  };
-  
-  ;.Call('R_swig_VecRaw_resize__SWIG_0', self, new_size, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_resize__SWIG_0`, 'returnType') = 'void'
-attr(`VecRaw_resize__SWIG_0`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer')
-class(`VecRaw_resize__SWIG_0`) = c("SWIGFunction", class('VecRaw_resize__SWIG_0'))
-
-# Start of new_VecRaw
-
-`VecRaw__SWIG_3` = function(size, value)
-{
-  size = as.integer(size);
-  
-  if(length(size) > 1) {
-    warning("using only the first element of size");
-  };
-  
-  value = as.integer(value);
-  ;ans = .Call('R_swig_new_VecRaw__SWIG_3', size, value, PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t", ref=ans);
-  
-  reg.finalizer(ans@ref, delete_VecRaw)
-  ans
-  
-}
-
-attr(`VecRaw__SWIG_3`, 'returnType') = '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t'
-attr(`VecRaw__SWIG_3`, "inputTypes") = c('integer', 'integer')
-class(`VecRaw__SWIG_3`) = c("SWIGFunction", class('VecRaw__SWIG_3'))
-
-`VecRaw` <- function(...) {
-  argtypes <- mapply(class, list(...));
-  argv <- list(...);
-  argc <- length(argtypes);
-# dispatch functions 4
-  if (argc == 0) {
-    f <- VecRaw__SWIG_0; 
-  } else if (argc == 1) {
-    if (( (is.integer(argv[[1]]) || is.numeric(argv[[1]])) && length(argv[[1]]) == 1 )) {
-      f <- VecRaw__SWIG_2; 
-    }
-    else if (extends(argtypes[1], '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t') && length(argv[[1]]) == 1) {
-      f <- VecRaw__SWIG_1; 
-    }
-  } else if (argc == 2) {
-    if (( (is.integer(argv[[1]]) || is.numeric(argv[[1]])) && length(argv[[1]]) == 1 ) && ( is.integer(argv[[2]]) || is.numeric(argv[[2]]) )) {
-      f <- VecRaw__SWIG_3; 
-    }
-  } else {
-    stop("cannot find overloaded function for VecRaw with argtypes (",toString(argtypes),")");
-  };
-  f(...);
-}
-
-# Dispatch function
-# Start of VecRaw_push_back
-
-`VecRaw_push_back` = function(self, x)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  x = as.integer(x);
-  ;.Call('R_swig_VecRaw_push_back', self, x, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_push_back`, 'returnType') = 'void'
-attr(`VecRaw_push_back`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer')
-class(`VecRaw_push_back`) = c("SWIGFunction", class('VecRaw_push_back'))
-
-# Start of VecRaw_front
-
-`VecRaw_front` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;ans = .Call('R_swig_VecRaw_front', self, as.logical(.copy), PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_unsigned_char", ref=ans);
-  
-  ans
-  
-}
-
-attr(`VecRaw_front`, 'returnType') = 'integer'
-attr(`VecRaw_front`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_front`) = c("SWIGFunction", class('VecRaw_front'))
-
-# Start of VecRaw_back
-
-`VecRaw_back` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;ans = .Call('R_swig_VecRaw_back', self, as.logical(.copy), PACKAGE='libgeoda');
-  ans <- if (is.null(ans)) ans
-  else new("_p_unsigned_char", ref=ans);
-  
-  ans
-  
-}
-
-attr(`VecRaw_back`, 'returnType') = 'integer'
-attr(`VecRaw_back`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_back`) = c("SWIGFunction", class('VecRaw_back'))
-
-# Start of VecRaw_assign
-
-`VecRaw_assign` = function(self, n, x)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  n = as.integer(n);
-  
-  if(length(n) > 1) {
-    warning("using only the first element of n");
-  };
-  
-  x = as.integer(x);
-  ;.Call('R_swig_VecRaw_assign', self, n, x, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_assign`, 'returnType') = 'void'
-attr(`VecRaw_assign`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer', 'integer')
-class(`VecRaw_assign`) = c("SWIGFunction", class('VecRaw_assign'))
-
-# Start of VecRaw_resize
-
-`VecRaw_resize__SWIG_1` = function(self, new_size, x)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  new_size = as.integer(new_size);
-  
-  if(length(new_size) > 1) {
-    warning("using only the first element of new_size");
-  };
-  
-  x = as.integer(x);
-  ;.Call('R_swig_VecRaw_resize__SWIG_1', self, new_size, x, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_resize__SWIG_1`, 'returnType') = 'void'
-attr(`VecRaw_resize__SWIG_1`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer', 'integer')
-class(`VecRaw_resize__SWIG_1`) = c("SWIGFunction", class('VecRaw_resize__SWIG_1'))
-
-`VecRaw_resize` <- function(...) {
-  argtypes <- mapply(class, list(...));
-  argv <- list(...);
-  argc <- length(argtypes);
-# dispatch functions 2
-  if (argc == 2) {
-    if ((extends(argtypes[1], '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t') || is.null(argv[[1]])) && ( (is.integer(argv[[2]]) || is.numeric(argv[[2]])) && length(argv[[2]]) == 1 )) {
-      f <- VecRaw_resize__SWIG_0; 
-    }
-  } else if (argc == 3) {
-    if ((extends(argtypes[1], '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t') || is.null(argv[[1]])) && ( (is.integer(argv[[2]]) || is.numeric(argv[[2]])) && length(argv[[2]]) == 1 ) && ( is.integer(argv[[3]]) || is.numeric(argv[[3]]) )) {
-      f <- VecRaw_resize__SWIG_1; 
-    }
-  } else {
-    stop("cannot find overloaded function for VecRaw_resize with argtypes (",toString(argtypes),")");
-  };
-  f(...);
-}
-
-# Dispatch function
-# Start of VecRaw_reserve
-
-`VecRaw_reserve` = function(self, n)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  n = as.integer(n);
-  
-  if(length(n) > 1) {
-    warning("using only the first element of n");
-  };
-  
-  ;.Call('R_swig_VecRaw_reserve', self, n, PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_reserve`, 'returnType') = 'void'
-attr(`VecRaw_reserve`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', 'integer')
-class(`VecRaw_reserve`) = c("SWIGFunction", class('VecRaw_reserve'))
-
-# Start of VecRaw_capacity
-
-`VecRaw_capacity` = function(self, .copy = FALSE)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_VecRaw_capacity', self, as.logical(.copy), PACKAGE='libgeoda');
-  
-}
-
-attr(`VecRaw_capacity`, 'returnType') = 'integer'
-attr(`VecRaw_capacity`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`VecRaw_capacity`) = c("SWIGFunction", class('VecRaw_capacity'))
-
-# Start of delete_VecRaw
-
-`delete_VecRaw` = function(self)
-{
-  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  ;.Call('R_swig_delete_VecRaw', self, PACKAGE='libgeoda');
-  
-}
-
-attr(`delete_VecRaw`, 'returnType') = 'void'
-attr(`delete_VecRaw`, "inputTypes") = c('_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t')
-class(`delete_VecRaw`) = c("SWIGFunction", class('delete_VecRaw'))
-
-# Start of accessor method for std::vector<(p.unsigned char)>
-setMethod('$', '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', function(x, name)
-
-{
-  accessorFuns = list('__nonzero__' = VecRaw___nonzero__, '__len__' = VecRaw___len__, 'pop' = VecRaw_pop, '__getslice__' = VecRaw___getslice__, '__setslice__' = VecRaw___setslice__, '__delslice__' = VecRaw___delslice__, '__delitem__' = VecRaw___delitem__, '__getitem__' = VecRaw___getitem__, '__setitem__' = VecRaw___setitem__, 'append' = VecRaw_append, 'empty' = VecRaw_empty, 'size' = VecRaw_size, 'swap' = VecRaw_swap, 'clear' = VecRaw_clear, 'get_allocator' = VecRaw_get_allocator, 'pop_back' = VecRaw_pop_back, 'resize' = VecRaw_resize, 'push_back' = VecRaw_push_back, 'front' = VecRaw_front, 'back' = VecRaw_back, 'assign' = VecRaw_assign, 'reserve' = VecRaw_reserve, 'capacity' = VecRaw_capacity);
-  ;        idx = pmatch(name, names(accessorFuns));
-  if(is.na(idx)) 
-  return(callNextMethod(x, name));
-  f = accessorFuns[[idx]];
-  function(...){
-    f(x, ...)
-  };
-}
-
-
-);
-# end of accessor method for std::vector<(p.unsigned char)>
-setMethod('delete', '_p_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t', function(obj) {delete_std__vectorT_unsigned_char_p_std__allocatorT_unsigned_char_p_t_t(obj)})
 
 defineEnumeration("_GeoDaWeight__WeightType",
  .values=c("gal_type" = .Call('R_swig_GeoDaWeight_gal_type_get',FALSE, PACKAGE='libgeoda'),

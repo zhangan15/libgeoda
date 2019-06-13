@@ -288,7 +288,7 @@ std::vector<double> GeoDa::GetNumericCol(std::string col_name)
     return rst;
 }
 
-std::vector<long long> GeoDa::GeIntegerCol(std::string col_name) {
+std::vector<long long> GeoDa::GetIntegerCol(std::string col_name) {
     std::vector<long long> rst;
     OGRFeature* feature = NULL;
     poLayer->ResetReading();

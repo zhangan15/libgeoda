@@ -121,7 +121,7 @@ public:
 
     // Data functions
     std::vector<double> GetNumericCol(std::string col_name);
-    std::vector<long long> GeIntegerCol(std::string col_name);
+    std::vector<long long> GetIntegerCol(std::string col_name);
     std::vector<std::string> GetStringCol(std::string col_name);
     std::vector<bool> GetUndefinesCol(std::string col_name);
 
