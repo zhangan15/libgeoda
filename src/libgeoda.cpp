@@ -483,29 +483,45 @@ double** GeoDa::fullRaggedMatrix(double** matrix, int n, int k, bool isSqrt) {
 }
 
 // i starts from 1
-std::vector<unsigned char> GeoDa::GetGeometryWKB(int idx) {
-    std::vector<unsigned char> rst;
+std::vector<std::vector<unsigned char> >  GeoDa::GetGeometryWKB() {
+    std::vector<std::vector<unsigned char> > rst(numObs);
     OGRFeature *feature = NULL;
     poLayer->ResetReading();
     int row = 0;
     while ((feature = poLayer->GetNextFeature()) != NULL) {
-        if (row == idx) {
-            OGRGeometry* geom = feature->GetGeometryRef();
-            int sz = geom->WkbSize();
-            rst.resize(sz);
-            unsigned char *data = (unsigned char*) malloc(sz);
-            OGRErr err = geom->exportToWkb(wkbNDR, data, wkbVariantIso);
-            //char *text = NULL;
-            //geom->exportToWkt(&text);
-            for (size_t i=0; i<sz; ++i) {
-                rst[i] = data[i];
-            }
-            free(data);
-            return rst;
+        OGRGeometry* geom = feature->GetGeometryRef();
+        int sz = geom->WkbSize();
+        rst[row].resize(sz);
+        unsigned char *data = (unsigned char*) malloc(sz);
+        OGRErr err = geom->exportToWkb(wkbNDR, data, wkbVariantIso);
+        //char *text = NULL;
+        //geom->exportToWkt(&text);
+        for (size_t i=0; i<sz; ++i) {
+            rst[row][i] = data[i];
         }
-        row ++;
+        free(data);
+        row++;
     }
     return rst;
+}
+
+std::vector<std::string>  GeoDa::GetGeometryWKT() {
+    std::vector<std::string> rst(numObs);
+    OGRFeature *feature = NULL;
+    poLayer->ResetReading();
+    int row = 0;
+    while ((feature = poLayer->GetNextFeature()) != NULL) {
+        OGRGeometry* geom = feature->GetGeometryRef();
+        char *text = NULL;
+        geom->exportToWkt(&text);
+        rst[row] = text;
+        row++;
+    }
+    return rst;
+}
+
+GeoDa::MapType GeoDa::GetMapType() const {
+    return mapType;
 }
 
 GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col)

@@ -8785,6 +8785,22 @@ attr(`delete_GeoDa`, 'returnType') = 'void'
 attr(`delete_GeoDa`, "inputTypes") = c('_p_GeoDa')
 class(`delete_GeoDa`) = c("SWIGFunction", class('delete_GeoDa'))
 
+# Start of GeoDa_GetMapType
+
+`GeoDa_GetMapType` = function(self, .copy = FALSE)
+{
+  if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
+  ;ans = .Call('R_swig_GeoDa_GetMapType', self, as.logical(.copy), PACKAGE='libgeoda');
+  ans = enumFromInteger(ans, "_GeoDa__MapType");
+  
+  ans
+  
+}
+
+attr(`GeoDa_GetMapType`, 'returnType') = 'character'
+attr(`GeoDa_GetMapType`, "inputTypes") = c('_p_GeoDa')
+class(`GeoDa_GetMapType`) = c("SWIGFunction", class('GeoDa_GetMapType'))
+
 # Start of GeoDa_GetNumObs
 
 `GeoDa_GetNumObs` = function(self, .copy = FALSE)
@@ -8839,21 +8855,19 @@ class(`GeoDa_GetFieldNames`) = c("SWIGFunction", class('GeoDa_GetFieldNames'))
 
 # Start of GeoDa_GetGeometryWKB
 
-`GeoDa_GetGeometryWKB` = function(self, i, .copy = FALSE)
+`GeoDa_GetGeometryWKB` = function(self, .copy = FALSE)
 {
   if (inherits(self, "ExternalReference")) self = slot(self,"ref") 
-  i = as.integer(i);
+  ;ans = .Call('R_swig_GeoDa_GetGeometryWKB', self, as.logical(.copy), PACKAGE='libgeoda');
+  ans <- if (is.null(ans)) ans
+  else new("_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t", ref=ans);
   
-  if(length(i) > 1) {
-    warning("using only the first element of i");
-  };
-  
-  ;.Call('R_swig_GeoDa_GetGeometryWKB', self, i, as.logical(.copy), PACKAGE='libgeoda');
+  ans
   
 }
 
-attr(`GeoDa_GetGeometryWKB`, 'returnType') = 'integer'
-attr(`GeoDa_GetGeometryWKB`, "inputTypes") = c('_p_GeoDa', 'integer')
+attr(`GeoDa_GetGeometryWKB`, 'returnType') = '_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t'
+attr(`GeoDa_GetGeometryWKB`, "inputTypes") = c('_p_GeoDa')
 class(`GeoDa_GetGeometryWKB`) = c("SWIGFunction", class('GeoDa_GetGeometryWKB'))
 
 # Start of GeoDa_GetNumericCol
@@ -9457,7 +9471,7 @@ class(`GeoDa_SKATER__SWIG_7`) = c("SWIGFunction", class('GeoDa_SKATER__SWIG_7'))
 setMethod('$', '_p_GeoDa', function(x, name)
 
 {
-  accessorFuns = list('GetNumObs' = GeoDa_GetNumObs, 'GetNumCols' = GeoDa_GetNumCols, 'GetFieldTypes' = GeoDa_GetFieldTypes, 'GetFieldNames' = GeoDa_GetFieldNames, 'GetGeometryWKB' = GeoDa_GetGeometryWKB, 'GetNumericCol' = GeoDa_GetNumericCol, 'GeIntegerCol' = GeoDa_GeIntegerCol, 'GetStringCol' = GeoDa_GetStringCol, 'GetUndefinesCol' = GeoDa_GetUndefinesCol, 'GetName' = GeoDa_GetName, 'CreateContiguityWeights' = GeoDa_CreateContiguityWeights, 'CreateDistanceWeights' = GeoDa_CreateDistanceWeights, 'LISA' = GeoDa_LISA, 'SKATER' = GeoDa_SKATER);
+  accessorFuns = list('GetMapType' = GeoDa_GetMapType, 'GetNumObs' = GeoDa_GetNumObs, 'GetNumCols' = GeoDa_GetNumCols, 'GetFieldTypes' = GeoDa_GetFieldTypes, 'GetFieldNames' = GeoDa_GetFieldNames, 'GetGeometryWKB' = GeoDa_GetGeometryWKB, 'GetNumericCol' = GeoDa_GetNumericCol, 'GeIntegerCol' = GeoDa_GeIntegerCol, 'GetStringCol' = GeoDa_GetStringCol, 'GetUndefinesCol' = GeoDa_GetUndefinesCol, 'GetName' = GeoDa_GetName, 'CreateContiguityWeights' = GeoDa_CreateContiguityWeights, 'CreateDistanceWeights' = GeoDa_CreateDistanceWeights, 'LISA' = GeoDa_LISA, 'SKATER' = GeoDa_SKATER);
   ;        idx = pmatch(name, names(accessorFuns));
   if(is.na(idx)) 
   return(callNextMethod(x, name));

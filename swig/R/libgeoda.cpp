@@ -18834,6 +18834,32 @@ R_swig_delete_GeoDa ( SEXP self)
 
 
 SWIGEXPORT SEXP
+R_swig_GeoDa_GetMapType ( SEXP self, SEXP s_swig_copy)
+{
+  GeoDa::MapType result;
+  GeoDa *arg1 = (GeoDa *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int r_nprotect = 0;
+  SEXP r_ans = R_NilValue ;
+  VMAXTYPE r_vmax = vmaxget() ;
+  
+  res1 = SWIG_R_ConvertPtr(self, &argp1, SWIGTYPE_p_GeoDa, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetMapType" "', argument " "1"" of type '" "GeoDa const *""'"); 
+  }
+  arg1 = reinterpret_cast< GeoDa * >(argp1);
+  result = (GeoDa::MapType)((GeoDa const *)arg1)->GetMapType();
+  r_ans = SWIG_From_int(static_cast< int >(result));
+  
+  vmaxset(r_vmax);
+  if(r_nprotect)  Rf_unprotect(r_nprotect);
+  
+  return r_ans;
+}
+
+
+SWIGEXPORT SEXP
 R_swig_GeoDa_GetNumObs ( SEXP self, SEXP s_swig_copy)
 {
   int result;
@@ -18938,11 +18964,10 @@ R_swig_GeoDa_GetFieldNames ( SEXP self, SEXP s_swig_copy)
 
 
 SWIGEXPORT SEXP
-R_swig_GeoDa_GetGeometryWKB ( SEXP self, SEXP i, SEXP s_swig_copy)
+R_swig_GeoDa_GetGeometryWKB ( SEXP self, SEXP s_swig_copy)
 {
-  std::vector< unsigned char,std::allocator< unsigned char > > result;
+  std::vector< std::vector< unsigned char,std::allocator< unsigned char > >,std::allocator< std::vector< unsigned char,std::allocator< unsigned char > > > > result;
   GeoDa *arg1 = (GeoDa *) 0 ;
-  int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   unsigned int r_nprotect = 0;
@@ -18954,10 +18979,8 @@ R_swig_GeoDa_GetGeometryWKB ( SEXP self, SEXP i, SEXP s_swig_copy)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GeoDa_GetGeometryWKB" "', argument " "1"" of type '" "GeoDa *""'"); 
   }
   arg1 = reinterpret_cast< GeoDa * >(argp1);
-  arg2 = static_cast< int >(INTEGER(i)[0]);
-  result = (arg1)->GetGeometryWKB(arg2);
-  r_ans = swig::from(static_cast< std::vector< unsigned char,std::allocator< unsigned char > > >(result));
-  
+  result = (arg1)->GetGeometryWKB();
+  r_ans = swig::from(static_cast< std::vector< std::vector< unsigned char,std::allocator< unsigned char > >,std::allocator< std::vector< unsigned char,std::allocator< unsigned char > > > > >(result));
   
   vmaxset(r_vmax);
   if(r_nprotect)  Rf_unprotect(r_nprotect);
@@ -22865,6 +22888,7 @@ SWIGINTERN R_CallMethodDef CallEntries[] = {
    {"R_swig_GeoDaWeight_GetIDName", (DL_FUNC) &R_swig_GeoDaWeight_GetIDName, 2},
    {"R_swig_AbstractLocalSA_IsReuseLastSeed", (DL_FUNC) &R_swig_AbstractLocalSA_IsReuseLastSeed, 2},
    {"R_swig_AbstractLocalSA_SetReuseLastSeed", (DL_FUNC) &R_swig_AbstractLocalSA_SetReuseLastSeed, 2},
+   {"R_swig_GeoDa_GetMapType", (DL_FUNC) &R_swig_GeoDa_GetMapType, 2},
    {"R_swig_GeoDaWeight_num_obs_set", (DL_FUNC) &R_swig_GeoDaWeight_num_obs_set, 2},
    {"R_swig_delete_VecRaw", (DL_FUNC) &R_swig_delete_VecRaw, 1},
    {"R_swig_GeoDaWeight_GetTitle", (DL_FUNC) &R_swig_GeoDaWeight_GetTitle, 2},
@@ -22926,7 +22950,7 @@ SWIGINTERN R_CallMethodDef CallEntries[] = {
    {"R_swig_GeoDaWeight_weight_type_set", (DL_FUNC) &R_swig_GeoDaWeight_weight_type_set, 2},
    {"R_swig_GeoDaColumn_field_type_set", (DL_FUNC) &R_swig_GeoDaColumn_field_type_set, 2},
    {"R_swig_GeoDaWeight_symmetry_checked_get", (DL_FUNC) &R_swig_GeoDaWeight_symmetry_checked_get, 2},
-   {"R_swig_GeoDa_GetGeometryWKB", (DL_FUNC) &R_swig_GeoDa_GetGeometryWKB, 3},
+   {"R_swig_GeoDa_GetGeometryWKB", (DL_FUNC) &R_swig_GeoDa_GetGeometryWKB, 2},
    {"R_swig_VecRaw_back", (DL_FUNC) &R_swig_VecRaw_back, 2},
    {"R_swig_AbstractLocalSA_CalcPseudoP_range", (DL_FUNC) &R_swig_AbstractLocalSA_CalcPseudoP_range, 4},
    {"R_swig_GeoDaIntColumn_data_set", (DL_FUNC) &R_swig_GeoDaIntColumn_data_set, 2},

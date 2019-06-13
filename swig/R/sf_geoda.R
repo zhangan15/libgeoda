@@ -59,6 +59,13 @@ sp_to_geoda = function(sp_obj) {
 }
 
 geoda_to_sp = function(gda) {
+  # map_type
+  map_type <- gda$GetMapType()
+  if (map_type == "polygon_type") {
+    # Creation of spatial polygons
+
+  }
+  # geometries
   wkb <- list()
   n_obs <- gda$GetNumObs()
   for (i in 1:n_obs) {

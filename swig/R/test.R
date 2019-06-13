@@ -3,7 +3,7 @@ source("libgeoda.R")
 cacheMetaData(1)
 
 gda <- GeoDa("../../data/natregimes.shp")
-a <- gda$GetGeometryWKB(0)
+wkb <- gda$GetGeometryWKB()
 
 library(wkb)
 library(rgdal)

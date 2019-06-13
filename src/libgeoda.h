@@ -108,13 +108,15 @@ public:
     virtual ~GeoDa();
 
     // Layer functions
+    MapType GetMapType() const;
     int GetNumObs() const;
     int GetNumCols() const;
     std::vector<std::string> GetFieldTypes();
     std::vector<std::string> GetFieldNames();
 
     // Geometry functions
-    std::vector<unsigned char> GetGeometryWKB(int i);
+    std::vector<std::vector<unsigned char> >  GetGeometryWKB();
+    std::vector<std::string>  GetGeometryWKT();
     //void SpatialCount(const char* pDSPath);
 
     // Data functions
