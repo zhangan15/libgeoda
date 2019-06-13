@@ -17,7 +17,7 @@ namespace {
 
     TEST(CLUSTERING_TEST, SKATER) {
         GeoDa gda("../data/natregimes.shp");
-        GeoDaWeight* w = gda.CreateQueenWeights();
+        GeoDaWeight* w = gda.CreateContiguityWeights();
         std::vector<std::string> col_names = {"HR60"};
         std::vector<int> clst = gda.SKATER(5, w, col_names);
 

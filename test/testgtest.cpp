@@ -12,8 +12,7 @@ using namespace testing;
 namespace {
 
     TEST(LayerFunctions, memory) {
-        std::string ds = "memory";
-        GeoDa gda(ds);
+        GeoDa gda("memory");
         EXPECT_THAT(gda.GetNumObs(), 3085);
     }
 

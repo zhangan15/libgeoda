@@ -3,6 +3,7 @@
 
 #include <list>
 #include <vector>
+#include <algorithm>
 #include <map>
 #include <ogrsf_frmts.h>
 
@@ -57,16 +58,51 @@ public:
             : GeoDaColumn(nm, real_type, 35, 15), data(vals) {}
 };
 
+class GeoDaTable {
+public:
+    GeoDaTable(){};
+    virtual ~GeoDaTable(){};
+
+    void AddIntColumn(const std::string& nm, const std::vector<long long>& vals) {
+        GeoDaColumn* col = new GeoDaIntColumn(nm, vals);
+        columns.push_back(col);
+    }
+    void AddStringColumn(const std::string& nm, const std::vector<std::string>& vals) {
+        GeoDaColumn* col = new GeoDaStringColumn(nm, vals);
+        columns.push_back(col);
+    }
+    void AddRealColumn(const std::string& nm, const std::vector<double>& vals) {
+        GeoDaColumn* col = new GeoDaRealColumn(nm, vals);
+        columns.push_back(col);
+    }
+
+    GeoDaColumn* GetColumn(const std::string& col_name) {
+        for (size_t i=0; i<columns.size(); ++i) {
+            if (col_name.compare(columns[i]->name) == 0) {
+                return columns[i];
+            }
+        }
+        return 0;
+    }
+
+    GeoDaColumn* GetColumn(int idx) {return columns[idx];}
+
+    int GetNumCols() { return columns.size(); }
+
+protected:
+    std::vector<GeoDaColumn*> columns;
+};
+
 class GeoDa {
 public:
     enum MapType { point_type, polygon_type, line_type };
 
     GeoDa(const std::string& layer_name, const std::string& map_type,
             int num_features,
-            const std::vector<GeoDaColumn*>& cols,
-            const std::vector<unsigned char*>& wkbs,
+            GeoDaTable* table,
+            unsigned char* wkbs,
             const std::vector<int>& wkb_bytes_len,
-            const char* pszProj4);
+            const std::string& pszProj4);
 
     GeoDa(const char* pDsPath, const char* layer_name=NULL);
 
@@ -78,6 +114,10 @@ public:
     std::vector<std::string> GetFieldTypes();
     std::vector<std::string> GetFieldNames();
 
+    // Geometry functions
+    char* GetGeometryWKB(int i);
+    //void SpatialCount(const char* pDSPath);
+
     // Data functions
     std::vector<double> GetNumericCol(std::string col_name);
     std::vector<long long> GeIntegerCol(std::string col_name);
@@ -87,8 +127,11 @@ public:
     std::string GetName();
 
     // Weights functions
-    GeoDaWeight* CreateQueenWeights(std::string polyid="", int order=1,
-            bool include_lower_order = false);
+    GeoDaWeight* CreateContiguityWeights(bool is_queen=true, std::string polyid="", int order=1,
+            bool include_lower_order = false,
+            double precision_threshold = 0);
+
+    GeoDaWeight* CreateDistanceWeights(double dist_thres, double power=1.0, bool is_inverse=false);
 
     // LocalSA functions
     UniLisa* LISA(GeoDaWeight* w, const std::vector<double>& data,
@@ -115,6 +158,8 @@ private:
 
     OGRGeometry* CreateOGRGeomFromWkb(unsigned char* wkb, int n);
 
+    const std::vector<OGRPoint*>& GetCentroids();
+
 protected:
     static const std::string DT_STRING;
     static const std::string DT_INTEGER;
@@ -133,16 +178,10 @@ protected:
     std::vector<std::string> fieldTypes;
     std::map<std::string, unsigned int> fieldNameIdx;
 
+    std::vector<OGRPoint*> centroids;
 };
 
 int test();
-void test_wkb1(int n, unsigned char* wkb);
-void test_wkb2(unsigned char* wkb, int n);
-void test_wkb3(int n, std::vector<int>& m, unsigned char** wkbs);
-void test_wkb4(int n, std::vector<int>& m, std::vector<unsigned char*>& wkbs);
-void test_wkb5(std::vector<unsigned char*>& wkbs, std::vector<int> m);
-void test_wkb(const std::vector<void*>& wkbs);
-void test_cols(std::vector<GeoDaColumn*> cols);
 
 GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col);
 GeoDaColumn* ToGeoDaColumn(GeoDaIntColumn* col);

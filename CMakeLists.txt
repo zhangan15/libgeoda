@@ -25,6 +25,9 @@ elseif (MSVC)
     set (DEP_OS_SUB "win64")
 endif()
 
+#ADD_DEFINITIONS("__LIBGEODA__=1")
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__LIBGEODA__=1")
+
 
 ###########################################################
 #
@@ -62,8 +65,8 @@ if (APPLE)
 endif()
 
 ## gdal library (minimal)
-set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.2.4/include)
-set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.2.4/lib/${DEP_OS_SUB}/libgdal.a)
+set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.4.0/include)
+set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.4.0/lib/${DEP_OS_SUB}/libgdal.a)
 
 ## geos library
 #set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include)
@@ -88,7 +91,11 @@ set (GEODA_INCLUDE_FILES
 
 set (GEODA_SOURCE_FILES
         src/libgeoda.cpp
+        src/geoda/logger.cpp
         src/geoda/GenUtils.cpp
+        src/geoda/SpatialIndAlgs.cpp
+        src/geoda/GenGeomAlgs.cpp
+        src/geoda/ShapeOperations/VoronoiUtils.cpp
         src/geoda/ShapeOperations/GeodaWeight.cpp
         src/geoda/ShapeOperations/GwtWeight.cpp
         src/geoda/ShapeOperations/GalWeight.cpp
@@ -185,7 +192,7 @@ set (TEST_SOURCE_FILES
         test/test_weights.cpp
         test/test_localSA.cpp
         test/test_clustering.cpp
-)
+        test/test_geometry.cpp)
 add_executable( runUnitTests ${TEST_SOURCE_FILES} )
 
 set_target_properties(runUnitTests PROPERTIES
@@ -205,10 +212,26 @@ target_include_directories(runUnitTests PUBLIC
         ${geoda_SOURCE_DIR}/src/geoda/ShapeOperations
 )
 # Link test executable against gtest & gtest_main
-target_link_libraries(runUnitTests gtest gtest_main)
-target_link_libraries(runUnitTests geoda)
-target_link_libraries(runUnitTests ${GDAL_LIBRARIES})
-target_link_libraries(runUnitTests ${GEOS_LIBRARIES})
+target_link_libraries(runUnitTests gtest gtest_main geoda)
+
+if (APPLE)
+    target_include_directories(runUnitTests PUBLIC ${CURL_INCLUDE_DIR})
+    target_link_libraries(runUnitTests ${CURL_LIBRARIES})
+    target_link_libraries(runUnitTests iconv)
+    target_link_libraries(runUnitTests "/usr/local/Cellar/geos/3.7.2/lib/libgeos.a")
+    target_link_libraries(runUnitTests "/usr/local/Cellar/geos/3.7.2/lib/libgeos_c.a")
+    target_link_libraries(runUnitTests "/usr/local/opt/proj/lib/libproj.a")
+    target_link_libraries(runUnitTests "/usr/local/opt/sqlite3/lib/libsqlite3.a")
+endif()
+
+#target_include_directories(runUnitTests PUBLIC ${ANN_INCLUDE_DIR} )
+#target_link_libraries(runUnitTests ${ANN_LIBRARIES} )
+#target_include_directories(runUnitTests PUBLIC ${Boost_INCLUDE_DIR} )
+#target_link_libraries(runUnitTests ${Boost_LIBRARIES})
+#target_include_directories(runUnitTests PUBLIC ${WX_INCLUDE_DIR} )
+#target_link_libraries(runUnitTests ${WX_LIBRARIES})
+#target_include_directories(runUnitTests PUBLIC ${GEOS_INCLUDE_DIR} )
+#target_link_libraries(runUnitTests ${GEOS_LIBRARIES})
 
 if (APPLE)
     find_library(CoreServices CoreServices)

@@ -17,7 +17,7 @@ namespace {
 
     TEST(LOCALSA_TEST, LISA_UNI) {
         GeoDa gda("../data/natregimes.shp");
-        GeoDaWeight* w = gda.CreateQueenWeights();
+        GeoDaWeight* w = gda.CreateContiguityWeights();
         std::vector<double> data = gda.GetNumericCol("HR60");
         std::vector<bool> undefs = gda.GetUndefinesCol("HR60");
         UniLisa* lisa = gda.LISA(w, data, undefs);

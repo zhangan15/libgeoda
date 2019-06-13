@@ -8,6 +8,7 @@ rm -rf build
 mkdir build
 cp -rf pkg-template build/libgeoda
 cp libgeoda.R build/libgeoda/R/
+cp sf_geoda.R build/libgeoda/R/
 cp libgeoda.cpp build/libgeoda/src
 mkdir build/libgeoda/src/deps
 mkdir build/libgeoda/src/deps/libgeoda

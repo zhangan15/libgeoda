@@ -12,6 +12,7 @@
 #include "./geoda/ShapeOperations/GalWeight.h"
 #include "./geoda/ShapeOperations/GwtWeight.h"
 #include "./geoda/ShapeOperations/GeodaWeight.h"
+#include "./geoda/ShapeOperations/VoronoiUtils.h"
 #include "./geoda/Algorithms/redcap.h"
 #include "./geoda/Algorithms/cluster.h"
 #include "./geoda/GenUtils.h"
@@ -25,15 +26,15 @@ const std::string GeoDa::DT_NUMERIC = "numeric";
 GeoDa::GeoDa(const std::string &layer_name,
              const std::string& map_type,
         int num_features,
-        const std::vector<GeoDaColumn *> &cols,
-        const std::vector<unsigned char*>& wkbs,
+        GeoDaTable* table,
+        unsigned char* wkbs,
         const std::vector<int>& wkb_bytes_len,
-        const char* pszProj4)
-: poDS(NULL), poLayer(NULL), numObs(num_features), numCols(cols.size())
+        const std::string& pszProj4)
+: poDS(NULL), poLayer(NULL), numObs(num_features), numCols(table->GetNumCols())
 {
-    std::string ds_name = "/vsimem/" + layer_name + ".shp";
+    std::string ds_name = "/tmp/" + layer_name + ".shp";
     poSpatialRef = new OGRSpatialReference();
-    poSpatialRef->importFromProj4(pszProj4);
+    poSpatialRef->importFromProj4(pszProj4.c_str());
 
     OGRwkbGeometryType eGType = wkbPolygon;
     if (map_type == "map_polygons") {
@@ -55,11 +56,15 @@ GeoDa::GeoDa(const std::string &layer_name,
     if (poDriver) {
         poDS = poDriver->Create( ds_name.c_str(), 0,0,0, GDT_Unknown, NULL);
         if( poDS ) {
-            std::cout << "create a in-memory data source" << std::endl;
+            std::cout << "create a in-memory data source:" << ds_name << std::endl;
             poLayer = poDS->CreateLayer(layer_name.c_str(), poSpatialRef, eGType);
             // create fields
-            for (size_t i=0; i<cols.size(); ++i) {
-                GeoDaColumn* col = cols[i];
+            for (size_t i=0; i<numCols; ++i) {
+                GeoDaColumn *col = table->GetColumn(i);
+                std::cout << "field: " << col->name << col->name.c_str() << std::endl;
+            }
+            for (size_t i=0; i<numCols; ++i) {
+                GeoDaColumn* col = table->GetColumn(i);
 
                 OGRFieldType ft = OFTString;
                 if (col->field_type == GeoDaColumn::integer_type) ft = OFTInteger64;
@@ -82,11 +87,12 @@ GeoDa::GeoDa(const std::string &layer_name,
                 }
             }
             // create features
+            unsigned long long wkb_offset = 0;
             for (size_t i=0; i<num_features; ++i) {
                 OGRFeature *poFeature;
                 poFeature = OGRFeature::CreateFeature(poLayer->GetLayerDefn());
-                for (size_t j=0; j<cols.size(); ++j) {
-                    GeoDaColumn *col = cols[j];
+                for (size_t j=0; j<numCols; ++j) {
+                    GeoDaColumn *col = table->GetColumn(j);
                     if (col->field_type == GeoDaColumn::integer_type) {
                         GeoDaIntColumn *int_col = (GeoDaIntColumn*)col;
                         std::vector<long long>& data = int_col->GetData();
@@ -104,8 +110,9 @@ GeoDa::GeoDa(const std::string &layer_name,
                     }
                 }
 
-                OGRGeometry* geom = CreateOGRGeomFromWkb(wkbs[i], wkb_bytes_len[i]);
-                poFeature->SetGeometry(geom);
+                OGRGeometry* geom = CreateOGRGeomFromWkb(wkbs + wkb_offset, wkb_bytes_len[i]);
+                if (geom) poFeature->SetGeometry(geom);
+                wkb_offset += wkb_bytes_len[i];
 
                 if( poLayer->CreateFeature( poFeature ) != OGRERR_NONE ) {
                     std::cout << "Failed to create feature in shapefile.\n" << std::endl;
@@ -187,23 +194,60 @@ std::string GeoDa::GetName() {
     return "Name";
 }
 
-GeoDaWeight* GeoDa::CreateQueenWeights(std::string polyid, int order, bool include_lower_order)
+GeoDaWeight* GeoDa::CreateContiguityWeights(bool is_queen, std::string polyid, int order, bool include_lower_order, double precision_threshold)
 {
-    double precision_threshold = 0.0;
-    bool is_rook = false;
-
     GalWeight* poW = new GalWeight;
     poW->num_obs = numObs;
     poW->is_symmetric = true;
     poW->symmetry_checked = true;
 
-    poW->gal = PolysToContigWeights(poLayer, !is_rook, precision_threshold);
+    if (mapType == point_type) {
+        std::vector<std::set<int> > nbr_map;
+        const std::vector<OGRPoint*>& centroids = GetCentroids();
+        std::vector<double> x(numObs), y(numObs);
+        for (size_t i=0; i<numObs; ++i) {
+            x[i] = centroids[i]->getX();
+            y[i] = centroids[i]->getX();
+        }
+        Gda::VoronoiUtils::PointsToContiguity(x, y, is_queen, nbr_map);
+        poW->gal = Gda::VoronoiUtils::NeighborMapToGal(nbr_map);
 
-    if (order > 1) {
-        Gda::MakeHigherOrdContiguity(order, numObs, poW->gal, include_lower_order);
+    } else if (mapType == polygon_type) {
+        poW->gal = PolysToContigWeights(poLayer, is_queen, precision_threshold);
+        if (order > 1) {
+            Gda::MakeHigherOrdContiguity(order, numObs, poW->gal, include_lower_order);
+        }
+
+    } else {
+        // not supported yet
+        delete poW;
+        return 0;
     }
     poW->GetNbrStats();
     return (GeoDaWeight*)poW;
+}
+
+GeoDaWeight* GeoDa::CreateDistanceWeights(double dist_thres, double power, bool is_inverse)
+{
+    //SpatialIndAlgs::thresh_build();
+    return 0;
+}
+
+const std::vector<OGRPoint*>& GeoDa::GetCentroids()
+{
+    if (centroids.empty()) {
+        OGRFeature *feature = NULL;
+        poLayer->ResetReading();
+        while ((feature = poLayer->GetNextFeature()) != NULL) {
+            OGRGeometry *geometry = feature->GetGeometryRef();
+            if (geometry) {
+                OGRPoint *poPoint = new OGRPoint;
+                geometry->Centroid(poPoint);
+                centroids.push_back(poPoint);
+            }
+        }
+    }
+    return centroids;
 }
 
 std::vector<bool> GeoDa::GetUndefinesCol(std::string col_name) {
@@ -426,82 +470,41 @@ double** GeoDa::fullRaggedMatrix(double** matrix, int n, int k, bool isSqrt) {
     return copy;
 }
 
-
-int test() { return 100;}
-
-void test_wkb1(int n, unsigned char* wkb) {
-    OGRPolygon* geom = new OGRPolygon();
-    geom->importFromWkb(wkb, n);
-    delete geom;
-}
-void test_wkb2(unsigned char* wkb, int n) {
-    OGRPolygon* geom = new OGRPolygon();
-    geom->importFromWkb(wkb, n);
-    delete geom;
-}
-
-void test_wkb(const std::vector<void*>& wkbs) {
-
-    //for (size_t i=0; i<wkbs.size(); ++i) {
-        int len = wkbs.size();
-        unsigned char* val = new unsigned char[len];
-        for (size_t j=0; j<len; ++j) {
-            val[j] = *(unsigned char*)wkbs[j];
-            std::cout << val[j] <<std::endl;
+// i starts from 1
+char *GeoDa::GetGeometryWKB(int i) {
+    OGRFeature *feature = NULL;
+    poLayer->ResetReading();
+    int row = 0;
+    while ((feature = poLayer->GetNextFeature()) != NULL) {
+        if (row == i) {
+            OGRGeometry* geom = feature->GetGeometryRef();
+            int sz = geom->WkbSize()+1;
+            unsigned char *data = (unsigned char*) malloc(sz);
+            OGRErr err = geom->exportToWkb(wkbXDR, data, wkbVariantOldOgc);
+            // NOTE: this function doesn't work and always return empty
+            //char *text = NULL;
+            //geom->exportToWkt(&text);
+            return (char*)data;
         }
-
-        //OGRGeometryFactory::createFromWkb(val, 0, &geom, len);
-        OGRPolygon* geom = new OGRPolygon();
-        geom->importFromWkb(val, len);
-        char* json = geom->exportToJson();
-        std::cout << geom->WkbSize() << "json:" << json << std::endl;
-        delete[] val;
-        delete geom;
-}
-
-void test_cols(std::vector<GeoDaColumn*> cols)
-{
-    for (size_t i=0; i<cols.size(); ++i) {
-        std::cout << cols[i]->name << std::endl;
+        row ++;
     }
+    return 0;
 }
-
 
 GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col)
 {
-    return (GeoDaColumn*) col;
+    return dynamic_cast<GeoDaColumn*>(col);
 }
 
 GeoDaColumn *ToGeoDaColumn(GeoDaIntColumn *col) {
-    return (GeoDaColumn*) col;
+    return dynamic_cast<GeoDaColumn*>(col);
 }
 
 GeoDaColumn *ToGeoDaColumn(GeoDaRealColumn *col) {
-    return (GeoDaColumn*) col;
+    return dynamic_cast<GeoDaColumn*>(col);
 }
 
-void test_wkb3(int n, std::vector<int> &m, unsigned char **wkbs) {
 
-}
+int test() { return 100;}
 
-void test_wkb4(int n, std::vector<int> &m, std::vector<unsigned char *> &wkbs) {
-    for (size_t i=0; i<n; ++i) {
-        unsigned char* wkb = wkbs[i];
-        for (size_t j=0; j<m[i]; ++j) {
-            OGRPolygon* geom = new OGRPolygon();
-            geom->importFromWkb(wkb, m[i]);
-            delete geom;
-        }
-    }
-}
 
-void test_wkb5(std::vector<unsigned char *> &wkbs, std::vector<int> m) {
-    for (size_t i=0; i<m.size(); ++i) {
-        unsigned char* wkb = wkbs[i];
-        for (size_t j=0; j<m[i]; ++j) {
-            OGRPolygon* geom = new OGRPolygon();
-            geom->importFromWkb(wkb, m[i]);
-            delete geom;
-        }
-    }
-}

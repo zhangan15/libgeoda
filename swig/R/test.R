@@ -2,19 +2,25 @@ dyn.load("libgeoda.so")
 source("libgeoda.R")
 cacheMetaData(1)
 
+gda <- GeoDa(system.file("extdata", "natregimes.shp", package = "libgeoda"))
+
 library(wkb)
 library(rgdal)
 nat_sp <- readOGR(system.file("extdata", "natregimes.shp", package = "libgeoda"))
 
+source("sf_geoda.R")
+nat <- sp_to_geoda(nat_sp)
 
 wkb <- writeWKB(nat_sp)
+test_wkb2(wkb[[1]], length(wkb[[1]]))
+
 n = length(wkb)
-m <- sapply(wkb, function(x) return length(x))
+m <- sapply(wkb, function(x) return(length(x)))
 dat <- VecRaw()
 for (i in 1:n) {
-    dat$push_back(wkb[[i]])
+    dat$push_back(address(wkb[[i]]))
 }
-test_wkb5(dat)
+test_wkb5(dat, m)
 
 
 wkb_vec <- VecVoid()
