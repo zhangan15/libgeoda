@@ -10158,20 +10158,6 @@ setMethod('$', '_p_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t'
 );
 # end of accessor method for std::vector<(p.GeoDaColumn)>
 setMethod('delete', '_p_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t', function(obj) {delete_std__vectorT_GeoDaColumn_p_std__allocatorT_GeoDaColumn_p_t_t(obj)})
-# Start of func
-
-`func` = function(.copy = FALSE)
-{
-  ;ans = .Call('R_swig_func', as.logical(.copy), PACKAGE='libgeoda');
-# override SWIG generate return an unkonwn type
-  
-  ans
-  
-}
-
-attr(`func`, 'returnType') = '_p_std__vectorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_std__allocatorT_std__vectorT_unsigned_char_std__allocatorT_unsigned_char_t_t_t_t'
-class(`func`) = c("SWIGFunction", class('func'))
-
 
 defineEnumeration("_GeoDaWeight__WeightType",
  .values=c("gal_type" = .Call('R_swig_GeoDaWeight_gal_type_get',FALSE, PACKAGE='libgeoda'),

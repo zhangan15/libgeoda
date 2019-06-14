@@ -6,4 +6,4 @@ import(sp)
 useDynLib(libgeoda, .registration = TRUE)
 
 # Export functions defined in R code
-export(GeoDa, GeoDaTable)
+export(GeoDa, GeoDaTable, sp_to_geoda)

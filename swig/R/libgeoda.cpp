@@ -3475,22 +3475,6 @@ SWIGINTERN void std_vector_Sl_GeoDaColumn_Sm__Sg____setitem__(std::vector< GeoDa
 SWIGINTERN void std_vector_Sl_GeoDaColumn_Sm__Sg__append(std::vector< GeoDaColumn * > *self,std::vector< GeoDaColumn * >::value_type x){
       self->push_back(x);
     }
-                                   // Example code.
-std::vector<std::vector<unsigned char> > func()
-{
-    std::vector<std::vector<unsigned char> > vv;
-    std::vector<unsigned char> v;
-    v.push_back((unsigned char)1);
-    v.push_back((unsigned char)2);
-    v.push_back((unsigned char)3);
-    vv.push_back(v);
-    v.clear();
-    v.push_back((unsigned char)4);
-    v.push_back((unsigned char)5);
-    vv.push_back(v);
-    return vv;
-}
-
 
 #ifdef __cplusplus
 extern "C" {
@@ -21260,39 +21244,6 @@ R_swig_delete_VecGeoDaColumn ( SEXP self)
 }
 
 
-SWIGEXPORT SEXP
-R_swig_func ( SEXP s_swig_copy)
-{
-  std::vector< std::vector< unsigned char,std::allocator< unsigned char > >,std::allocator< std::vector< unsigned char,std::allocator< unsigned char > > > > result;
-  unsigned int r_nprotect = 0;
-  SEXP r_ans = R_NilValue ;
-  VMAXTYPE r_vmax = vmaxget() ;
-  
-  result = func();
-  {
-    int sz = (&result)->size();
-    SEXP vec = Rf_allocVector(VECSXP, sz);
-    for(int i = 0; i <sz; ++i)
-    {
-      int subLength = result[i].size();
-      SEXP raws = Rf_allocVector(RAWSXP, subLength);
-      Rbyte* p_raws = RAW(raws);
-      for (int j=0; j < subLength; ++j)
-      {
-        p_raws[j] = result[i][j];
-      }
-      SET_VECTOR_ELT(vec, i, raws);
-    }
-    //UNPROTECT(sz+1);
-    r_ans = vec;
-  }
-  vmaxset(r_vmax);
-  if(r_nprotect)  Rf_unprotect(r_nprotect);
-  
-  return r_ans;
-}
-
-
 #ifdef __cplusplus
 }
 #endif
@@ -22213,7 +22164,6 @@ SWIGINTERN R_CallMethodDef CallEntries[] = {
    {"R_swig_AbstractLocalSA_GetHasUndefined", (DL_FUNC) &R_swig_AbstractLocalSA_GetHasUndefined, 2},
    {"R_swig_test", (DL_FUNC) &R_swig_test, 1},
    {"R_swig_GeoDa_GetFieldTypes", (DL_FUNC) &R_swig_GeoDa_GetFieldTypes, 2},
-   {"R_swig_func", (DL_FUNC) &R_swig_func, 1},
    {"R_swig_VecVecInt_pop", (DL_FUNC) &R_swig_VecVecInt_pop, 2},
    {"R_swig_VecInt_pop", (DL_FUNC) &R_swig_VecInt_pop, 2},
    {"R_swig_GeoDaWeight_Equal", (DL_FUNC) &R_swig_GeoDaWeight_Equal, 3},

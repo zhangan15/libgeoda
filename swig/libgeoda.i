@@ -18,6 +18,23 @@
 
 
 #if defined(SWIGR)
+%typemap(in) (GeoDaWeight* w, std::list<long long>&)
+{
+    // access the object passed by R and store the values
+    // to std::list<long long>* type for C++ code
+    int* val = INTEGER($input);
+    int sz = Rf_length($input);
+
+    for (size_t i=0; i<sz; ++i)
+    {
+        $2->push_back(val[i]);
+    }
+}
+
+%typemap(scoerceint) std::list<long long>&
+%{ # override SWIG generate return an unkonwn type %}
+
+
 %feature("novaluewrapper") std::vector<std::vector<unsigned char>>;
 %template() std::vector<std::vector<unsigned char>>;
 %typemap(out) std::vector<std::vector<unsigned char>>
@@ -59,19 +76,3 @@
 
 %template(VecGeoDaColumn) std::vector<GeoDaColumn*>;
 
-%inline %{                                   // Example code.
-std::vector<std::vector<unsigned char> > func()
-{
-    std::vector<std::vector<unsigned char> > vv;
-    std::vector<unsigned char> v;
-    v.push_back((unsigned char)1);
-    v.push_back((unsigned char)2);
-    v.push_back((unsigned char)3);
-    vv.push_back(v);
-    v.clear();
-    v.push_back((unsigned char)4);
-    v.push_back((unsigned char)5);
-    vv.push_back(v);
-    return vv;
-}
-%}
