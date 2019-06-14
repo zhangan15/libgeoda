@@ -32,7 +32,7 @@ The sp package has been an essential tool which provides spatial data-structures
 
 Using rgdal to read a ESRI Shapefile will return a `sp` (Spatial object) object, which could be either a SpatialPointsDataFrame (using an AttributeList for its data slot directly), a SpatialLinesDataFrame, or a SpatialPolygonsDataFrame.
 
-```{r echo=FALSE}
+```{r}
 library(libgeoda)
 guerry_path <- system.file("extdata", "Guerry.shp", package = "libgeoda")
 
@@ -42,7 +42,7 @@ guerry_sp <- readOGR(guerry_path)
 
 You can simply call plot() function to plot this map:
 
-```{r pressure, echo=FALSE}
+```{r}
 plot(guerry_sp)
 ```
 
