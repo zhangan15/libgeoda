@@ -10,6 +10,8 @@ cp -rf pkg-template build/libgeoda
 cp libgeoda.R build/libgeoda/R/
 cp sf_geoda.R build/libgeoda/R/
 cp libgeoda.cpp build/libgeoda/src
+cp *.Rmd build/libgeoda/docs
+cp *.html build/libgeoda/docs
 mkdir build/libgeoda/src/deps
 mkdir build/libgeoda/src/deps/libgeoda
 cp -rf ../../deps/ build/libgeoda/src/deps/
