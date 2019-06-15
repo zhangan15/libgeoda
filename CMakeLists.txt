@@ -18,9 +18,11 @@ if ( APPLE )
     set (DEP_OS_SUB "osx")
     set (CMAKE_OSX_ARCHITECTURES "x86_64")
     set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -arch x86_64")
+
 elseif (UNIX)
     set (DEP_OS_SUB "bionic")
-    set (CMAKE_CXX_FLAGS  "-Wl,--no-as-needed")
+    set (CMAKE_CXX_FLAGS  "-fPIC -Wl,--no-as-needed")
+
 elseif (MSVC)
     set (DEP_OS_SUB "win64")
 endif()
