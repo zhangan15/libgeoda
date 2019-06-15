@@ -169,7 +169,7 @@ add_custom_command(
     TARGET geoda POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
     ${CMAKE_CURRENT_BINARY_DIR}/libgeoda.a
-    ${CMAKE_SOURCE_DIR}/deps/libgeoda/lib/libgeoda.a)
+    ${CMAKE_SOURCE_DIR}/deps/libgeoda/lib/${DEP_OS_SUB}/libgeoda.a)
 
 ###########################################################
 #
