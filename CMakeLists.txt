@@ -13,6 +13,7 @@ message(STATUS "Binary dir: ${CMAKE_BINARY_DIR}")
 
 set (DEP_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/deps)
 set (DEP_OS_SUB "")
+set (GEODA_SRC "src/geoda")
 if ( APPLE )
     set(CMAKE_MACOSX_RPATH 1)
     set (DEP_OS_SUB "osx")
@@ -23,6 +24,7 @@ elseif (UNIX)
     set (CMAKE_CXX_FLAGS  "-Wl,--no-as-needed")
 elseif (MSVC)
     set (DEP_OS_SUB "win64")
+    set (GEODA_SRC "src/geoda_win")
 endif()
 
 #ADD_DEFINITIONS("__LIBGEODA__=1")
@@ -86,25 +88,25 @@ set (GEODA_INCLUDE_FILES
         src/libgeoda.h
         src/AbstractLocalSA.h
         src/UniLisa.h
-        src/geoda/ShapeOperations/GalWeight.h
-        src/geoda/ShapeOperations/GeodaWeight.h
-        src/geoda/ShapeOperations/WeightsManState.h
+        ${GEODA_SRC}/ShapeOperations/GalWeight.h
+        ${GEODA_SRC}/ShapeOperations/GeodaWeight.h
+        ${GEODA_SRC}/ShapeOperations/WeightsManState.h
 )
 
 set (GEODA_SOURCE_FILES
         src/libgeoda.cpp
-        src/geoda/logger.cpp
-        src/geoda/GenUtils.cpp
-        src/geoda/SpatialIndAlgs.cpp
-        src/geoda/GenGeomAlgs.cpp
-        src/geoda/ShapeOperations/VoronoiUtils.cpp
-        src/geoda/ShapeOperations/GeodaWeight.cpp
-        src/geoda/ShapeOperations/GwtWeight.cpp
-        src/geoda/ShapeOperations/GalWeight.cpp
-        src/geoda/ShapeOperations/PolysToContigWeights.cpp
-        src/geoda/ShapeOperations/WeightsManState.cpp
-        src/geoda/Algorithms/cluster.cpp
-        src/geoda/Algorithms/redcap.cpp
+        ${GEODA_SRC}/logger.cpp
+        ${GEODA_SRC}/GenUtils.cpp
+        ${GEODA_SRC}/SpatialIndAlgs.cpp
+        ${GEODA_SRC}/GenGeomAlgs.cpp
+        ${GEODA_SRC}/ShapeOperations/VoronoiUtils.cpp
+        ${GEODA_SRC}/ShapeOperations/GeodaWeight.cpp
+        ${GEODA_SRC}/ShapeOperations/GwtWeight.cpp
+        ${GEODA_SRC}/ShapeOperations/GalWeight.cpp
+        ${GEODA_SRC}/ShapeOperations/PolysToContigWeights.cpp
+        ${GEODA_SRC}/ShapeOperations/WeightsManState.cpp
+        ${GEODA_SRC}/Algorithms/cluster.cpp
+        ${GEODA_SRC}/Algorithms/redcap.cpp
         src/AbstractLocalSA.cpp
         src/UniLisa.cpp
 )
@@ -207,7 +209,7 @@ target_include_directories(runUnitTests PUBLIC
         ${gtest_SOURCE_DIR}/include
         ${gmock_SOURCE_DIR}/include
         ${geoda_SOURCE_DIR}/src
-        ${geoda_SOURCE_DIR}/src/geoda/ShapeOperations
+        ${geoda_SOURCE_DIR}/${GEODA_SRC}/ShapeOperations
 )
 # Link test executable against gtest & gtest_main
 target_link_libraries(runUnitTests gtest gtest_main geoda)

@@ -15,6 +15,7 @@ cp *.html build/libgeoda/docs
 mkdir build/libgeoda/src/deps
 mkdir build/libgeoda/src/deps/libgeoda
 cp -rf ../../deps/ build/libgeoda/src/deps/
+rm -rf build/libgeoda/src/deps/boost/include
 cd build
 
 R CMD BUILD libgeoda
