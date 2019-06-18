@@ -19,9 +19,11 @@ if ( APPLE )
     set (DEP_OS_SUB "osx")
     set (CMAKE_OSX_ARCHITECTURES "x86_64")
     set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -arch x86_64")
+
 elseif (UNIX)
     set (DEP_OS_SUB "bionic")
-    set (CMAKE_CXX_FLAGS  "-Wl,--no-as-needed")
+    set (CMAKE_CXX_FLAGS  "-fPIC -Wl,--no-as-needed")
+
 elseif (MSVC)
     set (DEP_OS_SUB "win64")
     set (GEODA_SRC "src/geoda_win")
@@ -169,7 +171,7 @@ add_custom_command(
     TARGET geoda POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
     ${CMAKE_CURRENT_BINARY_DIR}/libgeoda.a
-    ${CMAKE_SOURCE_DIR}/deps/libgeoda/lib/libgeoda.a)
+    ${CMAKE_SOURCE_DIR}/deps/libgeoda/lib/${DEP_OS_SUB}/libgeoda.a)
 
 ###########################################################
 #

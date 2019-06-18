@@ -8,6 +8,7 @@ swig/python/build/
 *.so
 *.pyc
 *.o
+*.Rout
 
 geoda_proxy_wrap.cxx
 libgeoda.dylib

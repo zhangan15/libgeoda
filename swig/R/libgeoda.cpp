@@ -3551,7 +3551,7 @@ R_swig_VecVoid_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< void * >::value_type)std_vector_Sl_void_Sm__Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -3599,7 +3599,7 @@ R_swig_VecVoid___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< void *,std::allocator< void * > > *)std_vector_Sl_void_Sm__Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -3661,11 +3661,11 @@ R_swig_VecVoid___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_void_Sm__Sg____setslice__(arg1,arg2,arg3,(std::vector< void *,std::allocator< void * > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -3715,7 +3715,7 @@ R_swig_VecVoid___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_void_Sm__Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -3756,7 +3756,7 @@ R_swig_VecVoid___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_void_Sm__Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -3797,7 +3797,7 @@ R_swig_VecVoid___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< void * >::value_type)std_vector_Sl_void_Sm__Sg____getitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -3843,7 +3843,7 @@ R_swig_VecVoid___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_void_Sm__Sg____setitem__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4519,7 +4519,7 @@ R_swig_VecFloat_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< float >::value_type)std_vector_Sl_float_Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4567,7 +4567,7 @@ R_swig_VecFloat___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< float,std::allocator< float > > *)std_vector_Sl_float_Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4629,11 +4629,11 @@ R_swig_VecFloat___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_float_Sg____setslice__(arg1,arg2,arg3,(std::vector< float,std::allocator< float > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4683,7 +4683,7 @@ R_swig_VecFloat___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_float_Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4724,7 +4724,7 @@ R_swig_VecFloat___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_float_Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4765,7 +4765,7 @@ R_swig_VecFloat___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< float >::value_type *) &std_vector_Sl_float_Sg____getitem__((std::vector< float > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -4815,7 +4815,7 @@ R_swig_VecFloat___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_float_Sg____setitem__(arg1,arg2,(float const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5511,7 +5511,7 @@ R_swig_VecString_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = std_vector_Sl_std_string_Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5559,7 +5559,7 @@ R_swig_VecString___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< std::string,std::allocator< std::string > > *)std_vector_Sl_std_string_Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5621,11 +5621,11 @@ R_swig_VecString___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_std_string_Sg____setslice__(arg1,arg2,arg3,(std::vector< std::string,std::allocator< std::string > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5675,7 +5675,7 @@ R_swig_VecString___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_std_string_Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5716,7 +5716,7 @@ R_swig_VecString___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_std_string_Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5757,7 +5757,7 @@ R_swig_VecString___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< std::string >::value_type *) &std_vector_Sl_std_string_Sg____getitem__((std::vector< std::string > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -5810,7 +5810,7 @@ R_swig_VecString___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_std_string_Sg____setitem__(arg1,arg2,(std::string const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6521,7 +6521,7 @@ R_swig_VecDouble_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< double >::value_type)std_vector_Sl_double_Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6569,7 +6569,7 @@ R_swig_VecDouble___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< double,std::allocator< double > > *)std_vector_Sl_double_Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6631,11 +6631,11 @@ R_swig_VecDouble___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_double_Sg____setslice__(arg1,arg2,arg3,(std::vector< double,std::allocator< double > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6685,7 +6685,7 @@ R_swig_VecDouble___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_double_Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6726,7 +6726,7 @@ R_swig_VecDouble___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_double_Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6767,7 +6767,7 @@ R_swig_VecDouble___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< double >::value_type *) &std_vector_Sl_double_Sg____getitem__((std::vector< double > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -6817,7 +6817,7 @@ R_swig_VecDouble___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_double_Sg____setitem__(arg1,arg2,(double const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7513,7 +7513,7 @@ R_swig_VecChar_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< char >::value_type)std_vector_Sl_char_Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7565,7 +7565,7 @@ R_swig_VecChar___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< char,std::allocator< char > > *)std_vector_Sl_char_Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7627,11 +7627,11 @@ R_swig_VecChar___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_char_Sg____setslice__(arg1,arg2,arg3,(std::vector< char,std::allocator< char > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7681,7 +7681,7 @@ R_swig_VecChar___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_char_Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7722,7 +7722,7 @@ R_swig_VecChar___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_char_Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7763,7 +7763,7 @@ R_swig_VecChar___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< char >::value_type *) &std_vector_Sl_char_Sg____getitem__((std::vector< char > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -7813,7 +7813,7 @@ R_swig_VecChar___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_char_Sg____setitem__(arg1,arg2,(char const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8509,7 +8509,7 @@ R_swig_VecVecDouble_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = std_vector_Sl_std_vector_Sl_double_Sg__Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8557,7 +8557,7 @@ R_swig_VecVecDouble___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > *)std_vector_Sl_std_vector_Sl_double_Sg__Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8619,11 +8619,11 @@ R_swig_VecVecDouble___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_std_vector_Sl_double_Sg__Sg____setslice__(arg1,arg2,arg3,(std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8673,7 +8673,7 @@ R_swig_VecVecDouble___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_std_vector_Sl_double_Sg__Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8714,7 +8714,7 @@ R_swig_VecVecDouble___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_std_vector_Sl_double_Sg__Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8755,7 +8755,7 @@ R_swig_VecVecDouble___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< std::vector< double > >::value_type *) &std_vector_Sl_std_vector_Sl_double_Sg__Sg____getitem__((std::vector< std::vector< double > > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -8808,7 +8808,7 @@ R_swig_VecVecDouble___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_std_vector_Sl_double_Sg__Sg____setitem__(arg1,arg2,(std::vector< double,std::allocator< double > > const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9519,7 +9519,7 @@ R_swig_VecInt_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< int >::value_type)std_vector_Sl_int_Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9567,7 +9567,7 @@ R_swig_VecInt___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< int,std::allocator< int > > *)std_vector_Sl_int_Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9629,11 +9629,11 @@ R_swig_VecInt___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_int_Sg____setslice__(arg1,arg2,arg3,(std::vector< int,std::allocator< int > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9683,7 +9683,7 @@ R_swig_VecInt___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_int_Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9724,7 +9724,7 @@ R_swig_VecInt___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_int_Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9765,7 +9765,7 @@ R_swig_VecInt___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< int >::value_type *) &std_vector_Sl_int_Sg____getitem__((std::vector< int > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -9815,7 +9815,7 @@ R_swig_VecInt___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_int_Sg____setitem__(arg1,arg2,(int const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10511,7 +10511,7 @@ R_swig_VecVecInt_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = std_vector_Sl_std_vector_Sl_int_Sg__Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10559,7 +10559,7 @@ R_swig_VecVecInt___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< std::vector< int,std::allocator< int > >,std::allocator< std::vector< int,std::allocator< int > > > > *)std_vector_Sl_std_vector_Sl_int_Sg__Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10621,11 +10621,11 @@ R_swig_VecVecInt___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_std_vector_Sl_int_Sg__Sg____setslice__(arg1,arg2,arg3,(std::vector< std::vector< int,std::allocator< int > >,std::allocator< std::vector< int,std::allocator< int > > > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10675,7 +10675,7 @@ R_swig_VecVecInt___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_std_vector_Sl_int_Sg__Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10716,7 +10716,7 @@ R_swig_VecVecInt___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_std_vector_Sl_int_Sg__Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10757,7 +10757,7 @@ R_swig_VecVecInt___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< std::vector< int > >::value_type *) &std_vector_Sl_std_vector_Sl_int_Sg__Sg____getitem__((std::vector< std::vector< int > > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -10810,7 +10810,7 @@ R_swig_VecVecInt___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_std_vector_Sl_int_Sg__Sg____setitem__(arg1,arg2,(std::vector< int,std::allocator< int > > const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11521,7 +11521,7 @@ R_swig_VecUINT8_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< unsigned char >::value_type)std_vector_Sl_unsigned_SS_char_Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11569,7 +11569,7 @@ R_swig_VecUINT8___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< unsigned char,std::allocator< unsigned char > > *)std_vector_Sl_unsigned_SS_char_Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11631,11 +11631,11 @@ R_swig_VecUINT8___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_unsigned_SS_char_Sg____setslice__(arg1,arg2,arg3,(std::vector< unsigned char,std::allocator< unsigned char > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11685,7 +11685,7 @@ R_swig_VecUINT8___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_unsigned_SS_char_Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11726,7 +11726,7 @@ R_swig_VecUINT8___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_unsigned_SS_char_Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11767,7 +11767,7 @@ R_swig_VecUINT8___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< unsigned char >::value_type *) &std_vector_Sl_unsigned_SS_char_Sg____getitem__((std::vector< unsigned char > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -11817,7 +11817,7 @@ R_swig_VecUINT8___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_unsigned_SS_char_Sg____setitem__(arg1,arg2,(unsigned char const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12513,7 +12513,7 @@ R_swig_VecVecUINT8_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12561,7 +12561,7 @@ R_swig_VecVecUINT8___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< std::vector< unsigned char,std::allocator< unsigned char > >,std::allocator< std::vector< unsigned char,std::allocator< unsigned char > > > > *)std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12623,11 +12623,11 @@ R_swig_VecVecUINT8___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg____setslice__(arg1,arg2,arg3,(std::vector< std::vector< unsigned char,std::allocator< unsigned char > >,std::allocator< std::vector< unsigned char,std::allocator< unsigned char > > > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12677,7 +12677,7 @@ R_swig_VecVecUINT8___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12718,7 +12718,7 @@ R_swig_VecVecUINT8___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12759,7 +12759,7 @@ R_swig_VecVecUINT8___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< std::vector< unsigned char > >::value_type *) &std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg____getitem__((std::vector< std::vector< unsigned char > > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -12812,7 +12812,7 @@ R_swig_VecVecUINT8___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_std_vector_Sl_unsigned_SS_char_Sg__Sg____setitem__(arg1,arg2,(std::vector< unsigned char,std::allocator< unsigned char > > const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13523,7 +13523,7 @@ R_swig_VecVecChar_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = std_vector_Sl_std_vector_Sl_char_Sg__Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13571,7 +13571,7 @@ R_swig_VecVecChar___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< std::vector< char,std::allocator< char > >,std::allocator< std::vector< char,std::allocator< char > > > > *)std_vector_Sl_std_vector_Sl_char_Sg__Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13633,11 +13633,11 @@ R_swig_VecVecChar___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_std_vector_Sl_char_Sg__Sg____setslice__(arg1,arg2,arg3,(std::vector< std::vector< char,std::allocator< char > >,std::allocator< std::vector< char,std::allocator< char > > > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13687,7 +13687,7 @@ R_swig_VecVecChar___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_std_vector_Sl_char_Sg__Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13728,7 +13728,7 @@ R_swig_VecVecChar___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_std_vector_Sl_char_Sg__Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13769,7 +13769,7 @@ R_swig_VecVecChar___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< std::vector< char > >::value_type *) &std_vector_Sl_std_vector_Sl_char_Sg__Sg____getitem__((std::vector< std::vector< char > > const *)arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -13822,7 +13822,7 @@ R_swig_VecVecChar___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_std_vector_Sl_char_Sg__Sg____setitem__(arg1,arg2,(std::vector< char,std::allocator< char > > const &)*arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20335,7 +20335,7 @@ R_swig_VecGeoDaColumn_pop ( SEXP self, SEXP s_swig_copy)
   try {
     result = (std::vector< GeoDaColumn * >::value_type)std_vector_Sl_GeoDaColumn_Sm__Sg__pop(arg1);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20383,7 +20383,7 @@ R_swig_VecGeoDaColumn___getslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     result = (std::vector< GeoDaColumn *,std::allocator< GeoDaColumn * > > *)std_vector_Sl_GeoDaColumn_Sm__Sg____getslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20445,11 +20445,11 @@ R_swig_VecGeoDaColumn___setslice__ ( SEXP self, SEXP i, SEXP j, SEXP v)
   try {
     std_vector_Sl_GeoDaColumn_Sm__Sg____setslice__(arg1,arg2,arg3,(std::vector< GeoDaColumn *,std::allocator< GeoDaColumn * > > const &)*arg4);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   } catch(std::invalid_argument &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20499,7 +20499,7 @@ R_swig_VecGeoDaColumn___delslice__ ( SEXP self, SEXP i, SEXP j)
   try {
     std_vector_Sl_GeoDaColumn_Sm__Sg____delslice__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20540,7 +20540,7 @@ R_swig_VecGeoDaColumn___delitem__ ( SEXP self, SEXP i)
   try {
     std_vector_Sl_GeoDaColumn_Sm__Sg____delitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20581,7 +20581,7 @@ R_swig_VecGeoDaColumn___getitem__ ( SEXP self, SEXP i, SEXP s_swig_copy)
   try {
     result = (std::vector< GeoDaColumn * >::value_type)std_vector_Sl_GeoDaColumn_Sm__Sg____getitem__(arg1,arg2);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
@@ -20629,7 +20629,7 @@ R_swig_VecGeoDaColumn___setitem__ ( SEXP self, SEXP i, SEXP x)
   try {
     std_vector_Sl_GeoDaColumn_Sm__Sg____setitem__(arg1,arg2,arg3);
   } catch(std::out_of_range &_e) {
-    /*@SWIG:/usr/local/Cellar/swig/4.0.0/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
+    /*@SWIG:/usr/local/share/swig/4.0.0/r/r.swg,29,%raise@*/ 
     return R_NilValue;
     /*@SWIG@*/;
   }
