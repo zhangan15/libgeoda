@@ -1,6 +1,23 @@
 #ifndef LIBGEODA_LIBRARY_H
 #define LIBGEODA_LIBRARY_H
 
+#ifdef LIBGEODA_EXPORTS
+#define LIBGEODA_API __declspec(dllexport)
+#else
+#define LIBGEODA_API __declspec(dllimport)
+#endif
+
+#include <Windows.h>
+#include <Psapi.h>
+
+#undef CreateDialog
+#undef CreateFont
+#undef CreateWindow
+#undef LoadMenu
+#undef FindText
+#undef LoadIcon
+#undef LoadBitmap
+
 #include <list>
 #include <vector>
 #include <algorithm>
@@ -10,7 +27,7 @@
 class UniLisa;
 class GeoDaWeight;
 
-class GeoDaColumn {
+class LIBGEODA_API GeoDaColumn {
 public:
     enum FieldType { integer_type, string_type, real_type };
     std::string name;
@@ -23,7 +40,7 @@ public:
     virtual ~GeoDaColumn() {}
 };
 
-class GeoDaIntColumn : public GeoDaColumn {
+class LIBGEODA_API GeoDaIntColumn : public GeoDaColumn {
 public:
     std::vector<long long> data;
 
@@ -35,7 +52,7 @@ public:
 };
 
 
-class GeoDaStringColumn : public GeoDaColumn {
+class LIBGEODA_API GeoDaStringColumn : public GeoDaColumn {
 public:
     std::vector<std::string> data;
 
@@ -46,7 +63,7 @@ public:
             : GeoDaColumn(nm, string_type, 254, 0), data(vals) {}
 };
 
-class GeoDaRealColumn : public GeoDaColumn {
+class LIBGEODA_API GeoDaRealColumn : public GeoDaColumn {
 public:
     std::vector<double> data;
 
@@ -57,7 +74,7 @@ public:
             : GeoDaColumn(nm, real_type, 35, 15), data(vals) {}
 };
 
-class GeoDaTable {
+class LIBGEODA_API GeoDaTable {
 public:
     GeoDaTable(){};
     virtual ~GeoDaTable(){};
@@ -92,7 +109,7 @@ protected:
     std::vector<GeoDaColumn*> columns;
 };
 
-class GeoDa {
+class LIBGEODA_API GeoDa {
 public:
     enum MapType { point_type, polygon_type, line_type };
 
@@ -182,9 +199,9 @@ protected:
     std::vector<OGRPoint*> centroids;
 };
 
-int test();
+LIBGEODA_API int test();
 
-GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col);
-GeoDaColumn* ToGeoDaColumn(GeoDaIntColumn* col);
-GeoDaColumn* ToGeoDaColumn(GeoDaRealColumn* col);
+LIBGEODA_API GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col);
+LIBGEODA_API GeoDaColumn* ToGeoDaColumn(GeoDaIntColumn* col);
+LIBGEODA_API GeoDaColumn* ToGeoDaColumn(GeoDaRealColumn* col);
 #endif

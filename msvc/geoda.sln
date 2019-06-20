@@ -1,0 +1,71 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geoda", "geoda.vcxproj", "{21D29926-5B5F-4403-94C5-5428E5941C2F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_geoda", "test_geoda\test_geoda.vcxproj", "{EB11F8B2-E9D4-4E53-95BA-C5004179949D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{21D29926-5B5F-4403-94C5-5428E5941C2F} = {21D29926-5B5F-4403-94C5-5428E5941C2F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		MinSizeRel|Itanium = MinSizeRel|Itanium
+		MinSizeRel|Win32 = MinSizeRel|Win32
+		MinSizeRel|x64 = MinSizeRel|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		RelWithDebInfo|Itanium = RelWithDebInfo|Itanium
+		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Debug|Itanium.Build.0 = Debug|Itanium
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Debug|Win32.Build.0 = Debug|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Debug|x64.ActiveCfg = Debug|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Debug|x64.Build.0 = Debug|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.MinSizeRel|Itanium.ActiveCfg = MinSizeRel|Itanium
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.MinSizeRel|Itanium.Build.0 = MinSizeRel|Itanium
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.MinSizeRel|Win32.ActiveCfg = MinSizeRel|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.MinSizeRel|Win32.Build.0 = MinSizeRel|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Release|Itanium.ActiveCfg = Release|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Release|Itanium.Build.0 = Release|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Release|Win32.ActiveCfg = Release|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Release|Win32.Build.0 = Release|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Release|x64.ActiveCfg = Release|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.Release|x64.Build.0 = Release|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.RelWithDebInfo|Itanium.ActiveCfg = RelWithDebInfo|Itanium
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.RelWithDebInfo|Itanium.Build.0 = RelWithDebInfo|Itanium
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.RelWithDebInfo|Win32.ActiveCfg = RelWithDebInfo|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.RelWithDebInfo|Win32.Build.0 = RelWithDebInfo|Win32
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{21D29926-5B5F-4403-94C5-5428E5941C2F}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Debug|Itanium.ActiveCfg = Debug|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Debug|Win32.Build.0 = Debug|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Debug|x64.ActiveCfg = Debug|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.MinSizeRel|Itanium.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.MinSizeRel|x64.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Release|Itanium.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Release|Win32.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Release|Win32.Build.0 = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Release|x64.ActiveCfg = Release|x64
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.Release|x64.Build.0 = Release|x64
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.RelWithDebInfo|Itanium.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+		{EB11F8B2-E9D4-4E53-95BA-C5004179949D}.RelWithDebInfo|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

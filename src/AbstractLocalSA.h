@@ -5,13 +5,20 @@
 #ifndef GEODA_ABSTRACTLOCALSA_H
 #define GEODA_ABSTRACTLOCALSA_H
 
+#ifdef LIBGEODA_EXPORTS
+#define SA_API __declspec(dllexport)
+#else
+#define SA_API __declspec(dllimport)
+#endif
+
+#include <stdint.h>
 #include <list>
 #include <wx/string.h>
 #include <wx/thread.h>
 
 class GeoDaWeight;
 
-class AbstractLocalSA
+class SA_API AbstractLocalSA
 {
 public:
     AbstractLocalSA(int num_obs, GeoDaWeight* w);

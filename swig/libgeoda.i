@@ -63,6 +63,7 @@
 #endif
 
 %{
+    #include <stdint.h>
     #include <GeodaWeight.h>
     #include <AbstractLocalSA.h>
     #include <UniLisa.h>

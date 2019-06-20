@@ -3,12 +3,23 @@ cmake-build-debug/
 swig/python/build/
 .idea/
 .vscode/
+msvc/Release/
+msvc/ipch/
+msvc/x64/
+msvc/test_geoda/x64/
 
+*.filters
+*.user
+*.sdf
 *.swp
 *.so
 *.pyc
 *.o
 *.Rout
+*.exp
+*.obj
+*.manifest
+*.suo
 
 geoda_proxy_wrap.cxx
 libgeoda.dylib

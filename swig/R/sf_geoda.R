@@ -15,6 +15,21 @@ geoda_to_sf = function(gda) {
   }
 }
 
+open_geoda = function(path) {
+  dll_path <- system.file("lib/libgeoda.dll", package="libgeoda")
+  src_path <- system.file("lib/libgeoda.R", package="libgeoda")
+  old_dir <- getwd()
+  new_dir <- dirname(dll_path)
+  setwd(new_dir)
+  print("load libgeoda.dll")
+  print(new_dir)
+  dyn.load("libgeoda.dll")
+  source("libgeoda.R")
+  cacheMetaData(1)
+  setwd(old_dir)
+  return (GeoDa(path))
+}
+
 # create a GeoDa object from a sp object
 sp_to_geoda = function(sp_obj) {
   if (!require("sp")) {

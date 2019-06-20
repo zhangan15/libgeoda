@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Itanium">
+      <Configuration>Debug</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Itanium">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Itanium">
+      <Configuration>Release</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Itanium">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{21D29926-5B5F-4403-94C5-5428E5941C2F}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>geoda</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\libgeoda\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\libgeoda\build\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">C:\libgeoda\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">geoda.dir\Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">geoda.dir\Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">geoda.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">geoda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\libgeoda\build\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\deps\libgeoda\lib\win64</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">C:\libgeoda\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">geoda.dir\Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">geoda.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">geoda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\libgeoda\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\libgeoda\build\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">C:\libgeoda\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">geoda.dir\MinSizeRel\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">geoda.dir\MinSizeRel\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">geoda.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">geoda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\libgeoda\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\libgeoda\build\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">C:\libgeoda\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">geoda.dir\RelWithDebInfo\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">geoda.dir\RelWithDebInfo\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">geoda.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">geoda</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">geoda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">true</GenerateManifest>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ExecutablePath);$(WindowsSdkMSBuildTools);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">$(ExecutablePath);$(WindowsSdkMSBuildTools);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <EnableManagedIncrementalBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;_DEBUG;CMAKE_INTDIR="Debug";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;_DEBUG;CMAKE_INTDIR=\"Debug\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/deps/libgeoda/lib/win64/geoda.lib</ImportLibrary>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;_DEBUG;CMAKE_INTDIR="Debug";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;_DEBUG;CMAKE_INTDIR=\"Debug\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/Debug/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/Debug/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;_DEBUG;CMAKE_INTDIR="Debug";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;_DEBUG;CMAKE_INTDIR=\"Debug\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/Debug/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/Debug/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="Release";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"Release\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/Release/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/Release/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="Release";WXUSINGDLL;__WXMSW__;LIBGEODA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"Release\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>gdal.lib;geos.lib;proj.lib;libcurl_a.lib;libiconv.lib;libANN.lib;libboost_date_time-vc100-mt-1_57.lib;libboost_thread-vc100-mt-1_57.lib;wxmsw31u.lib;wxmsw31u_gl.lib;wxexpat.lib;wxregexu.lib;wxscintilla.lib;wxzlib.lib;wxtiff.lib;wxpng.lib;wxjpeg.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\deps\ann\lib\win64;..\deps\gdal\2.2.4\lib\win64;..\deps\boost\57\lib\win64;..\deps\iconv\lib\win64;..\deps\geos\3.7.2\lib\win64;..\deps\proj\5.2.0\lib\win64;..\deps\wx\3.1\lib;C:\OSGeo4W\lib;C:\Python27\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>$(TargetDir)$(TargetName).lib</ImportLibrary>
+      <ProgramDataBaseFile>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="Release";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"Release\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;gdal_i.lib;libANN.lib;libboost_date_time-vc100-mt-gd-1_57.lib;libboost_thread-vc100-mt-gd-1_57.lib;wxmsw31u.lib;wxmsw31u_gl.lib;wxexpat.lib;wxregexu.lib;wxscintilla.lib;wxzlib.lib;wxtiff.lib;wxpng.lib;wxjpeg.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\deps\ann\lib\win64;..\deps\gdal\2.2.4\lib\win64;..\deps\boost\57\lib\win64;..\deps\iconv\lib\win64;..\deps\geos\3.7.2\lib\win64;..\deps\wx\3.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/Release/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/Release/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="MinSizeRel";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/MinSizeRel/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/MinSizeRel/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="MinSizeRel";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/MinSizeRel/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/MinSizeRel/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="MinSizeRel";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/MinSizeRel/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/MinSizeRel/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/RelWithDebInfo/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/RelWithDebInfo/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/RelWithDebInfo/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/RelWithDebInfo/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;__LIBGEODA__=1;_FILE_OFFSET_BITS=64;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";geoda_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\ann\include;c:\libgeoda\deps\boost\57\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;c:\libgeoda\googletest\googletest\include;c:\libgeoda\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\deps\gdal\2.2.4\lib\win64\gdal_i.lib;..\deps\ann\lib\win64\libANN.a;..\deps\boost\57\lib\win64\libboost_date_time-vc100-mt-gd-1_57.lib;..\deps\boost\57\lib\win64\libboost_thread-vc100-mt-gd-1_57.lib;..\deps\wx\3.1\lib\wxmsw31u.lib;..\deps\wx\3.1\lib\wxmsw31u_gl.lib;..\deps\wx\3.1\lib\wxexpat.lib;..\deps\wx\3.1\lib\wxregexu.lib;..\deps\wx\3.1\lib\wxscintilla.lib;..\deps\wx\3.1\lib\wxzlib.lib;..\deps\wx\3.1\lib\wxtiff.lib;..\deps\wx\3.1\lib\wxpng.lib;..\deps\wx\3.1\lib\wxjpeg.lib;kernel32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/libgeoda/build/RelWithDebInfo/geoda.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/libgeoda/build/RelWithDebInfo/geoda.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Itanium'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">Building Custom Rule c:/libgeoda/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -Hc:/libgeoda -BC:/libgeoda/build --check-stamp-file C:\libgeoda\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">c:/libgeoda/CMakeLists.txt;c:\libgeoda\CMakeLists.txt;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\libgeoda\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;c:\libgeoda\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Itanium'">C:\libgeoda\build\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\libgeoda.cpp" />
+    <ClCompile Include="..\src\geoda\logger.cpp" />
+    <ClCompile Include="..\src\geoda\GenUtils.cpp" />
+    <ClCompile Include="..\src\geoda\SpatialIndAlgs.cpp" />
+    <ClCompile Include="..\src\geoda\GenGeomAlgs.cpp" />
+    <ClCompile Include="..\src\geoda\ShapeOperations\VoronoiUtils.cpp" />
+    <ClCompile Include="..\src\geoda\ShapeOperations\GeodaWeight.cpp" />
+    <ClCompile Include="..\src\geoda\ShapeOperations\GwtWeight.cpp" />
+    <ClCompile Include="..\src\geoda\ShapeOperations\GalWeight.cpp" />
+    <ClCompile Include="..\src\geoda\ShapeOperations\PolysToContigWeights.cpp" />
+    <ClCompile Include="..\src\geoda\ShapeOperations\WeightsManState.cpp" />
+    <ClCompile Include="..\src\geoda\Algorithms\cluster.cpp" />
+    <ClCompile Include="..\src\geoda\Algorithms\redcap.cpp" />
+    <ClCompile Include="..\src\AbstractLocalSA.cpp" />
+    <ClCompile Include="..\src\UniLisa.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\geoda\ShapeOperations\GeodaWeight.h" />
+    <ClInclude Include="..\src\libgeoda.h" />
+    <ClInclude Include="..\src\UniLisa.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,5 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_GENERATOR_TOOLSET=x64"
+    ]
+}

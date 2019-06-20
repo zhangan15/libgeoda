@@ -5,13 +5,20 @@
 #ifndef GEODA_UNILISA_H
 #define GEODA_UNILISA_H
 
+#ifdef LIBGEODA_EXPORTS
+#define LISA_API __declspec(dllexport)
+#else
+#define LISA_API __declspec(dllimport)
+#endif
+
+
 #include <vector>
 
 #include "AbstractLocalSA.h"
 
 class GeoDaWeight;
 
-class UniLisa : public AbstractLocalSA {
+class LISA_API UniLisa : public AbstractLocalSA {
 
     const unsigned long CLUSTER_NOT_SIG;
     const unsigned long CLUSTER_HIGHHIGH;
