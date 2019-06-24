@@ -7,6 +7,7 @@ msvc/Release/
 msvc/ipch/
 msvc/x64/
 msvc/test_geoda/x64/
+deps/lib/x64/dev
 
 *.filters
 *.user
@@ -29,3 +30,4 @@ swig/R/geoda_proxy_wrap.cpp
 swig/R/.RData
 swig/R/.Rhistory
 swig/R/.Rhistory
+msvc/geoda.suo

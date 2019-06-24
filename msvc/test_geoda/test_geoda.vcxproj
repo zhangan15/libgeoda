@@ -107,14 +107,15 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\libgeoda\deps\libgeoda\include;C:\libgeoda\deps\gdal\2.2.4\include;c:\libgeoda\deps\wx\3.1\include;c:\libgeoda\deps\wx\3.1\lib\mswu;C:\Program Files\R\R-3.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\libgeoda\deps\libgeoda\include;C:\libgeoda\deps\include;C:\libgeoda\deps\lib\x64\mswu;C:\Program Files\R\R-3.6.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\libgeoda\deps\gdal\2.2.4\lib\win64;C:\libgeoda\deps\libgeoda\lib\win64;C:\libgeoda\deps\R\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gdal_i.lib;geoda.lib;R.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\libgeoda\deps\libgeoda\lib\win64;C:\libgeoda\deps\lib\x64\dev;C:\libgeoda\deps\R\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wxzlib.lib;geoda.lib;R.lib;gdal.lib;geos.lib;proj.lib;libcurl_a.lib;libiconv.lib;wxmsw30u.lib;wxexpat.lib;wxregexu.lib;wxpng.lib;comctl32.lib;rpcrt4.lib;Psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
