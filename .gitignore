@@ -7,6 +7,9 @@ msvc/Release/
 msvc/ipch/
 msvc/x64/
 msvc/test_geoda/x64/
+msvc/test_geoda/Release/
+deps/lib/x64/dev
+deps/lib/x86/dev
 
 *.filters
 *.user
@@ -20,6 +23,8 @@ msvc/test_geoda/x64/
 *.obj
 *.manifest
 *.suo
+*..DS_Store
+*.opensdf
 
 geoda_proxy_wrap.cxx
 libgeoda.dylib
@@ -30,4 +35,5 @@ swig/R/.RData
 swig/R/.Rhistory
 swig/R/.Rhistory
 deps/lib/.DS_Store
-deps/lib/.DS_Store
+msvc/geoda.suo
+*.opensdf

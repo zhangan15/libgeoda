@@ -28,7 +28,7 @@
     /* needs to create the dialog in ::Create() and not for each user      */ \
     /* request in response to the user click as the generic implementation */ \
     /* does.                                                               */ \
-    virtual wxWindow *GetDialogParent() wxOVERRIDE                            \
+    virtual wxWindow *GetDialogParent()                                       \
     {                                                                         \
         return NULL;                                                          \
     }                                                                         \
@@ -42,7 +42,7 @@
     /* give us access to the internal GdkWindow of a GtkFileChooserButton  */ \
 protected:                                                                    \
     virtual GdkWindow *                                                       \
-    GTKGetWindow(wxArrayGdkWindows& WXUNUSED(windows)) const wxOVERRIDE       \
+    GTKGetWindow(wxArrayGdkWindows& WXUNUSED(windows)) const                  \
         { return NULL; }
 
 
@@ -92,8 +92,8 @@ public:     // overrides
     // event handler for the click
     void OnDialogOK(wxCommandEvent &);
 
-    virtual void SetPath(const wxString &str) wxOVERRIDE;
-    virtual void SetInitialDirectory(const wxString& dir) wxOVERRIDE;
+    virtual void SetPath(const wxString &str);
+    virtual void SetInitialDirectory(const wxString& dir);
 
     // see macro defined above
     FILEDIRBTN_OVERRIDES
@@ -101,11 +101,15 @@ public:     // overrides
 protected:
     wxDialog *m_dialog;
 
+#if wxABI_VERSION >= 30004
+    virtual void DoApplyWidgetStyle(GtkRcStyle*);
+#endif
+
 private:
     // common part of all ctors
     void Init() { m_dialog = NULL; }
 
-    wxDECLARE_DYNAMIC_CLASS(wxFileButton);
+    DECLARE_DYNAMIC_CLASS(wxFileButton)
 };
 
 
@@ -156,19 +160,23 @@ public:     // overrides
 
     // GtkFileChooserButton does not support GTK_FILE_CHOOSER_CREATE_FOLDER
     // thus we must ensure that the wxDD_DIR_MUST_EXIST style was given
-    long GetDialogStyle() const wxOVERRIDE
+    long GetDialogStyle() const
     {
         return (wxGenericDirButton::GetDialogStyle() | wxDD_DIR_MUST_EXIST);
     }
 
-    virtual void SetPath(const wxString &str) wxOVERRIDE;
-    virtual void SetInitialDirectory(const wxString& dir) wxOVERRIDE;
+    virtual void SetPath(const wxString &str);
+    virtual void SetInitialDirectory(const wxString& dir);
 
     // see macro defined above
     FILEDIRBTN_OVERRIDES
 
 protected:
     wxDialog *m_dialog;
+
+#if wxABI_VERSION >= 30004
+    virtual void DoApplyWidgetStyle(GtkRcStyle*);
+#endif
 
 public:    // used by the GTK callback only
 
@@ -183,7 +191,7 @@ private:
         m_bIgnoreNextChange = false;
     }
 
-    wxDECLARE_DYNAMIC_CLASS(wxDirButton);
+    DECLARE_DYNAMIC_CLASS(wxDirButton)
 };
 
 #undef FILEDIRBTN_OVERRIDES

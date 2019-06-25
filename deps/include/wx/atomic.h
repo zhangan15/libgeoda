@@ -23,7 +23,7 @@
 //  but not necessary).
 
 #if wxUSE_THREADS
-#undef HAVE_GCC_ATOMIC_BUILTINS
+#undef HAVE_GCC_ATOMIC_BUILTINS // conflict with cpl_config
 #if defined(HAVE_GCC_ATOMIC_BUILTINS)
 
 // NB: we intentionally don't use Linux's asm/atomic.h header, because it's
@@ -57,7 +57,7 @@ inline wxUint32 wxAtomicDec (wxUint32 &value)
     return InterlockedDecrement ((LONG*)&value);
 }
 
-#elif defined(__DARWIN__)
+#elif defined(__WXMAC__) || defined(__DARWIN__)
 
 #include "libkern/OSAtomic.h"
 inline void wxAtomicInc (wxUint32 &value)
