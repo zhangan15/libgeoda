@@ -10,5 +10,9 @@
         } 
         dyn.load(dll_path)
         cacheMetaData(1)
+    } else {
+        # unix
+        dyn.load("libgeoda.so")
+        cacheMetaData(1)
     }
 }

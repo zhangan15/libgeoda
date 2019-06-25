@@ -8,4 +8,4 @@ Maintainer: Xun Li <lixun910@gmail.com>
 Description: A package that wrap core features of GeoDa for spatial data analysis
 License: GPL (>= 2)
 Depends: R (>= 2.14)
-Collate: libgeoda.R sf_geoda.R
+Collate: libgeoda.R sf_geoda.R read_geoda.R AAA.R

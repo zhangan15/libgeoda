@@ -1,7 +1,7 @@
 # Import required packages
 
 # Load dynamic libraries (shared object files)
-useDynLib(libgeoda, .registration = TRUE)
+#useDynLib(libgeoda, .registration = TRUE)
 
 # Export functions defined in R code
 export(GeoDa, GeoDaTable, sp_to_geoda, geoda_to_sp)

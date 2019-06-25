@@ -142,3 +142,13 @@ cacheMetaData(1)
 source("sf_geoda.R")
 gda <- GeoDa("../../data/natregimes.shp")
 ```
+
+## Package libgeoda on windows
+
+The precompiled DLLs will be used directly so that no compilation will be needed 
+, since it's too complex and may cause problem when installation. 
+
+The dlls have to be placed under the directory `inst/libs`, and are structured as $(arch)/libgeoda.dll".
+
+Besides, `.onLoad()` function should be implemented to load DLL manually based on the 
+OS "windows" and architecture type "i386" or "x64". See file `AAA.R`.

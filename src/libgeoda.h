@@ -1,17 +1,6 @@
 #ifndef LIBGEODA_LIBRARY_H
 #define LIBGEODA_LIBRARY_H
 
-#include <Windows.h>
-#include <Psapi.h>
-
-#undef CreateDialog
-#undef CreateFont
-#undef CreateWindow
-#undef LoadMenu
-#undef FindText
-#undef LoadIcon
-#undef LoadBitmap
-
 #include <list>
 #include <vector>
 #include <algorithm>
