@@ -1,12 +1,6 @@
 #ifndef LIBGEODA_LIBRARY_H
 #define LIBGEODA_LIBRARY_H
 
-#ifdef LIBGEODA_EXPORTS
-#define LIBGEODA_API __declspec(dllexport)
-#else
-#define LIBGEODA_API __declspec(dllimport)
-#endif
-
 #include <Windows.h>
 #include <Psapi.h>
 
@@ -27,7 +21,7 @@
 class UniLisa;
 class GeoDaWeight;
 
-class LIBGEODA_API GeoDaColumn {
+class GeoDaColumn {
 public:
     enum FieldType { integer_type, string_type, real_type };
     std::string name;
@@ -40,7 +34,7 @@ public:
     virtual ~GeoDaColumn() {}
 };
 
-class LIBGEODA_API GeoDaIntColumn : public GeoDaColumn {
+class GeoDaIntColumn : public GeoDaColumn {
 public:
     std::vector<long long> data;
 
@@ -52,7 +46,7 @@ public:
 };
 
 
-class LIBGEODA_API GeoDaStringColumn : public GeoDaColumn {
+class GeoDaStringColumn : public GeoDaColumn {
 public:
     std::vector<std::string> data;
 
@@ -63,7 +57,7 @@ public:
             : GeoDaColumn(nm, string_type, 254, 0), data(vals) {}
 };
 
-class LIBGEODA_API GeoDaRealColumn : public GeoDaColumn {
+class GeoDaRealColumn : public GeoDaColumn {
 public:
     std::vector<double> data;
 
@@ -74,7 +68,7 @@ public:
             : GeoDaColumn(nm, real_type, 35, 15), data(vals) {}
 };
 
-class LIBGEODA_API GeoDaTable {
+class GeoDaTable {
 public:
     GeoDaTable(){};
     virtual ~GeoDaTable(){};
@@ -109,7 +103,7 @@ protected:
     std::vector<GeoDaColumn*> columns;
 };
 
-class LIBGEODA_API GeoDa {
+class GeoDa {
 public:
     enum MapType { point_type, polygon_type, line_type };
 
@@ -199,9 +193,9 @@ protected:
     std::vector<OGRPoint*> centroids;
 };
 
-LIBGEODA_API int test();
+int test();
 
-LIBGEODA_API GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col);
-LIBGEODA_API GeoDaColumn* ToGeoDaColumn(GeoDaIntColumn* col);
-LIBGEODA_API GeoDaColumn* ToGeoDaColumn(GeoDaRealColumn* col);
+GeoDaColumn* ToGeoDaColumn(GeoDaStringColumn* col);
+GeoDaColumn* ToGeoDaColumn(GeoDaIntColumn* col);
+GeoDaColumn* ToGeoDaColumn(GeoDaRealColumn* col);
 #endif

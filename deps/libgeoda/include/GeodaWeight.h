@@ -20,17 +20,10 @@
 #ifndef __GEODA_CENTER_GEODA_WEIGHTS_H__
 #define __GEODA_CENTER_GEODA_WEIGHTS_H__
 
-#ifdef LIBGEODA_EXPORTS
-#define GEODAWEIGHTS_API __declspec(dllexport)
-#else
-#define GEODAWEIGHTS_API __declspec(dllimport)
-#endif
-
-
 #include <vector>
 #include <wx/string.h>
 
-class GEODAWEIGHTS_API GeoDaWeight {
+class GeoDaWeight {
 public:
 	GeoDaWeight() : symmetry_checked(false), num_obs(0) {}
 	GeoDaWeight(const GeoDaWeight& gw);
