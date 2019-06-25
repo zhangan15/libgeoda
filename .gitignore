@@ -31,3 +31,4 @@ swig/R/.RData
 swig/R/.Rhistory
 swig/R/.Rhistory
 msvc/geoda.suo
+*.opensdf
