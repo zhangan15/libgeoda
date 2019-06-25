@@ -29,3 +29,5 @@ swig/R/geoda_proxy_wrap.cpp
 swig/R/.RData
 swig/R/.Rhistory
 swig/R/.Rhistory
+deps/lib/.DS_Store
+deps/lib/.DS_Store

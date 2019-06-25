@@ -43,85 +43,50 @@ if (APPLE)
 endif()
 
 ## ANN library
-set (ANN_INCLUDE_DIR ${DEP_LIBRARY_PATH}/ann/include)
-set (ANN_LIBRARIES ${DEP_LIBRARY_PATH}/ann/lib/${DEP_OS_SUB}/libANN.a)
+set (ANN_INCLUDE_DIR ${DEP_LIBRARY_PATH}/include)
+set (ANN_LIBRARIES ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libANN.a)
+set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/include/geos)
 
-## Boost: static link
 if (UNIX)
-    set (Boost_INCLUDE_DIR ${DEP_LIBRARY_PATH}/boost/include)
     set (Boost_LIBRARIES
-    ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_thread-mt.a
-    ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_system-mt.a
-    ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_chrono-mt.a
-    ${DEP_LIBRARY_PATH}/boost/lib/${DEP_OS_SUB}/libboost_date_time-mt.a
-    )
-elseif (WIN32)
-    set (Boost_INCLUDE_DIR ${DEP_LIBRARY_PATH}/boost/57/include)
-    set (Boost_LIBRARIES
-    ${DEP_LIBRARY_PATH}/boost/57/lib/${DEP_OS_SUB}/libboost_date_time-vc100-mt-gd-1_57.lib
-    ${DEP_LIBRARY_PATH}/boost/57/lib/${DEP_OS_SUB}/libboost_thread-vc100-mt-gd-1_57.lib
-    )
-endif()
-
-## wxWidgets library (non-ui)
-if (UNIX)
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libboost_thread.a
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libboost_system.a
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libboost_chrono.a
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libboost_date_time.a)
     set (WX_INCLUDE_DIR
-        ${DEP_LIBRARY_PATH}/wx/include/wx-3.0
-        ${DEP_LIBRARY_PATH}/wx/lib/${DEP_OS_SUB}/wx/include/base-unicode-static-3.0)
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/wx/include/base-unicode-static-3.0)
     set (WX_LIBRARIES
-        ${DEP_LIBRARY_PATH}/wx/lib/${DEP_OS_SUB}/libwx_baseu-3.0.a
-        ${DEP_LIBRARY_PATH}/wx/lib/${DEP_OS_SUB}/libwxregexu-3.0.a)
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libwx_baseu-3.0.a
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libwxregexu-3.0.a)
     if (APPLE)
         set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -framework IOKit -framework CoreServices -framework System -framework ApplicationServices")
     endif()
+    set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libgdal.a)
+    set (GEOS_LIBRARIES
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libgeos_c.a
+            ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libgeos.a)
+    set (PROJ4_LIBRARIES ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libproj.a)
+
 elseif (WIN32)
-    set (WX_INCLUDE_DIR
-        ${DEP_LIBRARY_PATH}/wx/3.1/include
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/mswu)
+    set (Boost_LIBRARIES
+            libboost_date_time-vc100-mt-1_57.lib
+            libboost_thread-vc100-mt-1_57.lib)
+    set (WX_INCLUDE_DIR ${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/mswu)
     set (WX_LIBRARIES
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxmsw31u.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxmsw31u_gl.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxexpat.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxregexu.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxscintilla.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxzlib.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxtiff.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxpng.lib 
-        ${DEP_LIBRARY_PATH}/wx/3.1/lib/wxjpeg.lib 
-        )
+        wxbase30u.lib
+        wxexpat.lib
+        wxregexu.lib
+        wxscintilla.lib
+        wxzlib.lib)
+    set (GDAL_LIBRARIES gdal_i.lib)
+    set (GEOS_LIBRARIES libgeos.lib)
+    set (PROJ4_LIBRARIES proj.lib)
+    link_directories(${DEP_LIBRARY_PATH}/lib)
+
 endif()
 set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -D_FILE_OFFSET_BITS=64")
 
 message(status ${WX_INCLUDE_DIR})
-
-## gdal library (minimal)
-set (GDAL_INCLUDE_DIR ${DEP_LIBRARY_PATH}/gdal/2.2.4/include)
-if (UNIX)
-    set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.2.4/lib/${DEP_OS_SUB}/libgdal.a)
-elseif (WIN32)
-    set (GDAL_LIBRARIES ${DEP_LIBRARY_PATH}/gdal/2.2.4/lib/${DEP_OS_SUB}/gdal_i.lib)
-endif()
-
-## geos library
-#set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include)
-set (GEOS_INCLUDE_DIR ${DEP_LIBRARY_PATH}/geos/3.7.2/include/geos)
-if (UNIX)
-    set (GEOS_LIBRARIES
-        ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos_c.a
-        ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/libgeos.a)
-elseif (WIN32)
-    set (GEOS_LIBRARIES ${DEP_LIBRARY_PATH}/geos/3.7.2/lib/${DEP_OS_SUB}/geos.lib)
-endif()
-
-if (UNIX)
-    set (PROJ4_LIBRARIES ${DEP_LIBRARY_PATH}/proj/5.2.0/lib/${DEP_OS_SUB}/libproj.a)
-elseif (WIN32)
-    set (PROJ4_LIBRARIES ${DEP_LIBRARY_PATH}/proj/5.2.0/lib/${DEP_OS_SUB}/proj.lib)
-endif()
-
-if (MSVC)
-    link_directories(${DEP_LIBRARY_PATH}/lib)
-endif()
 
 ###########################################################
 #
@@ -179,27 +144,21 @@ install(TARGETS ${PROJECT_NAME}
 if (APPLE)
     target_include_directories(geoda PUBLIC ${CURL_INCLUDE_DIR})
     target_link_libraries(geoda ${CURL_LIBRARIES})
+    target_link_libraries(geoda iconv)
 endif()
 
-#target_include_directories(geoda PUBLIC ${GEOS_INCLUDE_DIR} )
-#target_link_libraries(geoda ${GEOS_LIBRARIES})
-
-target_include_directories(geoda PUBLIC ${GDAL_INCLUDE_DIR} )
-target_link_libraries(geoda ${GDAL_LIBRARIES})
-
 target_include_directories(geoda PUBLIC ${ANN_INCLUDE_DIR} )
-target_link_libraries(geoda ${ANN_LIBRARIES} )
-
-target_include_directories(geoda PUBLIC ${Boost_INCLUDE_DIR} )
-target_link_libraries(geoda ${Boost_LIBRARIES})
-
 target_include_directories(geoda PUBLIC ${WX_INCLUDE_DIR} )
+target_include_directories(geoda PUBLIC ${GEOS_INCLUDE_DIR} )
+
+target_link_libraries(geoda ${GEOS_LIBRARIES})
+target_link_libraries(geoda ${GDAL_LIBRARIES})
+target_link_libraries(geoda ${ANN_LIBRARIES} )
+target_link_libraries(geoda ${Boost_LIBRARIES})
 target_link_libraries(geoda ${WX_LIBRARIES})
 
-if (APPLE)
-    target_link_libraries(geoda iconv)
-elseif(UNIX)
-    target_link_libraries(geoda "${DEP_LIBRARY_PATH}/iconv/lib/${DEP_OS_SUB}/libiconv.a")
+if(UNIX AND NOT APPLE)
+    target_link_libraries(geoda "${DEP_LIBRARY_PATH}/lib/${DEP_OS_SUB}/libiconv.a")
 endif()
 
 if (MSVC)
@@ -207,16 +166,16 @@ if (MSVC)
 endif()
 
 if (UNIX)
-#  For SWIG and testing only, copy files
-foreach(hfile ${GEODA_INCLUDE_FILES})
+    #  For SWIG and testing only, copy files
+    foreach(hfile ${GEODA_INCLUDE_FILES})
     get_filename_component(barename ${hfile} NAME)
     add_custom_command(
             TARGET geoda POST_BUILD
             COMMAND ${CMAKE_COMMAND} ARGS -E copy
             ${CMAKE_SOURCE_DIR}/${hfile}
             ${CMAKE_SOURCE_DIR}/deps/libgeoda/include/${barename})
-endforeach()
-add_custom_command(
+    endforeach()
+    add_custom_command(
     TARGET geoda POST_BUILD
     COMMAND ${CMAKE_COMMAND} ARGS -E copy
     ${CMAKE_CURRENT_BINARY_DIR}/libgeoda.a
