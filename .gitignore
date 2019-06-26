@@ -35,5 +35,7 @@ swig/R/.RData
 swig/R/.Rhistory
 swig/R/.Rhistory
 deps/lib/.DS_Store
-msvc/geoda.suo
-*.opensdf
+
+swig/python/package
+swig/python/build
+

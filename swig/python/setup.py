@@ -1,19 +1,15 @@
 #!/usr/bin/env python
 
+import setuptools
 from distutils.core import setup, Extension
 
-DEP_DIR = '../../deps/osx/'
-SRC_DIR = '../../src/'
 #PYTHON_HEADER = '-I/usr/include/python2.7'
+OS_NAME = 'osx'
 
 INCLUDE_DIRS = [
-       SRC_DIR, 
-       DEP_DIR + 'ann/include',
-       DEP_DIR + 'gdal/include',
-       DEP_DIR + 'geos/3.7.2/include',
-       DEP_DIR + 'wx/include/wx-3.0',
-       DEP_DIR + 'wx/lib/wx/include/base-unicode-static-3.0',
-       '/usr/local/include'
+    './deps/include',
+    './deps/libgeoda/include',
+    './deps/lib/' + OS_NAME + '/wx/include/base-unicode-static-3.0'
 ]
 
 LIBRARY_DIRS = ['/usr/lib']
@@ -41,25 +37,25 @@ EXTRA_LINK_ARGS = [
 ]
 
 EXTRA_OBJECTS = [
-       DEP_DIR + 'ann/lib/libANN.a',
-       DEP_DIR + 'gdal/lib/libgdal.a',
-       DEP_DIR + 'geos/3.7.2/lib/libgeos.a',
-       DEP_DIR + 'geos/3.7.2/lib/libgeos_c.a',
-       DEP_DIR + 'wx/lib/libwx_baseu-3.0.a',
-       DEP_DIR + 'wx/lib/libwxregexu-3.0.a',
-       '/usr/local/lib/libboost_thread-mt.a',
-       '/usr/local/lib/libboost_system-mt.a',
-       '/usr/local/lib/libboost_chrono-mt.a',
-       '/usr/local/lib/libboost_date_time-mt.a',
-       '/usr/local/lib/libboost_atomic-mt.a',
-       ]
+    './deps/libgeoda/lib/' + OS_NAME + '/libgeoda.a',
+    './deps/lib/' + OS_NAME + '/libANN.a',
+    './deps/lib/' + OS_NAME + '/libgdal.a',
+    './deps/lib/' + OS_NAME + '/libgeos.a',
+    './deps/lib/' + OS_NAME + '/libgeos_c.a',
+    './deps/lib/' + OS_NAME + '/libproj.a',
+    './deps/lib/' + OS_NAME + '/libwx_baseu-3.0.a',
+    './deps/lib/' + OS_NAME + '/libwxregexu-3.0.a',
+    './deps/lib/' + OS_NAME + '/libboost_thread.a',
+    './deps/lib/' + OS_NAME + '/libboost_system.a',
+    './deps/lib/' + OS_NAME + '/libboost_date_time.a',
+    './deps/lib/' + OS_NAME + '/libboost_chrono.a'
+]
 
 SOURCE_FILES  = [
-       'geoda_proxy_wrap.cxx',
-       SRC_DIR + 'libgeoda.cpp'
+    'pygeoda/libgeoda.cpp'
 ]
  
-extensions = [Extension('_libgeoda',
+extensions = [Extension('pygeoda._libgeoda',
                         sources=SOURCE_FILES,
                         include_dirs=INCLUDE_DIRS,
                         swig_opts=SWIG_OPTS,
@@ -70,11 +66,13 @@ extensions = [Extension('_libgeoda',
                         libraries=LIBRARIES,
                         extra_objects=EXTRA_OBJECTS),]
 
-setup (name = 'GeoDa',
+setup (name = 'pygeoda',
        version = '0.1',
        author = "Xun Li",
+       author_email = "lixun910@gmail.com",
+       url = "https://github.com/lixun910/libgeoda",
        description = """Python wrapper for GeoDa""",
        ext_modules = extensions,
-       py_modules = ["geoda"],
+       packages=['pygeoda']
       )
 

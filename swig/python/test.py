@@ -1,7 +1,3 @@
-from libgeoda import GeoDa
+from pygeoda import GeoDa
 
-gda = GeoDa("/Users/xun/Box/test_data/natregimes/natregimes.shp")
-
-print(gda.GetName())
-
-print(gda.GetValues())
+gda = GeoDa("../../data/natregimes.shp")

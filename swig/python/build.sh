@@ -1,3 +1,20 @@
-swig -python -c++ -threads -outcurrentdir ../geoda_proxy.i
+swig -python -c++ -threads -I../../deps/libgeoda/include  -o pygeoda/libgeoda.cpp ../libgeoda.i
 
-CFLAGS='-Wall -O0 -DDEBUG' python setup.py build_ext --inplace --force
+rm -rf package
+mkdir package
+cd package
+cp -rf ../pygeoda .
+cp ../setup.py .
+mkdir deps
+mkdir deps/lib
+cp -rf ../../../deps/include deps/
+rm -rf deps/include/boost/
+cp -rf ../../../deps/lib/osx deps/lib/
+cp -rf ../../../deps/libgeoda deps/
+
+
+python setup.py bdist_wheel
+python setup.py sdist
+#twine upload dist/*
+
+cd ..
