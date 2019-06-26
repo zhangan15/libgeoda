@@ -1,4 +1,4 @@
 import os
 
-from libgeoda import GeoDa
+from .libgeoda import GeoDa
 

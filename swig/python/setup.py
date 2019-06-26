@@ -1,10 +1,13 @@
 #!/usr/bin/env python
-
+import sys
 import setuptools
 from distutils.core import setup, Extension
 
 #PYTHON_HEADER = '-I/usr/include/python2.7'
 OS_NAME = 'osx'
+
+if sys.platform == "darwin":
+    OS_NAME = 'osx'
 
 INCLUDE_DIRS = [
     './deps/include',
@@ -22,7 +25,9 @@ LIBRARIES = [
 SWIG_OPTS = ['-c++']
 
 EXTRA_COMPILE_ARGS = [
-       '-D_FILE_OFFSET_BITS=64',
+    '-D_FILE_OFFSET_BITS=64',
+    '-std=c++11',
+    '-mmacosx-version-min=10.9'
 ]
 
 EXTRA_LINK_ARGS = [
@@ -33,7 +38,8 @@ EXTRA_LINK_ARGS = [
        '-framework',
        'System',
        '-framework',
-       'ApplicationServices'
+       'ApplicationServices',
+       '-stdlib=libc++',
 ]
 
 EXTRA_OBJECTS = [
