@@ -24,9 +24,10 @@ const std::string GeoDa::DT_STRING = "string";
 const std::string GeoDa::DT_INTEGER= "integer";
 const std::string GeoDa::DT_NUMERIC = "numeric";
 
-GeoDa::GeoDa(const std::string &layer_name,
-             const std::string& map_type,
+GeoDa::GeoDa(
         int num_features,
+        const std::string& layer_name,
+        const std::string& map_type,
         GeoDaTable* table,
         unsigned char* wkbs,
         const std::vector<int>& wkb_bytes_len,

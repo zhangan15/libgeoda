@@ -11,6 +11,7 @@
 %template(VecChar) std::vector<char>;
 %template(VecVecDouble) std::vector<std::vector<double> >;
 %template(VecInt) std::vector<int>;
+%template(VecInt64) std::vector<long long>;
 %template(VecVecInt) std::vector<std::vector<int> >;
 %template(VecUINT8) std::vector<unsigned char>;
 %template(VecVecUINT8) std::vector<std::vector<unsigned char> >;
@@ -59,6 +60,7 @@
 %{ # override SWIG generate return an unkonwn type %}
 
 #elif defined(SWIGPYTHON)
+
 
 #endif
 

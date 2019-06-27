@@ -893,6 +893,112 @@ class VecInt(object):
 # Register VecInt in _libgeoda:
 _libgeoda.VecInt_swigregister(VecInt)
 
+class VecInt64(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _libgeoda.VecInt64_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _libgeoda.VecInt64___nonzero__(self)
+
+    def __bool__(self):
+        return _libgeoda.VecInt64___bool__(self)
+
+    def __len__(self):
+        return _libgeoda.VecInt64___len__(self)
+
+    def __getslice__(self, i, j):
+        return _libgeoda.VecInt64___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _libgeoda.VecInt64___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _libgeoda.VecInt64___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _libgeoda.VecInt64___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _libgeoda.VecInt64___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _libgeoda.VecInt64___setitem__(self, *args)
+
+    def pop(self):
+        return _libgeoda.VecInt64_pop(self)
+
+    def append(self, x):
+        return _libgeoda.VecInt64_append(self, x)
+
+    def empty(self):
+        return _libgeoda.VecInt64_empty(self)
+
+    def size(self):
+        return _libgeoda.VecInt64_size(self)
+
+    def swap(self, v):
+        return _libgeoda.VecInt64_swap(self, v)
+
+    def begin(self):
+        return _libgeoda.VecInt64_begin(self)
+
+    def end(self):
+        return _libgeoda.VecInt64_end(self)
+
+    def rbegin(self):
+        return _libgeoda.VecInt64_rbegin(self)
+
+    def rend(self):
+        return _libgeoda.VecInt64_rend(self)
+
+    def clear(self):
+        return _libgeoda.VecInt64_clear(self)
+
+    def get_allocator(self):
+        return _libgeoda.VecInt64_get_allocator(self)
+
+    def pop_back(self):
+        return _libgeoda.VecInt64_pop_back(self)
+
+    def erase(self, *args):
+        return _libgeoda.VecInt64_erase(self, *args)
+
+    def __init__(self, *args):
+        _libgeoda.VecInt64_swiginit(self, _libgeoda.new_VecInt64(*args))
+
+    def push_back(self, x):
+        return _libgeoda.VecInt64_push_back(self, x)
+
+    def front(self):
+        return _libgeoda.VecInt64_front(self)
+
+    def back(self):
+        return _libgeoda.VecInt64_back(self)
+
+    def assign(self, n, x):
+        return _libgeoda.VecInt64_assign(self, n, x)
+
+    def resize(self, *args):
+        return _libgeoda.VecInt64_resize(self, *args)
+
+    def insert(self, *args):
+        return _libgeoda.VecInt64_insert(self, *args)
+
+    def reserve(self, n):
+        return _libgeoda.VecInt64_reserve(self, n)
+
+    def capacity(self):
+        return _libgeoda.VecInt64_capacity(self)
+    __swig_destroy__ = _libgeoda.delete_VecInt64
+
+# Register VecInt64 in _libgeoda:
+_libgeoda.VecInt64_swigregister(VecInt64)
+
 class VecVecInt(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
     __repr__ = _swig_repr

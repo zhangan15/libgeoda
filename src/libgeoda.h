@@ -96,8 +96,7 @@ class GeoDa {
 public:
     enum MapType { point_type, polygon_type, line_type };
 
-    GeoDa(const std::string& layer_name, const std::string& map_type,
-            int num_features,
+    GeoDa(int num_features, const std::string& layer_name, const std::string& map_type,
             GeoDaTable* table,
             unsigned char* wkbs,
             const std::vector<int>& wkb_bytes_len,
