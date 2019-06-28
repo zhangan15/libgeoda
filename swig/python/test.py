@@ -3,13 +3,16 @@ import geopandas
 import ctypes
 import matplotlib
 
+#gdf = geopandas.read_file("../../data/natregimes.shp")
+
 gda = GeoDa("../../data/natregimes.shp")
 
 gdf = geoda_to_geopandas(gda)
 
-ax = gdf.plot()
+#ax = gdf.plot()
 
-ax.set_title("NAT")
+#ax.set_title("NAT")
+
 """
 gdf = geopandas.read_file("../../data/natregimes.shp")
 

@@ -75,16 +75,16 @@ def geoda_to_geopandas(gda):
 
     # pandas DF
     data = {}
-    df = pandas.DataFrame(data)
     for i in range(n_cols):
         c_nm = col_nms[i]
         c_tp = col_tps[i]
         if c_tp == "integer":
-            df[c_nm] = gda.GetIntegerCol(c_nm)
+            data[c_nm] = gda.GetIntegerCol(c_nm)
         elif c_tp == "numeric":
-            df[c_nm] = gda.GetNumericCol(c_nm)
+            data[c_nm] = gda.GetNumericCol(c_nm)
         else:
-            df[c_nm] = gda.GetStringCol(c_nm)
+            data[c_nm] = gda.GetStringCol(c_nm)
+    df = pandas.DataFrame(data)
 
     # geometries
     geoms = []

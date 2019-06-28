@@ -165,22 +165,19 @@ if (MSVC)
     target_link_libraries(geoda kernel32.lib)
 endif()
 
-if (UNIX)
-    #  For SWIG and testing only, copy files
-    foreach(hfile ${GEODA_INCLUDE_FILES})
+#  For SWIG and testing only, copy files
+foreach(hfile ${GEODA_INCLUDE_FILES})
     get_filename_component(barename ${hfile} NAME)
     add_custom_command(
             TARGET geoda POST_BUILD
-            COMMAND ${CMAKE_COMMAND} ARGS -E copy
-            ${CMAKE_SOURCE_DIR}/${hfile}
-            ${CMAKE_SOURCE_DIR}/deps/libgeoda/include/${barename})
-    endforeach()
-    add_custom_command(
+            COMMAND ${CMAKE_COMMAND}
+            ARGS -E copy ${CMAKE_SOURCE_DIR}/${hfile} ${CMAKE_SOURCE_DIR}/deps/libgeoda/include/${barename})
+endforeach()
+
+add_custom_command(
     TARGET geoda POST_BUILD
-    COMMAND ${CMAKE_COMMAND} ARGS -E copy
-    ${CMAKE_CURRENT_BINARY_DIR}/libgeoda.a
-    ${CMAKE_SOURCE_DIR}/deps/libgeoda/lib/${DEP_OS_SUB}/libgeoda.a)
-endif()
+    COMMAND ${CMAKE_COMMAND}
+    ARGS -E copy ${CMAKE_CURRENT_BINARY_DIR}/libgeoda.a ${CMAKE_SOURCE_DIR}/deps/libgeoda/lib/${DEP_OS_SUB}/libgeoda.a)
 
 
 ###########################################################

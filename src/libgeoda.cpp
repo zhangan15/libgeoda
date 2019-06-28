@@ -133,6 +133,7 @@ GeoDa::GeoDa(const std::string &layer_name,
             }
         }
     }
+    ReadAllFeatures();
 }
 
 GeoDa::GeoDa(const char* poDsPath, const char* layer_name)
@@ -195,6 +196,7 @@ GeoDa::GeoDa(const char* poDsPath, const char* layer_name)
     } else {
         std::cout << "posDS is NULL" << std::endl;
     }
+    ReadAllFeatures();
     //GDALClose(poDS);
 }
 
@@ -274,13 +276,22 @@ const std::vector<OGRPoint*>& GeoDa::GetCentroids()
     return centroids;
 }
 
+void GeoDa::ReadAllFeatures()
+{
+    OGRFeature *feature = NULL;
+    poLayer->ResetReading();
+    while ((feature = poLayer->GetNextFeature()) != NULL) {
+        features.push_back(feature);
+    }
+}
+
 std::vector<bool> GeoDa::GetUndefinesCol(std::string col_name) {
     std::vector<bool> rst;
     if (fieldNameIdx.find(col_name) != fieldNameIdx.end()) {
         int iField = fieldNameIdx[col_name];
         OGRFeature *feature = NULL;
-        poLayer->ResetReading();
-        while ((feature = poLayer->GetNextFeature()) != NULL) {
+        for (size_t i=0; i<numObs; ++i) {
+            feature = features[i];
             bool val = feature->IsFieldNull(iField);
             rst.push_back(val);
         }
@@ -291,9 +302,9 @@ std::vector<bool> GeoDa::GetUndefinesCol(std::string col_name) {
 std::vector<double> GeoDa::GetNumericCol(std::string col_name)
 {
     std::vector<double> rst;
-    OGRFeature* feature = NULL;
-    poLayer->ResetReading();
-    while ((feature = poLayer->GetNextFeature()) != NULL) {
+    OGRFeature *feature = NULL;
+    for (size_t i=0; i<numObs; ++i) {
+        feature = features[i];
         double val = feature->GetFieldAsDouble(col_name.c_str());
         rst.push_back(val);
     }
@@ -302,9 +313,9 @@ std::vector<double> GeoDa::GetNumericCol(std::string col_name)
 
 std::vector<long long> GeoDa::GetIntegerCol(std::string col_name) {
     std::vector<long long> rst;
-    OGRFeature* feature = NULL;
-    poLayer->ResetReading();
-    while ((feature = poLayer->GetNextFeature()) != NULL) {
+    OGRFeature *feature = NULL;
+    for (size_t i=0; i<numObs; ++i) {
+        feature = features[i];
         long long val = feature->GetFieldAsInteger64(col_name.c_str());
         rst.push_back(val);
     }
@@ -313,9 +324,9 @@ std::vector<long long> GeoDa::GetIntegerCol(std::string col_name) {
 
 std::vector<std::string> GeoDa::GetStringCol(std::string col_name) {
     std::vector<std::string> rst;
-    OGRFeature* feature = NULL;
-    poLayer->ResetReading();
-    while ((feature = poLayer->GetNextFeature()) != NULL) {
+    OGRFeature *feature = NULL;
+    for (size_t i=0; i<numObs; ++i) {
+        feature = features[i];
         std::string val = feature->GetFieldAsString(col_name.c_str());
         rst.push_back(val);
     }

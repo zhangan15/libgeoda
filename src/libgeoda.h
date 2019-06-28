@@ -171,6 +171,8 @@ private:
 
     const std::vector<OGRPoint*>& GetCentroids();
 
+    void ReadAllFeatures();
+
 protected:
     static const std::string DT_STRING;
     static const std::string DT_INTEGER;
@@ -190,6 +192,7 @@ protected:
     std::map<std::string, unsigned int> fieldNameIdx;
 
     std::vector<OGRPoint*> centroids;
+    std::vector<OGRFeature*> features;
 };
 
 int test();
