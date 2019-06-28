@@ -120,7 +120,7 @@ set (GEODA_SOURCE_FILES
         src/UniLisa.cpp
 )
 
-add_library(geoda SHARED ${GEODA_SOURCE_FILES})
+add_library(geoda STATIC ${GEODA_SOURCE_FILES})
 
 # Setup public headers for libgeoda
 #set_target_properties(geoda PROPERTIES PUBLIC_HEADER ${GEODA_INCLUDE_FILES})

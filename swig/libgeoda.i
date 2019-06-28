@@ -61,6 +61,16 @@
 
 #elif defined(SWIGPYTHON)
 
+%typemap(ignore) TYPEMAP(unsigned char* temp) {
+    $1 = ($1_ltype) temp;
+}
+%typemap(in) (unsigned char*) {
+  if (!PyByteArray_Check($input)) {
+    SWIG_exception_fail(SWIG_TypeError, "in method '" "$symname" "', argument "
+                       "$argnum"" of type '" "$type""'");
+  }
+  $1 = (unsigned char*) PyByteArray_AsString($input);
+}
 
 #endif
 

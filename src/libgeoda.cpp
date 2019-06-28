@@ -24,10 +24,21 @@ const std::string GeoDa::DT_STRING = "string";
 const std::string GeoDa::DT_INTEGER= "integer";
 const std::string GeoDa::DT_NUMERIC = "numeric";
 
-GeoDa::GeoDa(
-        int num_features,
-        const std::string& layer_name,
+GeoDa::GeoDa(GeoDaTable* table,
+             const std::string& layer_name,
+             const std::string& map_type,
+             const std::vector<unsigned char> &wkbs,
+             const std::vector<int>& wkb_bytes_len,
+             const std::string& pszProj4)
+: GeoDa(layer_name, map_type, wkb_bytes_len.size(), table,
+        (unsigned char*)wkbs.data(), wkb_bytes_len, pszProj4)
+{
+
+}
+
+GeoDa::GeoDa(const std::string &layer_name,
         const std::string& map_type,
+        int num_features,
         GeoDaTable* table,
         unsigned char* wkbs,
         const std::vector<int>& wkb_bytes_len,
@@ -63,7 +74,6 @@ GeoDa::GeoDa(
             // create fields
             for (size_t i=0; i<numCols; ++i) {
                 GeoDaColumn *col = table->GetColumn(i);
-                std::cout << "field: " << col->name << col->name.c_str() << std::endl;
             }
             for (size_t i=0; i<numCols; ++i) {
                 GeoDaColumn* col = table->GetColumn(i);
