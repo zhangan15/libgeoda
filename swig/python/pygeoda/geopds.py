@@ -5,7 +5,7 @@ try:
 except ImportError:
     print("GeoPandas is not found. Please install GeoPandas first.")
 
-
+import sys
 from .libgeoda import GeoDa, GeoDaTable
 import string
 import random
@@ -32,7 +32,7 @@ def geopandas_to_geoda(gdf):
     gda_tbl = GeoDaTable()
 
     for i in range(n_cols):
-        col_nm = col_nms[i]
+        col_nm = str(col_nms[i])
         if col_nm == 'geometry':
             continue
         col_type = gdf[col_nm].dtype
@@ -46,6 +46,7 @@ def geopandas_to_geoda(gdf):
 
     # Geoms
     wkb_bytes = bytes()
+    if sys.version_info[0] < 3: wkb_bytes = bytearray()
     wkb_size = []
     for i in range(n_rows):
         wkb = geoms[i].to_wkb()
@@ -60,7 +61,7 @@ def geopandas_to_geoda(gdf):
     layer_name = id_generator()
 
     # projection
-    prj = print_crs(gdf.crs)
+    prj = str(print_crs(gdf.crs))
 
     gda = GeoDa(gda_tbl, layer_name, map_type,  wkb_bytes, tuple(wkb_size), prj)
 
@@ -83,13 +84,19 @@ def geoda_to_geopandas(gda):
         elif c_tp == "numeric":
             data[c_nm] = gda.GetNumericCol(c_nm)
         else:
-            data[c_nm] = gda.GetStringCol(c_nm)
+            if sys.version_info[0] < 3: 
+                vals = gda.GetStringCol(c_nm)
+                vals = [str(i) for i in vals]
+                data[c_nm] = vals
+            else:
+                data[c_nm] = gda.GetStringCol(c_nm)
     df = pandas.DataFrame(data)
 
     # geometries
     geoms = []
     wkb_array = gda.GetGeometryWKB()
     for wkb in wkb_array:
+        if sys.version_info[0] < 3: wkb = bytearray(wkb)
         shapely_obj = shapely.wkb.loads(bytes(wkb))
         geoms.append(shapely_obj)
 

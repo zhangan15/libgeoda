@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys
+import sys, os
 import setuptools
 from distutils.core import setup, Extension
 
@@ -8,6 +8,7 @@ OS_NAME = 'osx'
 
 if sys.platform == "darwin":
     OS_NAME = 'osx'
+    os.environ['MACOSX_DEPLOYMENT_TARGET'] = '10.14'
 
 INCLUDE_DIRS = [
     './deps/include',
@@ -73,7 +74,7 @@ extensions = [Extension('pygeoda._libgeoda',
                         extra_objects=EXTRA_OBJECTS),]
 
 setup (name = 'pygeoda',
-       version = '0.1',
+       version = '0.0.1',
        author = "Xun Li",
        author_email = "lixun910@gmail.com",
        url = "https://github.com/lixun910/libgeoda",

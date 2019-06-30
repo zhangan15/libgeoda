@@ -1,5 +1,7 @@
 %module libgeoda
-
+%begin %{
+#define SWIG_PYTHON_2_UNICODE
+%}
 %include "stl.i"
 %include "std_string.i"
 %include "std_vector.i"
@@ -64,6 +66,7 @@
 %typemap(ignore) TYPEMAP(unsigned char* temp) {
     $1 = ($1_ltype) temp;
 }
+
 %typemap(in) (unsigned char*) {
   if (!PyByteArray_Check($input)) {
     SWIG_exception_fail(SWIG_TypeError, "in method '" "$symname" "', argument "
@@ -72,9 +75,21 @@
   $1 = (unsigned char*) PyByteArray_AsString($input);
 }
 
+/*
+%typemap(in) (const std::vector<std::string>& ) {
+    // vector of string from unicode string list
+    int iLen = PySequence_Length($input);
+    std::cout << iLen << "dafadfa" << std::endl;
+    for(unsigned int i = 0; i < iLen; i++) {
+        PyObject *o = PySequence_GetItem($input, i);
+        $1->push_back(PyUnicode_AS_DATA(o));
+    }
+}
+*/
 #endif
 
 %{
+    #include <string>
     #include <stdint.h>
     #include <GeodaWeight.h>
     #include <AbstractLocalSA.h>
@@ -82,6 +97,7 @@
     #include <libgeoda.h>
 %}
 
+%include <std_string.i>
 %include <GeodaWeight.h>
 %include <AbstractLocalSA.h>
 %include <UniLisa.h>
