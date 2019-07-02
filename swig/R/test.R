@@ -1,5 +1,5 @@
-dyn.load("libgeoda.so")
-source("libgeoda.R")
+dyn.load("rgeoda.so")
+source("rgeoda.R")
 cacheMetaData(1)
 
 source("sf_geoda.R")

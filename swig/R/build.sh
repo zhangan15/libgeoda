@@ -1,34 +1,36 @@
 # build & install libgeoda to ../deps/osx/geoda
 
 echo "create R wrappers..."
-swig -c++ -r -I../../deps/libgeoda/include -o libgeoda.cpp ../libgeoda.i
+cp ../libgeoda.i rgeoda.i
+sed -i.bu 's/module libgeoda/module rgeoda/g' rgeoda.i 
+swig -c++ -r -I../../deps/libgeoda/include -o rgeoda.cpp ./rgeoda.i
 
 # create R package
 rm -rf build
 mkdir build
-cp -rf pkg-template/ build/libgeoda
+cp -rf pkg-template/ build/rgeoda
 
-mkdir build/libgeoda/src/deps
-mkdir build/libgeoda/src/deps/lib
-cp -rf ../../deps/libgeoda/ build/libgeoda/src/deps/libgeoda
-cp -rf ../../deps/lib/osx build/libgeoda/src/deps/lib
-cp -rf ../../deps/include build/libgeoda/src/deps/include
-rm -rf build/libgeoda/src/deps/include/boost/
+mkdir build/rgeoda/src/deps
+mkdir build/rgeoda/src/deps/lib
+cp -rf ../../deps/libgeoda/ build/rgeoda/src/deps/libgeoda
+cp -rf ../../deps/lib/osx build/rgeoda/src/deps/lib
+cp -rf ../../deps/include build/rgeoda/src/deps/include
+rm -rf build/rgeoda/src/deps/include/boost/
 
-cp libgeoda.R build/libgeoda/R/
-cp sf_geoda.R build/libgeoda/R/
-cp read_geoda.R build/libgeoda/R/
-cp AAA.R build/libgeoda/R/
+cp rgeoda.R build/rgeoda/R/
+cp sf_geoda.R build/rgeoda/R/
+cp read_geoda.R build/rgeoda/R/
+cp AAA.R build/rgeoda/R/
 
-cp libgeoda.cpp build/libgeoda/src
+cp rgeoda.cpp build/rgeoda/src
 
-cp *.Rmd build/libgeoda/docs
-cp *.html build/libgeoda/docs
+cp *.Rmd build/rgeoda/docs
+cp *.html build/rgeoda/docs
 
 cd build
 
-R CMD build libgeoda
-R CMD REMOVE libgeoda
-R CMD INSTALL libgeoda_0.1.0.tar.gz
+R CMD build rgeoda
+R CMD REMOVE rgeoda
+R CMD INSTALL rgeoda_0.1.0.tar.gz
 
 cd ..

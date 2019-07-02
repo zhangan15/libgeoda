@@ -1,7 +1,7 @@
 # build & install libgeoda to ../deps/osx/geoda
 
 echo "create R wrappers..."
-swig -c++ -r -I../../deps/libgeoda/include -o libgeoda.cpp ../libgeoda.i
+swig -c++ -r -I../../deps/libgeoda/include -o rgeoda.cpp ./rgeoda.i
 
 # create R package
 rm -rf build
